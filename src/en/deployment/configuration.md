@@ -41,6 +41,10 @@ For server deployment, Cloudflare R2 storage is added by default. The following 
    - Enter "System Settings" → "Upload Settings"
    - Configure R2 channel parameters
    - If image review is needed, fill in R2 public access link
+::: tip Note
+Please note the free tier limits of Cloudflare R2, exceeding which may incur costs.
+   ![Note](/images/deployment/r2-free-tier.png)
+:::
 
 ### Configure S3 Channel
 
