@@ -35,7 +35,8 @@ export default defineConfig({
             items: [
               { text: 'Introduction', link: '/en/guide/introduction' },
               { text: 'Features', link: '/en/guide/features' },
-              { text: 'Quick Start', link: '/en/guide/quick-start' }
+              { text: 'Quick Start', link: '/en/guide/quick-start' },
+              { text: 'Update Logs', link: '/en/guide/update-log' }
             ]
           },
           {
@@ -107,7 +108,8 @@ export default defineConfig({
         items: [
           { text: '介绍', link: '/guide/introduction' },
           { text: '功能特性', link: '/guide/features' },
-          { text: '快速开始', link: '/guide/quick-start' }
+          { text: '快速开始', link: '/guide/quick-start' },
+          { text: '更新日志', link: '/guide/update-log' }
         ]
       },
       {
