@@ -43,9 +43,16 @@ CloudFlare ImgBed 是一个基于 Cloudflare Pages 的开源文件托管解决�
 ![海报](/images/guide/poster.png)
 ![登录界面](/images/guide/login.png)
 ![上传界面](/images/guide/upload.png)
+
+<details>
+    <summary>更多界面展示</summary>
+
 ![控制台界面](/images/guide/dashboard.png)
 ![用户管理](/images/guide/cusmanager.png)
 ![系统设置](/images/guide/sysconfig.png)
+
+</details>
+
 ## 技术架构
 
 - **前端界面**：基于 Vue.js 开发，支持响应式设计

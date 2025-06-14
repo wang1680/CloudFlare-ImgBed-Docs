@@ -25,7 +25,7 @@
         </a>
     </div>
 </div>
-CloudFlare ImgBed is an open-source file hosting solution based on Cloudflare Pages, providing users with free, stable, and efficient file storage services. The project supports multiple storage channels and both serverless and server-based deployment methods to meet different user needs.
+CloudFlare ImgBed is an open-source file hosting solution based on Cloudflare Pages, providing users with free, stable, and efficient file storage services. The project supports multiple storage channels and offers both serverless and server-based deployment options to meet different user needs.
 
 <div style="position: relative; padding: 30% 45%;">
     <iframe 
@@ -39,20 +39,27 @@ CloudFlare ImgBed is an open-source file hosting solution based on Cloudflare Pa
     ></iframe>
 </div>
 
-## Feature Gallery
+## Demo Screenshots
 ![Poster](/images/guide/poster.png)
 ![Login Interface](/images/guide/login.png)
 ![Upload Interface](/images/guide/upload.png)
+
+<details>
+    <summary>More Interface Screenshots</summary>
+
 ![Dashboard Interface](/images/guide/dashboard.png)
 ![User Management](/images/guide/cusmanager.png)
 ![System Settings](/images/guide/sysconfig.png)
 
+</details>
+
 ## Technical Architecture
 
 - **Frontend Interface**: Built with Vue.js, supports responsive design
-- **Backend API**: Serverless architecture built on Cloudflare Workers
+- **Backend API**: Serverless architecture based on Cloudflare Workers
 - **Storage Layer**: Supports multiple storage backends (Telegram, R2, S3)
 - **Database**: Uses Cloudflare KV for metadata storage
+
 
 ## Version History
 
@@ -62,9 +69,9 @@ CloudFlare ImgBed is an open-source file hosting solution based on Cloudflare Pa
 - 📁 Directory functionality launched, supports file categorization management
 - 🔧 S3 API channel integration, supports more storage service providers
 - ⚡ Multi-channel load balancing, improves upload success rate
-- 🎯 Short link naming scheme, more concise file links
+- 🎯 Short link naming convention, more concise file links
 
-### v1.x Foundation Features
+### v1.x Feature Foundation
 
 - 🚀 Basic file upload and management functionality
 - 🔐 Authentication and permission control
@@ -73,10 +80,11 @@ CloudFlare ImgBed is an open-source file hosting solution based on Cloudflare Pa
 
 ## Open Source License
 
-This project is licensed under the [MIT License](https://github.com/MarSeventh/CloudFlare-ImgBed/blob/main/LICENSE), which allows you to:
+This project is licensed under the [MIT Open Source License](https://github.com/MarSeventh/CloudFlare-ImgBed/blob/main/LICENSE), you can:
 
 - ✅ Commercial use
-- ✅ Modification and distribution
+- ✅ Modify and distribute
 - ✅ Private use
 - ✅ Patent use
 
+But you must retain the original author's copyright notice.
