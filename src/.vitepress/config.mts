@@ -34,9 +34,10 @@ export default defineConfig({
             collapsed: false,
             items: [
               { text: 'Introduction', link: '/en/guide/introduction' },
-              { text: 'Features', link: '/en/guide/features' },
               { text: 'Quick Start', link: '/en/guide/quick-start' },
-              { text: 'Update Logs', link: '/en/guide/update-log' }
+              { text: 'Features', link: '/en/guide/features' },
+              { text: 'Update Logs', link: '/en/guide/update-log' },
+              { text: 'TODO List', link: '/en/guide/todolist' }
             ]
           },
           {
@@ -53,7 +54,7 @@ export default defineConfig({
           },
           {
             text: 'API Documentation',
-            collapsed: false,
+            collapsed: true,
             items: [
               { text: 'Upload API', link: '/en/api/upload' },
               { text: 'Random Image API', link: '/en/api/random' }
@@ -61,7 +62,7 @@ export default defineConfig({
           },
           {
             text: 'Q&A',
-            collapsed: false,
+            collapsed: true,
             items: [
               { text: 'Frequently Asked Questions', link: '/en/qa/' }
             ]
@@ -72,6 +73,7 @@ export default defineConfig({
             items: [
               { text: 'Contribute', link: '/en/about/contribute' },
               { text: 'Thanks', link: '/en/about/thanks' },
+              { text: 'Ecosystem', link: '/en/about/ecosystem' },
               { text: 'Contact Us', link: '/en/about/contact' }
             ]
           }
@@ -107,9 +109,10 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: '介绍', link: '/guide/introduction' },
-          { text: '功能特性', link: '/guide/features' },
           { text: '快速开始', link: '/guide/quick-start' },
-          { text: '更新日志', link: '/guide/update-log' }
+          { text: '功能特性', link: '/guide/features' },
+          { text: '更新日志', link: '/guide/update-log' },
+          { text: '开发计划', link: '/guide/todolist' }
         ]
       },
       {
@@ -145,6 +148,7 @@ export default defineConfig({
         items: [
           { text: '贡献', link: '/about/contribute' },
           { text: '致谢', link: '/about/thanks' },
+          { text: '生态建设', link: '/about/ecosystem' },
           { text: '联系我们', link: '/about/contact' }
         ]
       }
