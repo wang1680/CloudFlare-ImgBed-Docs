@@ -75,6 +75,10 @@ export default defineConfig({
             ]
           }
         ],
+        footer: {
+          message: 'Released under the MIT License',
+          copyright: 'Copyright © 2024 MarSeventh'
+        },
         editLink: {
           pattern: 'https://github.com/MarSeventh/CloudFlare-ImgBed-Docs/edit/main/src/:path',
           text: 'Edit this page on GitHub'
@@ -150,7 +154,7 @@ export default defineConfig({
 
     footer: {
       message: '基于 MIT 许可发布',
-      copyright: 'Copyright © 2024-present MarSeventh'
+      copyright: 'Copyright © 2024 MarSeventh'
     },
 
     search: {
