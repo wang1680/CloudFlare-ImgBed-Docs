@@ -72,7 +72,9 @@ KV database is used to store file metadata and is a required component.
    - **KV namespace**: Select the newly created namespace
 5. Click "Save"
 
-![KV Binding](/images/deployment/kv-bind.png)
+::: warning Important Notice
+The variable name must be `img_url`, which is used in the code to access the KV database. Do not change this name.
+:::
 
 ## 🔄 Step 4: Redeploy
 
