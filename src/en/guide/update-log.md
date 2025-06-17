@@ -1,5 +1,12 @@
 # Update Logs
 
+## Recent Updates
+
+Add Features:
+
+- Beautified error images
+- Upload page now supports previewing ico and more file formats
+
 ## 2025.6.13
 
 Add Features:

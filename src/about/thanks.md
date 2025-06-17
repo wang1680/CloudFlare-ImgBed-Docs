@@ -10,7 +10,7 @@
 
 ### 赞助渠道
 
-项目维护不易，喜欢本项目的话，可以作者大大一点小小的鼓励哦，您的每一份支持都是我前进的动力\~
+项目维护不易，喜欢本项目的话，可以作者一点鼓励哦，您的每一份支持都是我前进的动力\~
 
 <a href="https://afdian.com/a/marseventh"><img width="200" src="https://pic1.afdiancdn.com/static/img/welcome/button-sponsorme.png" alt="赞助"></a>
 
