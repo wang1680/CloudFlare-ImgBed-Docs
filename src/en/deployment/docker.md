@@ -32,17 +32,17 @@ name = "cloudflare-imgbed"
 compatibility_date = "2024-07-24"
 
 # Optional: Add environment variables, most configurations have been migrated to admin backend after v2.0
-[vars]
+# [vars]
 ```
 
 4. **Start Service**
 
 ```bash
 # Start service (run in background)
-docker-compose up -d
+docker compose up -d
 
 # View logs
-docker-compose logs -f
+docker compose logs -f
 ```
 
 5. **Access Service**
@@ -67,7 +67,7 @@ name = "cloudflare-imgbed"
 compatibility_date = "2024-07-24"
 
 # Optional: Add environment variables, most configurations have been migrated to admin backend after v2.0
-[vars]
+# [vars]
 ```
 
 3. **Pull Image**

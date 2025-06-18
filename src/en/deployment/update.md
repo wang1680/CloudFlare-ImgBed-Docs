@@ -26,13 +26,10 @@ Enable GitHub Actions automatic sync:
 
 ```bash
 # Pull latest image
-docker-compose pull
+docker compose pull
 
 # Restart service
-docker-compose up -d
-
-# Clean old images
-docker image prune
+docker compose up -d
 ```
 
 ### Docker Command Update

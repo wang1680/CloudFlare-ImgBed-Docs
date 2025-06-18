@@ -33,17 +33,17 @@ name = "cloudflare-imgbed"
 compatibility_date = "2024-07-24"
 
 # 可选：添加环境变量，v2.0 版本后大部分配置已迁移到管理后台
-[vars]
+# [vars]
 ```
 
 4. **启动服务**
 
 ```bash
 # 启动服务（后台运行）
-docker-compose up -d
+docker compose up -d
 
 # 查看日志
-docker-compose logs -f
+docker compose logs -f
 ```
 
 5. **访问服务**
@@ -69,7 +69,7 @@ name = "cloudflare-imgbed"
 compatibility_date = "2024-07-24"
 
 # 可选：添加环境变量，v2.0 版本后大部分配置已迁移到管理后台
-[vars]
+# [vars]
 ```
 
 3. **拉取镜像**

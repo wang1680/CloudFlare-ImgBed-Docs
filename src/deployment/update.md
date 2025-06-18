@@ -26,13 +26,10 @@
 
 ```bash
 # 拉取最新镜像
-docker-compose pull
+docker compose pull
 
 # 重启服务
-docker-compose up -d
-
-# 清理旧镜像
-docker image prune
+docker compose up -d
 ```
 
 ### Docker 命令更新
