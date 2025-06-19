@@ -3,9 +3,18 @@
 ## Recent Updates
 
 Add Features:
+- S3 channels now support path-style access, compatible with more S3-compatible storage services
 
-- Beautified error images
-- Upload page now supports previewing ico and more file formats
+Fix Bugs:
+- Code style optimizations
+
+## 2025.6.19
+
+Add Features:
+- S3 channels now support path-style access, compatible with more S3-compatible storage services
+
+Fix Bugs:
+- Code style optimizations
 
 ## 2025.6.13
 
