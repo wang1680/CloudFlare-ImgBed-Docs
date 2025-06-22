@@ -3,10 +3,12 @@
 ## Recent Updates
 
 Add Features:
-- S3 channels now support path-style access, compatible with more S3-compatible storage services
+- Support for nsfwjs moderation channels, with custom API address
 
-Fix Bugs:
-- Code style optimizations
+## 2025.6.22
+
+Add Features:
+- Support for nsfwjs moderation channels, with custom API address
 
 ## 2025.6.19
 
