@@ -2,9 +2,8 @@
 
 Before deploying CloudFlare ImgBed, you need to prepare according to the storage channels you want to use.
 
-## 🗄️ Storage Channel Preparation
 
-### 1. Channel Overview
+## 1. Channel Overview
 
 The project supports different storage channels as backend storage. Each channel has different advantages and limitations. You can choose the appropriate channel according to your needs.
 
@@ -14,9 +13,9 @@ The project supports different storage channels as backend storage. Each channel
 | Cloudflare R2 | No file size limit, enterprise-grade performance | Charges after 10GB free quota, requires payment method |
 | S3 Compatible Storage | Diverse options, flexible pricing | Pricing varies by provider |
 
-### 2. Telegram Bot Channel
+## 2. Telegram Bot Channel
 
-#### 2.1 Get TG_BOT_TOKEN
+### 2.1 Get TG_BOT_TOKEN
 
 - Search for [@BotFather](https://t.me/BotFather) in Telegram
 - Send `/newbot` command
@@ -25,7 +24,7 @@ The project supports different storage channels as backend storage. Each channel
 
 > ![Create Telegram Bot](/images/deployment/telegram-bot-creation.png)
 
-#### 2.2 Get TG_CHAT_ID
+### 2.2 Get TG_CHAT_ID
 
 - Create a new Telegram channel
 - Add the created Bot as channel administrator
@@ -46,9 +45,9 @@ The project supports different storage channels as backend storage. Each channel
 - The Bot must have channel administrator permissions
 :::
 
-### 3. Cloudflare R2 Channel
+## 3. Cloudflare R2 Channel
 
-#### 3.1 Create R2 Bucket
+### 3.1 Create R2 Bucket
 
 - Login to [Cloudflare Dashboard](https://dash.cloudflare.com/)
 - Select "R2 Object Storage"
@@ -59,7 +58,7 @@ The project supports different storage channels as backend storage. Each channel
 - Click "Create bucket"
 > ![Create R2 Bucket](/images/deployment/r2-bucket-creation-1.png)
 
-#### 3.2 Configure Public Access (Optional)
+### 3.2 Configure Public Access (Optional)
 
 If you need to enable image review functionality:
 
@@ -69,9 +68,9 @@ If you need to enable image review functionality:
 - Record the complete public access link (e.g., `https://your-bucket.r2.cloudflarestorage.com/`)
 > ![Configure R2 Bucket Public Access](/images/deployment/r2-public-access.png)
 
-### 4. S3 Compatible Storage
+## 4. S3 Compatible Storage
 
-#### 4.1 Supported Providers
+### 4.1 Supported Providers
 
 | Provider | Region | Features |
 |----------|--------|----------|
@@ -80,12 +79,13 @@ If you need to enable image review functionality:
 | Upyun | China | CDN acceleration |
 | Backblaze B2 | USA | Affordable pricing |
 | Cloudflare R2 | Global | Cloudflare ecosystem integration |
+| MinIO | Global | Open-source S3 compatible storage |
 
 ::: tip Note
 The above are tested S3 compatible storage providers. Other S3 compatible providers have not been tested and may have compatibility issues.
 :::
 
-#### 4.2 Required Information
+### 4.2 Required Information
 
 - `S3_ACCESS_KEY_ID`: Access key ID
 - `S3_SECRET_ACCESS_KEY`: Secret access key
@@ -93,15 +93,6 @@ The above are tested S3 compatible storage providers. Other S3 compatible provid
 - `S3_ENDPOINT`: Service endpoint URL
 - `S3_REGION`: Storage region (optional)
 
-## 🔧 Optional Feature Preparation
-
-### Image Content Review
-
-If you need to enable adult content detection:
-
-1. Visit [ModerateContent](https://moderatecontent.com/)
-2. Register and get free API Key (currently no longer supports free registration)
-3. Record API Key for subsequent configuration
 
 ## 🚀 Next Steps
 

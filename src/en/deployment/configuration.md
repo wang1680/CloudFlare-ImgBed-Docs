@@ -53,7 +53,8 @@ Fill in the S3 channel configuration in the admin backend:
 - **Access Key ID**: Access key ID
 - **Secret Access Key**: Secret access key
 - **Bucket Name**: Bucket name
-- **Endpoint**: Service endpoint (complete host-style URL, e.g., https://s3.us-east-005.backblazeb2.com)
+- **Endpoint**: Service endpoint (complete URL, e.g., https://s3.us-east-005.backblazeb2.com)
+- **PathStyle**: Path style (enable this option for compatibility with older S3 versions)
 - **Region**: Storage region (optional)
 
 ## 🔒 Security Settings
@@ -67,13 +68,35 @@ Security-related settings are configured in "System Settings" → "Security Sett
 
 ### Upload Management
 
-- Image Review: Review channel currently only supports `moderatecontent.com`. Use the steps in [Prerequisites](/en/deployment/prerequisites#image-content-review) to get the API Key
+#### Image Moderation
+
+The moderation channels support both nsfwjs and moderatecontent.com. The project comes with a default moderation channel (nsfwjs), but no service availability guarantee is provided. For high-frequency use of the moderation feature, it is recommended to configure it yourself by following the steps below.
+
+##### moderatecontent.com
+
+- Visit [ModerateContent](https://moderatecontent.com/)
+
+- Register and obtain a free API Key (currently free registration is no longer supported)
+
+- Enter the API Key in the management console under "System Settings" → "Security Settings"
+
+##### nsfwjs
+
+Deploy the nsfwjs moderation service using Docker:
+```bash
+# Example command
+docker run -d -p 127.0.0.1:5000:5000/tcp \
+  --env PORT=5000 \
+  --restart=always \
+  eugencepoi/nsfw_api:latest
+```
+Enter the moderation service address in the management console under "System Settings" → "Security Settings", e.g., https://nsfwjs.your.domain
 
 ### Access Management
 
 - Domain Filtering
   - Allowed Domains: List of domains allowed to access (leave empty to allow all domains, otherwise manually add the image hosting's own domain)
-  - Whitelist Mode: When enabled, only files added to the whitelist can be accessed
+- Whitelist Mode: When enabled, only files added to the whitelist can be accessed
 
 ## 🌐 Web Settings
 

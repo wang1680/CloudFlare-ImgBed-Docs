@@ -55,7 +55,8 @@
 - **Access Key ID**：访问密钥 ID
 - **Secret Access Key**：机密访问密钥
 - **Bucket Name**：存储桶名称
-- **Endpoint**：服务端点（完整主机风格 URL，如 https://s3.us-east-005.backblazeb2.com）
+- **Endpoint**：服务端点（完整 URL，如 https://s3.us-east-005.backblazeb2.com）
+- **PathStyle**：路径样式（如需兼容旧 S3 版本，开启此选项）
 - **Region**：存储区域（可选）
 
 
@@ -70,13 +71,33 @@
 
 ### 上传管理
 
-- 图像审查：审查渠道目前仅支持 `moderatecontent.com`， 用[前期准备](/deployment/prerequisites#图像内容审查)中的步骤获取 API Key
+#### 图像审查
+
+审查渠道支持 `nsfwjs` 和 `moderatecontent.com`，项目自带默认审查渠道（nsfwjs），但不做服务可用性保证，如需高频使用审查功能，建议根据如下步骤自行配置。
+
+##### moderatecontent.com
+
+- 访问 [ModerateContent](https://moderatecontent.com/)
+- 注册并获取免费 API Key（目前已不再支持免费注册）
+- 在管理后台 "系统设置" → "安全设置" 中填入 API Key
+
+##### nsfwjs
+
+- 使用 Docker 部署 `nsfwjs` 审查服务
+```bash
+# 参考命令
+docker run -d -p 127.0.0.1:5000:5000/tcp \
+  --env PORT=5000 \
+  --restart=always \
+  eugencepoi/nsfw_api:latest
+```
+- 在管理后台 "系统设置" → "安全设置" 中填入审查服务地址，如 `https://nsfwjs.your.domain`
 
 ### 访问管理
 
 - 域名过滤
   - 放行域名：允许访问的域名列表（留空放行所有域名，否则需要手动添加图床自身域名）
-  - 白名单模式：启用后仅允许加入白名单的文件被访问
+- 白名单模式：启用后仅允许加入白名单的文件被访问
 
 ## 🌐 网页设置
 
