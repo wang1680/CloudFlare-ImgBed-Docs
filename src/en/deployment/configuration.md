@@ -72,7 +72,7 @@ Security-related settings are configured in "System Settings" → "Security Sett
 
 The moderation channels support both nsfwjs and moderatecontent.com. The project comes with a default moderation channel (nsfwjs), but no service availability guarantee is provided. For high-frequency use of the moderation feature, it is recommended to configure it yourself by following the steps below.
 
-##### moderatecontent.com
+##### 1.moderatecontent.com
 
 - Visit [ModerateContent](https://moderatecontent.com/)
 
@@ -80,7 +80,7 @@ The moderation channels support both nsfwjs and moderatecontent.com. The project
 
 - Enter the API Key in the management console under "System Settings" → "Security Settings"
 
-##### nsfwjs
+##### 2.nsfwjs
 
 Deploy the nsfwjs moderation service using Docker:
 ```bash

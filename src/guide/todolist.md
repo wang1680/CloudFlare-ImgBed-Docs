@@ -69,12 +69,12 @@
 
 
 1. :white_check_mark:~~修复API上传无法直接展示在后台的问题~~（2024.7.25已修复）
-1. :white_check_mark:~~由于telegra.ph关闭上传，迁移至TG频道上传~~（2024.9.7已修复）
-1. :white_check_mark:~~修复未设管理员认证时管理端无限刷新的问题~~（2024.9.9已修复）
-1. :white_check_mark:~~修复部分视频无法预览播放的问题~~（经测试，暂定为文件自身存在问题，暂无法修复）
-1. :hourglass_flowing_sand:增加新的图片审查渠道
-1. :white_check_mark:~~R2渠道在管理端删除时，存储桶同步删除~~（2024.12.4已修复）
-1. :white_check_mark:~~读取文件响应头增加允许跨域头`access-control-allow-origin: *`~~（2024.12.9已修复）
-1. :white_check_mark:~~上传界面加入访问限制白名单~~（2024.12.11已修复）
-1. :white_check_mark:修复文件名过长挡住操作按钮的问题
-1. :white_check_mark:修复`list`接口返回数据完整性问题
+2. :white_check_mark:~~由于telegra.ph关闭上传，迁移至TG频道上传~~（2024.9.7已修复）
+3. :white_check_mark:~~修复未设管理员认证时管理端无限刷新的问题~~（2024.9.9已修复）
+4. :white_check_mark:~~修复部分视频无法预览播放的问题~~（经测试，暂定为文件自身存在问题，暂无法修复）
+5. :white_check_mark:~~增加新的图片审查渠道~~（2025.6.23已完成）
+6. :white_check_mark:~~R2渠道在管理端删除时，存储桶同步删除~~（2024.12.4已修复）
+7. :white_check_mark:~~读取文件响应头增加允许跨域头`access-control-allow-origin: *`~~（2024.12.9已修复）
+8. :white_check_mark:~~上传界面加入访问限制白名单~~（2024.12.11已修复）
+9. :white_check_mark:修复文件名过长挡住操作按钮的问题
+10. :white_check_mark:修复`list`接口返回数据完整性问题

@@ -75,13 +75,13 @@
 
 审查渠道支持 `nsfwjs` 和 `moderatecontent.com`，项目自带默认审查渠道（nsfwjs），但不做服务可用性保证，如需高频使用审查功能，建议根据如下步骤自行配置。
 
-##### moderatecontent.com
+##### 1.moderatecontent.com
 
 - 访问 [ModerateContent](https://moderatecontent.com/)
 - 注册并获取免费 API Key（目前已不再支持免费注册）
 - 在管理后台 "系统设置" → "安全设置" 中填入 API Key
 
-##### nsfwjs
+##### 2.nsfwjs
 
 - 使用 Docker 部署 `nsfwjs` 审查服务
 ```bash

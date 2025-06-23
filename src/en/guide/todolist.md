@@ -70,7 +70,7 @@
 2. :white_check_mark: ~~Migrate to TG channel upload due to telegra.ph closure~~ (Fixed on 2024.9.7)
 3. :white_check_mark: ~~Fix admin infinite refresh when no admin auth set~~ (Fixed on 2024.9.9)
 4. :white_check_mark: ~~Fix some videos not previewing (file issue, cannot fix)~~
-5. :hourglass_flowing_sand: Add new image review channel
+5. :white_check_mark: ~~Add new image review channel~~ (Completed on 2025.6.23)
 6. :white_check_mark: ~~R2 channel deletes from bucket when deleted in admin~~ (Fixed on 2024.12.4)
 7. :white_check_mark: ~~Add CORS header `access-control-allow-origin: *` to file response~~ (Fixed on 2024.12.9)
 8. :white_check_mark: ~~Add access whitelist to upload page~~ (Fixed on 2024.12.11)
