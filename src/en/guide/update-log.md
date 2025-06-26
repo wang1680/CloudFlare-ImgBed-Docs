@@ -3,7 +3,16 @@
 ## Recent Updates
 
 Add Features:
-- Support for nsfwjs moderation channels, with custom API address
+- Admin panel now supports global search
+- Admin login page supports custom background images
+- Multiple visual experience optimizations
+
+## 2025.6.26
+
+Add Features:
+- Admin panel now supports global search
+- Admin login page supports custom background images
+- Multiple visual experience optimizations
 
 ## 2025.6.22
 

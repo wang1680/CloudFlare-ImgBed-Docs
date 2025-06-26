@@ -54,7 +54,7 @@
 37. :white_check_mark: ~~Support dark mode~~ (Completed on 2025.1.11)
 38. :hourglass_flowing_sand: Support KV backup & restore
 39. :white_check_mark: ~~Footer can be hidden~~ (Completed on 2025.2.4)
-40. :hourglass_flowing_sand: Enhanced search function
+40. :white_check_mark: Enhanced search function
 41. :white_check_mark: Support pasting multiple links, external link management
 42. :hourglass_flowing_sand: Record MD5 on upload, support file hard link
 43. :hourglass_flowing_sand: Show recent uploads on upload page
