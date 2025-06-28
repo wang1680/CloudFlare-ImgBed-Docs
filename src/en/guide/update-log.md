@@ -3,9 +3,14 @@
 ## Recent Updates
 
 Add Features:
-- Admin panel now supports global search
-- Admin login page supports custom background images
-- Multiple visual experience optimizations
+- Optimized display effects of some pages
+- Added validity check for login password
+
+## 2025.6.28
+
+Add Features:
+- Optimized display effects of some pages
+- Added validity check for login password
 
 ## 2025.6.26
 
