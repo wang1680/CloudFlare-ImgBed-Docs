@@ -3,8 +3,18 @@
 ## Recent Updates
 
 Add Features:
-- Optimized display effects of some pages
-- Added validity check for login password
+- Added 404 page
+
+Fix Bugs:
+- Fixed errors when file names contain special characters
+
+## 2025.6.29
+
+Add Features:
+- Added 404 page
+
+Fix Bugs:
+- Fixed errors when file names contain special characters
 
 ## 2025.6.28
 
