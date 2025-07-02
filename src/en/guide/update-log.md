@@ -3,10 +3,16 @@
 ## Recent Updates
 
 Add Features:
-- Added 404 page
+- Support for automatic renaming of files with the same name
+- Admin panel now supports previewing external link images
+- Beautified some error pages
 
-Fix Bugs:
-- Fixed errors when file names contain special characters
+## 2025.7.2
+
+Add Features:
+- Support for automatic renaming of files with the same name
+- Admin panel now supports previewing external link images
+- Beautified some error pages
 
 ## 2025.6.29
 
