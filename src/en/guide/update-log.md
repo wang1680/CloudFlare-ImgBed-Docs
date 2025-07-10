@@ -3,9 +3,12 @@
 ## Recent Updates
 
 Add Features:
-- Support for automatic renaming of files with the same name
-- Admin panel now supports previewing external link images
-- Beautified some error pages
+- Optimized response speed of list API
+
+## 2025.7.10
+
+Add Features:
+- Optimized response speed of list API
 
 ## 2025.7.2
 
