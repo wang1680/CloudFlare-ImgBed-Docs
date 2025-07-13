@@ -3,7 +3,16 @@
 ## Recent Updates
 
 Add Features:
-- Optimized response speed of list API
+- Support for large file chunked uploads, improving stability for large file uploads
+- Telegram Bot channel now supports chunked storage, allowing uploads larger than 20MB
+- File reading now supports streaming processing
+
+## 2025.7.13
+
+Add Features:
+- Support for large file chunked uploads, improving stability for large file uploads
+- Telegram Bot channel now supports chunked storage, allowing uploads larger than 20MB
+- File reading now supports streaming processing
 
 ## 2025.7.10
 

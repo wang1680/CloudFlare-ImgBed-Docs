@@ -9,7 +9,7 @@ The project supports different storage channels as backend storage. Each channel
 
 | Channel Type | Advantages | Limitations |
 |--------------|------------|-------------|  
-| Telegram Bot | Completely free, unlimited capacity | Single file maximum 20MB |
+| Telegram Bot | Completely free, unlimited capacity | Files larger than 20MB need to be stored in chunks |
 | Cloudflare R2 | No file size limit, enterprise-grade performance | Charges after 10GB free quota, requires payment method |
 | S3 Compatible Storage | Diverse options, flexible pricing | Pricing varies by provider |
 
