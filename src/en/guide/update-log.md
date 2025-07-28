@@ -3,9 +3,14 @@
 ## Recent Updates
 
 Add Features:
-- Support for large file chunked uploads, improving stability for large file uploads
-- Telegram Bot channel now supports chunked storage, allowing uploads larger than 20MB
-- File reading now supports streaming processing
+- Support for file database indexing, optimizing access speed
+- Admin panel now includes a system status page
+
+## 2025.7.28
+
+Add Features:
+- Support for file database indexing, optimizing access speed
+- Admin panel now includes a system status page
 
 ## 2025.7.13
 
