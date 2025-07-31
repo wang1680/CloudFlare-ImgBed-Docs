@@ -1,6 +1,6 @@
 # Quick Start
 
-This guide will help you quickly deploy and use CloudFlare ImgBed in 5 minutes.
+This guide will help you quickly deploy and use CloudFlare ImgBed in 15 minutes.
 
 ## 📱 Quick Experience
 

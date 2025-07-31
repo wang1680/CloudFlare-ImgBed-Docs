@@ -7,6 +7,7 @@
 
 - **端点**：`/upload`
 - **方法**：`POST`
+- **认证**：使用上传认证码或 API Token（需要`upload`权限）
 - **内容类型**：`multipart/form-data`
 - **文件大小限制**：根据存储渠道而定
 

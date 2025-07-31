@@ -3,8 +3,16 @@
 ## Recent Updates
 
 Add Features:
-- Support for file database indexing, optimizing access speed
-- Admin panel now includes a system status page
+- Support for backup and restore functionality
+- Support for specifying default upload settings for certain parameters
+- Support for API Token authentication, opening up more interfaces
+
+## 2025.7.31
+
+Add Features:
+- Support for backup and restore functionality
+- Support for specifying default upload settings for certain parameters
+- Support for API Token authentication, opening up more interfaces
 
 ## 2025.7.28
 

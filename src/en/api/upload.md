@@ -6,6 +6,7 @@ The Upload API supports uploading files to CloudFlare ImgBed through third parti
 
 - **Endpoint**: `/upload`
 - **Method**: `POST`
+- **Authentication**: Upload authentication code or API Token required (requires `upload` privileges)
 - **Content Type**: `multipart/form-data`
 - **File Size Limit**: Depends on storage channel
 

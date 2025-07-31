@@ -1,6 +1,6 @@
 # 快速开始
 
-本指南将帮助您在 5 分钟内快速部署并使用 CloudFlare ImgBed。
+本指南将帮助您在 15 分钟内快速部署并使用 CloudFlare ImgBed。
 
 ## 📱 快速体验
 

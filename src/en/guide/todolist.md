@@ -52,15 +52,15 @@
 35. :white_check_mark: ~~Integrate S3 API channel~~ (Completed on 2024.2.3)
 36. :white_check_mark: ~~Support short link naming~~ (Completed on 2025.2.1)
 37. :white_check_mark: ~~Support dark mode~~ (Completed on 2025.1.11)
-38. :hourglass_flowing_sand: Support KV backup & restore
+38. :white_check_mark: ~~Support KV backup & restore~~ (Completed on 2025.7.31)
 39. :white_check_mark: ~~Footer can be hidden~~ (Completed on 2025.2.4)
-40. :white_check_mark: Enhanced search function
-41. :white_check_mark: Support pasting multiple links, external link management
+40. :white_check_mark: ~~Enhanced search function~~
+41. :white_check_mark: ~~Support pasting multiple links, external link management~~
 42. :hourglass_flowing_sand: Record MD5 on upload, support file hard link
 43. :hourglass_flowing_sand: Show recent uploads on upload page
-44. :hourglass_flowing_sand: Configure upload page defaults from admin
-45. :white_check_mark: Add announcement feature
-46. :hourglass_flowing_sand: Set width/height params when accessing images
+44. :white_check_mark: ~~Configure upload page defaults from admin~~
+45. :white_check_mark: ~~Add announcement feature~~
+46. :hourglass_flowing_sand: Show width/height params when accessing images
 47. :hourglass_flowing_sand: Convert image format on upload
 
 
@@ -74,5 +74,5 @@
 6. :white_check_mark: ~~R2 channel deletes from bucket when deleted in admin~~ (Fixed on 2024.12.4)
 7. :white_check_mark: ~~Add CORS header `access-control-allow-origin: *` to file response~~ (Fixed on 2024.12.9)
 8. :white_check_mark: ~~Add access whitelist to upload page~~ (Fixed on 2024.12.11)
-9. :white_check_mark: Fix long file name blocking action buttons
-10. :white_check_mark: Fix `list` API data integrity issue
+9. :white_check_mark: ~~Fix long file name blocking action buttons~~
+10. :white_check_mark: ~~Fix `list` API data integrity issue~~

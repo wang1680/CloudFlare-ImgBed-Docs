@@ -52,14 +52,14 @@
 35. :white_check_mark:~~接入S3 API渠道~~（2024.2.3已完成）
 36. :white_check_mark:~~支持短链接命名方式~~（2025.2.1已完成）
 37. :white_check_mark:~~支持深色模式~~（2025.1.11已完成）
-38. :hourglass_flowing_sand:支持KV备份恢复功能
+38. :white_check_mark:~~支持KV备份恢复功能~~（2025.7.31已完成）
 39. :white_check_mark:~~页脚可自定义隐藏~~（2025.2.4已完成）
-40. :white_check_mark:搜索功能增强
-41. :white_check_mark:支持粘贴多个链接，支持外链管理
+40. :white_check_mark:~~搜索功能增强~~
+41. :white_check_mark:~~支持粘贴多个链接，支持外链管理~~
 42. :hourglass_flowing_sand:上传文件记录MD5，支持文件硬链接
 43. :hourglass_flowing_sand:上传页面增加最近上传展示
-44. :hourglass_flowing_sand:支持从后台管理处配置上传页默认设置
-45. :white_check_mark:增加公告功能
+44. :white_check_mark:~~支持从后台管理处配置上传页默认设置~~
+45. :white_check_mark:~~增加公告功能~~
 46. :hourglass_flowing_sand:支持访问图片时设置宽高参数
 47. :hourglass_flowing_sand:支持上传时转换图片格式
 
@@ -76,5 +76,5 @@
 6. :white_check_mark:~~R2渠道在管理端删除时，存储桶同步删除~~（2024.12.4已修复）
 7. :white_check_mark:~~读取文件响应头增加允许跨域头`access-control-allow-origin: *`~~（2024.12.9已修复）
 8. :white_check_mark:~~上传界面加入访问限制白名单~~（2024.12.11已修复）
-9. :white_check_mark:修复文件名过长挡住操作按钮的问题
-10. :white_check_mark:修复`list`接口返回数据完整性问题
+9. :white_check_mark:~~修复文件名过长挡住操作按钮的问题~~
+10. :white_check_mark:~~修复`list`接口返回数据完整性问题~~

@@ -108,15 +108,17 @@ Frontend web-related settings are configured in "System Settings" → "Web Setti
 | siteIcon | Website Icon | String | Only supports `string` type, set to your custom website icon link |
 | ownerName | Image Hosting Name | String | Only supports `string` type, set to your custom image hosting name (default is `Sanyue`) |
 | logoUrl | Image Hosting Logo | String | Only supports `string` type, set to your custom image hosting logo link |
-| announcement | Announcement | String | Only supports `string` type, can be HTML format, set to your custom announcement content (if any) |
-| loginBkImg | Login Page Background | List/String | 1. When field type is `list`, list elements are image links to be added to the carousel list (when list has only one image, it becomes a fixed background), like `["1.jpg","2.jpg"]`<br />2. When field type is `string`, currently **only supports** string value `bing`, setting this value enables bing random image carousel mode. |
-| uploadBkImg | Upload Page Background | List/String | Same as above |
-| adminLoginBkImg | Admin Page Background | List/String | Same as above |
 | bkInterval | Background Switch Interval | Positive Integer | Set to background image carousel time, default `3000`, unit `ms`.<br />For example, if you want to switch every 10s, set to `10000`. |
 | bkOpacity | Background Image Transparency | Float in (0,1] | Displayed background image transparency, default is `1`.<br />If you think the display effect is poor, you can customize it, like `0.8` |
+| urlPrefix | Default URL Prefix | String | Only supports `string` type, set to custom global default link prefix, this prefix will override the original default prefix, but will not override user-customized link prefixes |
+| announcement | Announcement | String | Only supports `string` type, can be HTML format, set to your custom announcement content (if any) |
+| defaultUploadChannel | Default Upload Channel | String | Only supports `string` type, set to your custom default upload channel, supports `telegram` (Telegram channel), `cfr2` (Cloudflare R2), and `s3` (S3 channel) |
+| defaultUploadNameType | Default Naming Method | String | Only supports `string` type, set to your custom default upload file naming method, supports `default` (default), `index` (only prefix), `original` (only original name), and `short` (short link) |
+| loginBkImg | Login Page Background | List/String | 1. When field type is `list`, list elements are image links to be added to the carousel list (when list has only one image, it becomes a fixed background), like `["1.jpg","2.jpg"]`<br />2. When field type is `string`, currently **only supports** string value `bing`, setting this value enables bing random image carousel mode. |
+| uploadBkImg | Upload Page Background | List/String | Same as loginBkImg |
 | footerLink | Footer Portal Link | String | Only supports `string` type, set to your custom destination address (like personal blog link) |
 | disableFooter | Hide Footer | boolean | Supports `boolean` type, set to `true` to disable footer, default `false` |
-| urlPrefix | Default URL Prefix | String | Only supports `string` type, set to custom global default link prefix, this prefix will override the original default prefix, but will not override user-customized link prefixes |
+| adminLoginBkImg | Admin Page Background | List/String | Same as loginBkImg |
 
 ## 🛠️ Other Settings
 Other setting items are configured in "System Settings" → "Other Settings" in the admin backend
