@@ -21,7 +21,7 @@ The List API supports retrieving file lists from CloudFlare ImgBed.
 | `dir` | string | No | `""` | Specify directory path |
 | `search` | string | No | `""` | Search keyword, supports filename search |
 | `channel` | string | No | `""` | Filter by storage channel: `telegram`, `cfr2`, `s3` |
-| `listType` | string | No | `""` | Filter by review result type: `None`, `adult`, `teen`, `everyone` |
+| `listType` | string | No | `""` | Filter by review result type: `None`, `Block`, `White` |
 | `action` | string | No | `""` | Special operations: `rebuild`, `info` |
 
 ## Feature Description
@@ -89,7 +89,7 @@ Get basic information and status of the index.
     "/": 30
   },
   "typeStats": {
-    "adult": 20
+    "None": 20
   },
   "oldestFile": {},
   "newestFile": {}

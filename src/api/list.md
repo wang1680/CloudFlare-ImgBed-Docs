@@ -21,7 +21,7 @@
 | `dir` | string | 否 | `""` | 指定目录路径 |
 | `search` | string | 否 | `""` | 搜索关键词，支持文件名搜索 |
 | `channel` | string | 否 | `""` | 筛选存储渠道：`telegram`、`cfr2`、`s3` |
-| `listType` | string | 否 | `""` | 审查结果类型筛选：`None`、`adult`、`teen`、`everyone` |
+| `listType` | string | 否 | `""` | 文件状态筛选：`None`、`Block`、`White` |
 | `action` | string | 否 | `""` | 特殊操作：`rebuild`、`info` |
 
 ## 功能说明
@@ -90,7 +90,7 @@
     "/": 30
   },
   "typeStats": {
-    "adult": 20
+    "None": 20
   },
   "oldestFile": {},
   "newestFile": {}
