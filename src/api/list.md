@@ -55,7 +55,7 @@
       "name": "example/image.jpg",
       "metadata": {
         "Channel": "telegram",
-        "TimeStamp": "2024-01-01T00:00:00.000Z",
+        "TimeStamp": "1754020094217",
         "File-Mime": "image/jpeg",
         "File-Size": "1024000"
       }
@@ -66,7 +66,7 @@
   ],
   "totalCount": 100, // 指定目录和子目录下的文件总数
   "returnedCount": 50, // 实际返回的文件数量
-  "indexLastUpdated": "2024-01-01T00:00:00.000Z",
+  "indexLastUpdated": "1754020094217",
   "isIndexedResponse": true
 }
 ```
@@ -76,7 +76,7 @@
 ```json
 {
   "sum": 100,
-  "indexLastUpdated": "2024-01-01T00:00:00.000Z"
+  "indexLastUpdated": "1754020094217"
 }
 ```
 
@@ -86,7 +86,7 @@
 ```json
 {
   "totalFiles": 100,
-  "lastUpdated": "2024-01-01T00:00:00.000Z",
+  "lastUpdated": "1754020094217",
   "channelStats": {
     "telegram": 20
   },

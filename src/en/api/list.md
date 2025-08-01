@@ -55,7 +55,7 @@ Get basic information and status of the index.
       "name": "example/image.jpg",
       "metadata": {
         "Channel": "telegram",
-        "TimeStamp": "2024-01-01T00:00:00.000Z",
+        "TimeStamp": "1754020094217",
         "File-Mime": "image/jpeg",
         "File-Size": "1024000"
       }
@@ -66,7 +66,7 @@ Get basic information and status of the index.
   ],
   "totalCount": 100, // Total file count in the specified directory and subdirectories
   "returnedCount": 50, // Actual number of files returned
-  "indexLastUpdated": "2024-01-01T00:00:00.000Z",
+  "indexLastUpdated": "1754020094217",
   "isIndexedResponse": true
 }
 ```
@@ -76,7 +76,7 @@ Get basic information and status of the index.
 ```json
 {
   "sum": 100,
-  "indexLastUpdated": "2024-01-01T00:00:00.000Z"
+  "indexLastUpdated": "1754020094217"
 }
 ```
 
@@ -85,7 +85,7 @@ Get basic information and status of the index.
 ```json
 {
   "totalFiles": 100,
-  "lastUpdated": "2024-01-01T00:00:00.000Z",
+  "lastUpdated": "1754020094217",
   "channelStats": {
     "telegram": 20
   },
