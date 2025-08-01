@@ -18,6 +18,7 @@
 | `start` | number | 否 | `0` | 起始位置，用于分页 |
 | `count` | number | 否 | `50` | 返回数量，`-1`表示不限制数量 |
 | `sum` | boolean | 否 | `false` | 是否只返回总数统计（count为 -1 生效） |
+| `recursive` | boolean | 否 | `false` | 是否递归获取子目录下的文件 |
 | `dir` | string | 否 | `""` | 指定目录路径 |
 | `search` | string | 否 | `""` | 搜索关键词，支持文件名搜索 |
 | `channel` | string | 否 | `""` | 筛选存储渠道：`telegram`、`cfr2`、`s3` |
@@ -30,7 +31,10 @@
 获取指定目录下的文件和子目录列表，支持分页、搜索和筛选。
 
 ### 统计查询
-当 `count=-1` 且 `sum=true` 时，只返回文件总数统计。
+当 `count=-1` 且 `sum=true` 时，只返回文件总数统计（指定目录和子目录下的文件）。
+
+### 递归查询
+当 `recursive=true` 时，递归获取子目录下的所有文件。
 
 ### 特殊操作
 
@@ -60,8 +64,8 @@
   "directories": [
     "example/subfolder"
   ],
-  "totalCount": 100,
-  "returnedCount": 50,
+  "totalCount": 100, // 指定目录和子目录下的文件总数
+  "returnedCount": 50, // 实际返回的文件数量
   "indexLastUpdated": "2024-01-01T00:00:00.000Z",
   "isIndexedResponse": true
 }

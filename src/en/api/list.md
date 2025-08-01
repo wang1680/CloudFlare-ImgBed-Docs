@@ -18,6 +18,7 @@ The List API supports retrieving file lists from CloudFlare ImgBed.
 | `start` | number | No | `0` | Starting position for pagination |
 | `count` | number | No | `50` | Number of items to return, `-1` means no limit |
 | `sum` | boolean | No | `false` | Whether to return only total count statistics (effective when count is -1) |
+| `recursive` | boolean | No | `false` | Whether to recursively get files in subdirectories |
 | `dir` | string | No | `""` | Specify directory path |
 | `search` | string | No | `""` | Search keyword, supports filename search |
 | `channel` | string | No | `""` | Filter by storage channel: `telegram`, `cfr2`, `s3` |
@@ -30,7 +31,10 @@ The List API supports retrieving file lists from CloudFlare ImgBed.
 Retrieve lists of files and subdirectories in the specified directory, with support for pagination, search, and filtering.
 
 ### Statistics Query
-When `count=-1` and `sum=true`, only returns total file count statistics.
+When `count=-1` and `sum=true`, only returns total file count statistics (for the specified directory and subdirectories).
+
+### Recursive Query
+When `recursive=true`, recursively retrieves all files in subdirectories.
 
 ### Special Operations
 
@@ -60,8 +64,8 @@ Get basic information and status of the index.
   "directories": [
     "example/subfolder"
   ],
-  "totalCount": 100,
-  "returnedCount": 50,
+  "totalCount": 100, // Total file count in the specified directory and subdirectories
+  "returnedCount": 50, // Actual number of files returned
   "indexLastUpdated": "2024-01-01T00:00:00.000Z",
   "isIndexedResponse": true
 }
