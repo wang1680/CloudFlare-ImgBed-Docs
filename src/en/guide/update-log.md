@@ -2,10 +2,13 @@
 
 ## Recent Updates
 
-Add Features:
-- Support for backup and restore functionality
-- Support for specifying default upload settings for certain parameters
-- Support for API Token authentication, opening up more interfaces
+Fix Bugs:
+- Fixed issue with images not previewing in user management page
+
+## 2025.8.5
+
+Fix Bugs:
+- Fixed issue with images not previewing in user management page
 
 ## 2025.7.31
 
