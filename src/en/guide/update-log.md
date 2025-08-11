@@ -2,8 +2,15 @@
 
 ## Recent Updates
 
-Fix Bugs:
-- Fixed issue with images not previewing in user management page
+Add Features:
+- web upload now supports automatic retry on failure
+- list API now supports fallback to traditional data return method in case of index build failure
+
+## 2025.8.11
+
+Add Features:
+- web upload now supports automatic retry on failure
+- list API now supports fallback to traditional data return method in case of index build failure
 
 ## 2025.8.5
 
