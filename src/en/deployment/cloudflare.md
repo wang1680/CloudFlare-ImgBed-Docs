@@ -47,13 +47,21 @@ The build command for v2.0 has changed to `npm install`. Please ensure you use t
 1. Click "Save and Deploy"
 2. Wait for the first deployment to complete (about 2-3 minutes)
 
-## 🗄️ Step 3: Configure KV Database
+## 🗄️ Step 3: Configure Database
 
-KV database is used to store file metadata and is a required component.
+The database is used to store file metadata and is a required component. You can choose between `KV` database and `D1` database. The comparison is shown in the table below. **Please choose one based on your usage scenario**.
 
-### 3.1 Create KV Namespace
+| Feature | KV Database | D1 Database |
+|---------|-------------|-------------|
+| Read/Write Performance | High | Lower |
+| Free Quota | Less | More |
+| Large File Upload | Supported | Not Supported |
 
-1. In Cloudflare Dashboard, select "Workers & Pages"
+### 3.1 KV Database Configuration
+
+#### Create KV Namespace
+
+1. In Cloudflare Dashboard, select "Storage & Databases"
 2. Click "KV"
 3. Click "Create namespace"
 4. Enter namespace name: `img_url` (recommended name)
@@ -62,23 +70,50 @@ KV database is used to store file metadata and is a required component.
 ![Create KV Namespace](/images/deployment/kv-create.png)
 ![Create KV Namespace](/images/deployment/kv-create-1.png)
 
-### 3.2 Bind KV to Project
+#### Bind KV to Project
 
 1. Return to your Pages project
-2. Select "Settings" → "Bindings"
+2. Select "Settings" → "Functions"
 3. Click "Add" → "KV namespace"
 4. Fill in binding information:
    - **Variable name**: `img_url` (must be this name)
-   - **KV namespace**: Select the newly created namespace
+   - **KV namespace**: Select the namespace you just created
 5. Click "Save"
 
-::: warning Important Notice
-The variable name must be `img_url`, which is used in the code to access the KV database. Do not change this name.
+::: warning Note
+When binding KV, the variable name must be `img_url`, which is the preset variable name for the project. Incorrect naming will cause issues such as inability to access the admin interface.
 :::
+
+### 3.2 D1 Database Configuration
+
+#### Create D1 Database
+
+1. In Cloudflare Dashboard, select "Storage & Databases"
+2. Click "D1 SQL Database"
+3. Click "Create database"
+4. Enter database name: `img_d1` (recommended name)
+5. Click "Add"
+
+#### Initialize D1 Database
+
+1. After creation, click to enter the database details page
+2. Select the "Console" tab
+3. Paste the initialization statement in the SQL input box (see [project repository](https://github.com/MarSeventh/CloudFlare-ImgBed/blob/main/database/init.sql))
+4. Click "Execute"
+
+#### Bind D1 to Project
+
+1. Return to your Pages project
+2. Select "Settings" → "Functions"
+3. Click "Add" → "D1 database"
+4. Fill in binding information:
+   - **Variable name**: `img_d1` (must be this name)
+   - **D1 database**: Select the database you just created
+5. Click "Save"
 
 ## 🔄 Step 4: Redeploy
 
-After binding KV, you need to redeploy for it to take effect:
+After binding the database, you need to redeploy for it to take effect:
 
 1. Go to the project's "Deployments" page
 2. Find the latest deployment record

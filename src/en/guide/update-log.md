@@ -3,8 +3,12 @@
 ## Recent Updates
 
 Add Features:
-- web upload now supports automatic retry on failure
-- list API now supports fallback to traditional data return method in case of index build failure
+- Adapted to Cloudflare D1 database
+
+## 2025.8.23
+
+Add Features:
+- Adapted to Cloudflare D1 database
 
 ## 2025.8.11
 

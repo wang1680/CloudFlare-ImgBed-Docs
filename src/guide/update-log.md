@@ -3,8 +3,12 @@
 ## 最近更新
 
 Add Features:
-- web上传支持失败自动重试
-- list接口在索引构建失败时支持回退到传统方式返回数据
+- 适配Cloudflare D1数据库
+
+## 2025.8.23
+
+Add Features:
+- 适配Cloudflare D1数据库
 
 ## 2025.8.11
 
