@@ -4,12 +4,13 @@
 
 ## 插件
 
-- **编辑器内自动上传（油猴脚本）**：https://greasyfork.org/zh-CN/scripts/529816-image-uploader-to-markdown-to-cloudflare-imgbed （_作者：Linux.do: [calg_c](https://linux.do/u/calg_c/summary)_）
+- **编辑器内自动上传（油猴脚本）**：[项目链接](https://greasyfork.org/zh-CN/scripts/529816-image-uploader-to-markdown-to-cloudflare-imgbed) （_作者：Linux.do: [calg_c](https://linux.do/u/calg_c/summary)_）
+- **Typecho插件**：[项目链接](https://github.com/Lord2333/CF-ImgBed-Uploader_for_Typecho) （_作者：[Lord2333](https://github.com/Lord2333)_）
 
 ## 应用
 
-- **向TG BOT发送文件上传图床**：[uki0xc/img-up-bot: 使用telegram机器人链接图床进行上传](https://github.com/uki0xc/img-up-bot?tab=readme-ov-file) （_作者：[uki0xc](https://github.com/uki0xc)_)
-- **自动备份元数据**：[yunsen2025/cloudflare-imgbed-auto-backup: 使用Action自动备份元数据到仓库](https://github.com/yunsen2025/cloudflare-imgbed-auto-backup) （_作者：[yunsen2025](https://github.com/yunsen2025)_)
+- **向TG BOT发送文件上传图床**：[项目链接](https://github.com/uki0xc/img-up-bot?tab=readme-ov-file) （_作者：[uki0xc](https://github.com/uki0xc)_）
+- **自动备份元数据**：[项目链接](https://github.com/yunsen2025/cloudflare-imgbed-auto-backup) （_作者：[yunsen2025](https://github.com/yunsen2025)_）
 
 ## 优质内容推荐
 
