@@ -9,6 +9,7 @@
 ## 应用
 
 - **向TG BOT发送文件上传图床**：[uki0xc/img-up-bot: 使用telegram机器人链接图床进行上传](https://github.com/uki0xc/img-up-bot?tab=readme-ov-file) （_作者：[uki0xc](https://github.com/uki0xc)_)
+- **自动备份元数据**：[yunsen2025/cloudflare-imgbed-auto-backup: 使用Action自动备份元数据到仓库](https://github.com/yunsen2025/cloudflare-imgbed-auto-backup) （_作者：[yunsen2025](https://github.com/yunsen2025)_)
 
 ## 优质内容推荐
 
@@ -21,6 +22,7 @@
 - [CloudFlare-ImgBed项目 – yunsen2025的小窝](https://www.yunsen2025.top/category/cloudflare-imgbed/)
   - [完全免费，图文教程手把手教你使用cloudflare搭建一个无限空间的私人图床 支持身份认证与成人元素鉴定！ - yunsen2025的小窝](https://www.yunsen2025.top/blog-cfpages-syq-imgbed)
   - [为CloudFlare-ImgBed图床配置国内CDN并分线路解析，以最低成本享受极致速度！ – yunsen2025的小窝](https://www.yunsen2025.top/cloudflare-imgbed-fen-xian-pei-zhi-guo-nei-cdn/)
+  - [【开源】cloudflare-imgbed项目使用Github Actions自动备份元数据](https://www.yunsen2025.top/024-cloudflare-imgbed-auto-backup/)
 - [利用cloudflare pages搭建telegram频道图床 (lepidus.me)](https://blogstr.lepidus.me/post/1725801323700/)
 - [搭建基于CloudFlare和Telegram的免费图床教程 - 刘学馆 | Blog (sexy0769.com)](https://blog.sexy0769.com/skill/735.html)
 - [CloudFlare+Github，打造属于自己的免费图床 - 大头钉的小小blog (luckyting.top)](https://luckyting.top/index.php/archives/20/)
