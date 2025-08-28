@@ -93,13 +93,13 @@ v2.0 版本的构建命令已变更为 `npm install`，请确保使用正确的�
 2. 点击 "D1 SQL 数据库"
 3. 点击 "创建数据库"
 4. 输入数据库名称：`img_d1`（建议使用此名称）
-5. 点击 "添加"
+5. 点击 "创建"
 
 #### 初始化 D1 数据库
 
 1. 创建完成后，点击进入数据库详情页
 2. 选择 "控制台" 选项卡
-3. 在 SQL 输入框中粘贴初始化语句（见[项目仓库](https://github.com/MarSeventh/CloudFlare-ImgBed/blob/main/database/init.sql)）
+3. 在 SQL 输入框中逐段粘贴并执行初始化语句（见[项目仓库](https://github.com/MarSeventh/CloudFlare-ImgBed/blob/main/database/init.sql)）
 4. 点击 "执行"
 
 #### 绑定 D1 到项目
@@ -114,7 +114,7 @@ v2.0 版本的构建命令已变更为 `npm install`，请确保使用正确的�
 
 ## 🔄 第四步：重新部署
 
-绑定 KV 后需要重新部署以生效：
+绑定数据库后需要重新部署以生效：
 
 1. 进入项目的 "部署" 页面
 2. 找到最新的部署记录

@@ -98,7 +98,7 @@ When binding KV, the variable name must be `img_url`, which is the preset variab
 
 1. After creation, click to enter the database details page
 2. Select the "Console" tab
-3. Paste the initialization statement in the SQL input box (see [project repository](https://github.com/MarSeventh/CloudFlare-ImgBed/blob/main/database/init.sql))
+3. Paste and execute the initialization statement in the SQL input box paragraph by paragraph (see [project repository](https://github.com/MarSeventh/CloudFlare-ImgBed/blob/main/database/init.sql))
 4. Click "Execute"
 
 #### Bind D1 to Project

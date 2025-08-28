@@ -130,7 +130,7 @@ docker run -d -p 127.0.0.1:5000:5000/tcp \
 便于开发者进行bug的捕捉和定位，但是过程中可能收集到访问链接、域名等信息，如您不愿意泄露类似信息给项目开发者，请在管理后台禁用此功能。
 
 ### 随机图像 API
-- 目录：开放随机图权限的目录，默认为根目录，多个目录用逗号分隔；目录均采用绝对路径，例如`/img/cover`，表示该目录及其所有子目录的文件可被随机图API访问
+- 目录：开放随机图权限的目录，默认为根目录，多个目录用逗号分隔；目录均采用绝对路径，例如`/img/cover`，表示该目录及其所有子目录的文件可被随机图API访问。
 
 ### CloudFlare API Token
 正常情况下，因为CloudFlare CDN缓存的存在，在管理端进行删除、拉黑、加白名单等操作不会立即生效，需要等到缓存过期才能生效。为了让操作立即生效，建议设置此项，设置方式如下：
@@ -139,6 +139,12 @@ docker run -d -p 127.0.0.1:5000:5000/tcp \
 - `CF_EMAIL`：Cloudflare 账户邮箱
 - `CF_API_KEY`：Cloudflare Global API Key
 ![获取方法](/images/deployment/cf-api-key.png)
+
+### WebDAV
+WebDAV 服务相关设置，详细介绍和使用方式请查看 [API 文档](../api/webdav.md)。
+- 启用 WebDAV 服务：开启或关闭 WebDAV 服务
+- 用户名：WebDAV 登录用户名
+- 密码：WebDAV 登录密码
 
 
 ## 🔧 环境变量清单

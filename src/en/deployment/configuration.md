@@ -127,7 +127,7 @@ Other setting items are configured in "System Settings" → "Other Settings" in 
 This helps developers capture and locate bugs, but may collect information such as access links and domain names during the process. If you don't want to disclose such information to project developers, please disable this feature in the admin backend.
 
 ### Random Image API
-- Directory: Directories with random image permissions, default is root directory, multiple directories separated by commas; all directories use absolute paths, e.g., `/img/cover`, indicating that files in this directory and all its subdirectories can be accessed by the random image API
+- Directory: Directories with random image permissions, default is root directory, multiple directories separated by commas; all directories use absolute paths, e.g., `/img/cover`, indicating that files in this directory and all its subdirectories can be accessed by the random image API.
 
 ### CloudFlare API Token
 Under normal circumstances, due to the existence of CloudFlare CDN cache, operations such as deletion, blacklisting, and whitelisting in the admin backend will not take effect immediately and need to wait until the cache expires. To make operations take effect immediately, it is recommended to set this item as follows:
@@ -136,6 +136,12 @@ Under normal circumstances, due to the existence of CloudFlare CDN cache, operat
 - `CF_EMAIL`: Cloudflare account email
 - `CF_API_KEY`: Cloudflare Global API Key
 ![How to get](/images/deployment/cf-api-key.png)
+
+### WebDAV
+WebDAV service related settings, detailed introduction and usage methods can be found in the [API documentation](../api/webdav.md).
+- Enable WebDAV Service: Turn on or off the WebDAV service
+- Username: WebDAV login username
+- Password: WebDAV login password
 
 ## 🔧 Environment Variables List
 

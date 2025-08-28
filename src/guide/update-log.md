@@ -3,7 +3,12 @@
 ## 最近更新
 
 Add Features:
-- 适配Cloudflare D1数据库
+- 支持提供 WebDAV 服务，可通过 WebDAV 客户端访问和管理文件
+
+## 2025.8.28
+
+Add Features:
+- 支持提供 WebDAV 服务，可通过 WebDAV 客户端访问和管理文件
 
 ## 2025.8.23
 

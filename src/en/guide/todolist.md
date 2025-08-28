@@ -34,7 +34,7 @@
 22. :white_check_mark: ~~Auto-switch channel on upload failure~~ (Completed on 2024.12.12)
 23. :white_check_mark: ~~Backend list API pagination~~ (Completed on 2024.2.5)
 24. :white_check_mark: ~~Support custom link prefix~~ (Completed on 2024.12.4)
-25. :memo: Integrate alist or implement webdav (under evaluation)
+25. :white_check_mark: ~~Integrate alist or implement webdav~~ (Completed on 2025.8.28)
 26. :white_check_mark: ~~File detail shows file size~~ (Completed on 2024.12.10)
 27. :white_check_mark: ~~Admin can set global default link prefix~~ (Completed on 2025.2.1)
 28. :white_check_mark: ~~Support more file formats~~ (Completed on 2024.12.9)

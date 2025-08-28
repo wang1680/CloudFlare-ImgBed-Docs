@@ -2,6 +2,8 @@
 
 CloudFlare ImgBed provides a series of API interfaces that facilitate users and developers to perform file upload, deletion, listing, and random image retrieval operations.
 
+Additionally, the project supports the standard WebDAV protocol, allowing users to manage files through WebDAV clients. For detailed information, please refer to the [WebDAV Documentation](./webdav).
+
 ## API Endpoints
 - **Upload API**: `/upload`
 - **Delete API**: `/api/manage/delete`

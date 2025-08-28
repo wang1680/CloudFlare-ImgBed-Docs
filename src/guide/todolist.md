@@ -34,7 +34,7 @@
 22. :white_check_mark:~~支持上传失败自动切换其他渠道尝试~~（2024.12.12已完成）
 23. :white_check_mark:~~后端list接口实现分页功能~~（2024.2.5已完成）
 24. :white_check_mark:~~支持自定义链接前缀~~（2024.12.4已完成）
-25. :memo:对接alist，或实现webdav（评估中）
+25. :white_check_mark:~~对接alist，或实现webdav~~（2025.8.28已完成）
 26. :white_check_mark:~~文件详情增加文件大小记录~~（2024.12.10已完成）
 27. :white_check_mark:~~支持管理员自定义全局默认链接前缀~~（2025.2.1已完成）
 28. :white_check_mark:~~开放更多文件格式~~（2024.12.9已完成）

@@ -111,6 +111,11 @@ CloudFlare ImgBed provides rich features to meet the needs of different users.
 - **Upload Interface**: Supports file upload and configuration
 - **Random Image Interface**: Randomly returns images from the image hosting
 
+### WebDAV Support
+- **Standard Protocol**: Supports WebDAV standard methods (PROPFIND, GET, PUT, DELETE, etc.)
+- **Directory Browsing**: Supports browsing and managing files via WebDAV clients
+- **File Operations**: Supports uploading, downloading, and deleting files and directories
+
 ### Third-party Integration
 
 - **PicGo Support**: Perfect compatibility with PicGo image hosting tool

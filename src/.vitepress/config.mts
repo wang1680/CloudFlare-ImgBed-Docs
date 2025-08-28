@@ -60,7 +60,8 @@ export default defineConfig({
               { text: 'Upload API', link: '/en/api/upload' },
               { text: 'Delete API', link: '/en/api/delete' },
               { text: 'List API', link: '/en/api/list' },
-              { text: 'Random Image API', link: '/en/api/random' }
+              { text: 'Random Image API', link: '/en/api/random' },
+              { text: 'WebDAV', link: '/en/api/webdav' }
             ]
           },
           {
@@ -138,7 +139,8 @@ export default defineConfig({
           { text: '上传 API', link: '/api/upload' },
           { text: '删除 API', link: '/api/delete' },
           { text: '列出 API', link: '/api/list' },
-          { text: '随机图 API', link: '/api/random' }
+          { text: '随机图 API', link: '/api/random' },
+          { text: 'WebDAV', link: '/api/webdav' }
         ]
       },
       {

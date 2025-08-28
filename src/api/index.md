@@ -2,6 +2,8 @@
 
 CloudFlare ImgBed 提供了一系列 API 接口，方便用户和开发者进行文件上传、删除、列出，以及随机图获取等操作。
 
+此外，项目还支持标准的 WebDAV 协议，方便用户通过 WebDAV 客户端进行文件管理，详细介绍请查看 [WebDAV 文档](./webdav)。
+
 ## API 端点
 - **上传 API**：`/upload`
 - **删除 API**：`/api/manage/delete`

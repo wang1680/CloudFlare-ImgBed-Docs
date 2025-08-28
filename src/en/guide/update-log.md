@@ -3,7 +3,12 @@
 ## Recent Updates
 
 Add Features:
-- Adapted to Cloudflare D1 database
+- Support for WebDAV service, allowing file access and management via WebDAV clients
+
+## 2025.8.28
+
+Add Features:
+- Support for WebDAV service, allowing file access and management via WebDAV clients
 
 ## 2025.8.23
 
