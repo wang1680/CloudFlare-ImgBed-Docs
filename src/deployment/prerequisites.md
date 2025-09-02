@@ -35,14 +35,14 @@
 > </div>
 - 在频道中发送一条测试消息
 - 向 [@VersaToolsBot](https://t.me/VersaToolsBot) 转发这条消息
-- 获得频道 ID（格式：`-1001234567890`）
+- 获得频道 ID（示例：`-1001234567890`）
 
 
 
 > ![获取频道 ID](/images/deployment/telegram-channel-id.png)
 
 ::: warning 注意
-- 频道 ID 前面的 `-` 号是必需的
+- 频道 ID 前面有 `-` 号时需要保留
 - Bot 必须具有频道管理员权限
 :::
 

@@ -36,12 +36,12 @@ The project supports different storage channels as backend storage. Each channel
 > </div>
 - Send a test message in the channel
 - Forward this message to [@VersaToolsBot](https://t.me/VersaToolsBot)
-- Get the channel ID (format: `-1001234567890`)
+- Get the channel ID (example: `-1001234567890`)
 
 > ![Get Channel ID](/images/deployment/telegram-channel-id.png)
 
 ::: warning Note
-- The `-` sign before the channel ID is required
+- The `-` sign before the channel ID must be retained
 - The Bot must have channel administrator permissions
 :::
 

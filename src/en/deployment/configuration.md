@@ -21,7 +21,7 @@ Visit `https://your-domain/dashboard`
 4. Fill in the prepared Token and Chat ID:
    - **Channel Name**: Custom name (e.g., Main Channel)
    - **Bot Token**: Token obtained from @BotFather
-   - **Chat ID**: Channel ID (with - sign)
+   - **Chat ID**: Channel ID (retain the `-` sign if present)
    - **Enable Status**: On
 5. Click "Save Settings"
 

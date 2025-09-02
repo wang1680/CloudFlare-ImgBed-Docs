@@ -19,21 +19,21 @@ This section collects common questions and solutions encountered by users when u
 
 - After setup is complete, confirm and you can use PicGo to upload to your self-hosted image hosting.
 
-## Q: What to do if uploading high-resolution images to Telegram channel fails?
+## Q: What to do if uploading high-resolution or certain images via Telegram channel fails?
 
 - Check if the `Server-side Compression` option is enabled during upload (Upload Page -> Upload Settings -> Server-side Compression). If it is enabled, try disabling it and re-uploading.
 
 ## Q: What to do if upload fails?
 
-- Check if environment variables like `TG_BOT_TOKEN`, `TG_CHAT_ID` are correctly configured
-- Check if the bot administrator has **sufficient permissions**
-- Check if **KV database is correctly bound**
+- Check if the upload channel is configured correctly
+- Check if the Telegram channel has granted the bot **sufficient permissions**
+- Check if **KV database or D1 database is correctly bound (one of the two)**
 - Check if updated to the **latest version**
 - Go to issues to find similar problems
 
 ## Q: Does `TG_CHAT_ID` have a `-` in front?
 
-- Pay attention to the image, there is a `-` in front
+- Follow the value returned by the bot, retain the `-` if present
 
 ## Q: Backend page cannot load records or images
 
