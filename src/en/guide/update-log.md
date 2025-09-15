@@ -2,8 +2,13 @@
 
 ## Recent Updates
 
-Add Features:
-- Support for WebDAV service, allowing file access and management via WebDAV clients
+Fix Bugs:
+- Fixed intermittent failure issue with list API channel filtering
+
+## 2025.9.15
+
+Fix Bugs:
+- Fixed intermittent failure issue with list API channel filtering
 
 ## 2025.8.28
 
