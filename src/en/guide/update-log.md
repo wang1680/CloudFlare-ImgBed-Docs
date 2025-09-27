@@ -3,7 +3,12 @@
 ## Recent Updates
 
 Fix Bugs:
-- Fixed intermittent failure issue with list API channel filtering
+- Fixed issue with custom site icon not taking effect
+
+## 2025.9.27
+
+Fix Bugs:
+- Fixed issue with custom site icon not taking effect
 
 ## 2025.9.15
 
