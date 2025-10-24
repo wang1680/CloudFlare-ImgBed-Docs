@@ -6,6 +6,8 @@
 
 - **编辑器内自动上传（油猴脚本）**：[项目链接](https://greasyfork.org/zh-CN/scripts/529816-image-uploader-to-markdown-to-cloudflare-imgbed) （_作者：Linux.do: [calg_c](https://linux.do/u/calg_c/summary)_）
 - **Typecho插件**：[项目链接](https://github.com/Lord2333/CF-ImgBed-Uploader_for_Typecho) （_作者：[Lord2333](https://github.com/Lord2333)_）
+- **Obsidian插件**：[项目链接](https://github.com/fantasy-ke/obsidian-cf-imgbed/tree/1.0.2) （_作者：[fantasy-ke](https://github.com/fantasy-ke)_）
+- **浏览器上传扩展（油猴脚本）**：[项目链接](https://greasyfork.org/en/scripts/552877-image-video-uploader-helper-intelligent-naming-version) （_作者：[yunskyline](https://github.com/yunskyline)_）
 
 ## 应用
 
