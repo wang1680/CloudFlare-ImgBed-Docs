@@ -21,6 +21,8 @@
 | `recursive` | boolean | 否 | `false` | 是否递归获取子目录下的文件 |
 | `dir` | string | 否 | `""` | 指定目录路径 |
 | `search` | string | 否 | `""` | 搜索关键词，支持文件名搜索 |
+| `includeTags` | string | 否 | `""` | 包含标签筛选，多个标签用逗号分隔，文件必须包含所有指定标签 |
+| `excludeTags` | string | 否 | `""` | 排除标签筛选，多个标签用逗号分隔，文件不能包含任何指定标签 |
 | `channel` | string | 否 | `""` | 筛选存储渠道：`telegram`、`cfr2`、`s3` |
 | `listType` | string | 否 | `""` | 文件状态筛选：`None`、`Block`、`White` |
 | `action` | string | 否 | `""` | 特殊操作：`rebuild`、`info` |
@@ -35,6 +37,13 @@
 
 ### 递归查询
 当 `recursive=true` 时，递归获取子目录下的所有文件。
+
+### 标签筛选
+支持通过标签对文件进行精确筛选：
+- **包含标签 (`includeTags`)**：文件必须包含所有指定的标签才会被返回
+- **排除标签 (`excludeTags`)**：文件不能包含任何指定的标签
+- 标签匹配不区分大小写，支持中文、日文、韩文等多语言标签
+- 可以同时使用包含和排除标签进行复合筛选
 
 ### 特殊操作
 
@@ -151,5 +160,25 @@ curl --location --request GET 'https://your.domain/api/manage/list?count=-1&sum=
 
 ```bash
 curl --location --request GET 'https://your.domain/api/manage/list?action=rebuild' \
+--header 'Authorization: Bearer your_token'
+```
+
+### 按标签筛选
+
+```bash
+# 包含特定标签的文件
+curl --location --request GET 'https://your.domain/api/manage/list?includeTags=风景,旅行' \
+--header 'Authorization: Bearer your_token'
+```
+
+```bash
+# 排除特定标签的文件
+curl --location --request GET 'https://your.domain/api/manage/list?excludeTags=私密,草稿' \
+--header 'Authorization: Bearer your_token'
+```
+
+```bash
+# 组合使用：包含"风景"标签但排除"草稿"标签
+curl --location --request GET 'https://your.domain/api/manage/list?includeTags=风景&excludeTags=草稿' \
 --header 'Authorization: Bearer your_token'
 ```

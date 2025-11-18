@@ -2,8 +2,17 @@
 
 ## Recent Updates
 
-Fix Bugs:
-- Fixed issue with custom site icon not taking effect
+Add Features:
+- Admin panel supports tag management
+- Supports dark mode following system settings
+- Beautified some page display effects
+
+## 2025.11.18
+
+Add Features:
+- Admin panel supports tag management
+- Supports dark mode following system settings
+- Beautified some page display effects
 
 ## 2025.9.27
 

@@ -90,6 +90,7 @@ CloudFlare ImgBed provides rich features to meet the needs of different users.
 - **Paginated Loading**: Efficient loading for large numbers of files
 - **Batch Operations**: Supports operations in user-selected order
 - **File Movement**: Supports moving files between directories
+- **Tag Management**: Add and manage tags for files
 
 ### User Management
 

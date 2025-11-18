@@ -21,6 +21,8 @@ The List API supports retrieving file lists from CloudFlare ImgBed.
 | `recursive` | boolean | No | `false` | Whether to recursively get files in subdirectories |
 | `dir` | string | No | `""` | Specify directory path |
 | `search` | string | No | `""` | Search keyword, supports filename search |
+| `includeTags` | string | No | `""` | Include tags filter, multiple tags separated by comma, files must contain all specified tags |
+| `excludeTags` | string | No | `""` | Exclude tags filter, multiple tags separated by comma, files cannot contain any specified tags |
 | `channel` | string | No | `""` | Filter by storage channel: `telegram`, `cfr2`, `s3` |
 | `listType` | string | No | `""` | Filter by review result type: `None`, `Block`, `White` |
 | `action` | string | No | `""` | Special operations: `rebuild`, `info` |
@@ -35,6 +37,13 @@ When `count=-1` and `sum=true`, only returns total file count statistics (for th
 
 ### Recursive Query
 When `recursive=true`, recursively retrieves all files in subdirectories.
+
+### Tag Filtering
+Supports precise file filtering by tags:
+- **Include Tags (`includeTags`)**: Files must contain all specified tags to be returned
+- **Exclude Tags (`excludeTags`)**: Files cannot contain any of the specified tags
+- Tag matching is case-insensitive and supports multilingual tags (Chinese, Japanese, Korean, etc.)
+- Include and exclude tags can be used together for complex filtering
 
 ### Special Operations
 
@@ -150,5 +159,25 @@ curl --location --request GET 'https://your.domain/api/manage/list?count=-1&sum=
 
 ```bash
 curl --location --request GET 'https://your.domain/api/manage/list?action=rebuild' \
+--header 'Authorization: Bearer your_token'
+```
+
+### Filter by Tags
+
+```bash
+# Files containing specific tags
+curl --location --request GET 'https://your.domain/api/manage/list?includeTags=landscape,travel' \
+--header 'Authorization: Bearer your_token'
+```
+
+```bash
+# Files excluding specific tags
+curl --location --request GET 'https://your.domain/api/manage/list?excludeTags=private,draft' \
+--header 'Authorization: Bearer your_token'
+```
+
+```bash
+# Combined usage: include "landscape" tag but exclude "draft" tag
+curl --location --request GET 'https://your.domain/api/manage/list?includeTags=landscape&excludeTags=draft' \
 --header 'Authorization: Bearer your_token'
 ```

@@ -2,8 +2,17 @@
 
 ## 最近更新
 
-Fix Bugs:
-- 修复自定义网站图标不生效的问题
+Add Features:
+- 管理端支持标签管理（D1数据库部署升级需要依据database/migrations/v2.2.1_add_tags_column.sql进行手动添加tags字段）
+- 支持深色模式跟随系统
+- 美化部分页面显示效果
+
+## 2025.11.18
+
+Add Features:
+- 管理端支持标签管理（D1数据库部署升级需要依据database/migrations/v2.2.1_add_tags_column.sql进行手动添加tags字段）
+- 支持深色模式跟随系统
+- 美化部分页面显示效果
 
 ## 2025.9.27
 
