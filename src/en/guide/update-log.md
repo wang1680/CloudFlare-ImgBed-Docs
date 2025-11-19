@@ -3,9 +3,12 @@
 ## Recent Updates
 
 Add Features:
-- Admin panel supports tag management
-- Supports dark mode following system settings
-- Beautified some page display effects
+- Optimized admin panel tag management user experience
+
+## 2025.11.19
+
+Add Features:
+- Optimized admin panel tag management user experience
 
 ## 2025.11.18
 
