@@ -62,6 +62,8 @@
 45. :white_check_mark:~~增加公告功能~~
 46. :hourglass_flowing_sand:支持访问图片时设置宽高参数
 47. :hourglass_flowing_sand:支持上传时转换图片格式
+48. :hourglass_flowing_sand:支持上传图片转换为WebP格式
+49. :hourglass_flowing_sand:支持API上传渠道
 
 
 ## Fix Bugs👻

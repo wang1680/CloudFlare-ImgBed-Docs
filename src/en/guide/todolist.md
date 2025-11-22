@@ -62,6 +62,8 @@
 45. :white_check_mark: ~~Add announcement feature~~
 46. :hourglass_flowing_sand: Show width/height params when accessing images
 47. :hourglass_flowing_sand: Convert image format on upload
+48. :hourglass_flowing_sand: Support converting uploaded images to WebP format
+49. :hourglass_flowing_sand: Support API upload channel
 
 
 ## Fix Bugs👻

@@ -14,12 +14,13 @@ Cloudflare Pages is the recommended deployment method, offering free hosting, gl
 ### 2.1 Access Cloudflare Dashboard
 
 1. Login to [Cloudflare Dashboard](https://dash.cloudflare.com/)
-2. Select "Workers & Pages" from the left menu
+2. Select the "Compute & AI" -> "Workers & Pages" from the left menu
 3. Click "Create application"
-4. Select the "Pages" tab
-5. Click "Connect to Git"
+4. At the bottom, under `Looking to deploy Pages?`, select "Get started"
+5. Click "Start with an existing Git repository"
 
 ![Create Pages Project](/images/deployment/pages-create.png)
+![Create Pages Project](/images/deployment/pages-create-1.png)
 
 ### 2.2 Connect GitHub Repository
 
@@ -62,10 +63,10 @@ The database is used to store file metadata and is a required component. You can
 #### Create KV Namespace
 
 1. In Cloudflare Dashboard, select "Storage & Databases"
-2. Click "KV"
-3. Click "Create namespace"
+2. Click "Workers KV"
+3. Click "Create instance"
 4. Enter namespace name: `img_url` (recommended name)
-5. Click "Add"
+5. Click "Create"
 
 ![Create KV Namespace](/images/deployment/kv-create.png)
 ![Create KV Namespace](/images/deployment/kv-create-1.png)

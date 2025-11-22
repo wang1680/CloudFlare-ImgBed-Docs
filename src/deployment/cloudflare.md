@@ -15,12 +15,13 @@ Cloudflare Pages 是推荐的部署方式，提供免费托管、全球 CDN 加�
 ### 2.1 访问 Cloudflare Dashboard
 
 1. 登录 [Cloudflare Dashboard](https://dash.cloudflare.com/)
-2. 选择左侧菜单的 "Workers & Pages"
+2. 选择左侧菜单的 "计算和AI" -> "Workers & Pages"
 3. 点击 "创建应用程序"
-4. 选择 "Pages" 选项卡
-5. 点击 "连接到 Git"
+4. 在最下方 `Looking to deploy Pages? ` 选择 "Get started"
+5. 在 "导入现有 Git 存储库" 处点击 "开始使用"
 
 ![创建 Pages 项目](/images/deployment/pages-create.png)
+![创建 Pages 项目](/images/deployment/pages-create-1.png)
 
 ### 2.2 连接 GitHub 仓库
 
@@ -63,10 +64,10 @@ v2.0 版本的构建命令已变更为 `npm install`，请确保使用正确的�
 #### 创建 KV 命名空间
 
 1. 在 Cloudflare Dashboard 中选择 "存储和数据库"
-2. 点击 "KV"
-3. 点击 "创建命名空间"
+2. 点击 "Workers KV"
+3. 点击 "创建实例"
 4. 输入命名空间名称：`img_url`（建议使用此名称）
-5. 点击 "添加"
+5. 点击 "创建"
 
 ![创建 KV 命名空间](/images/deployment/kv-create.png)
 ![创建 KV 命名空间](/images/deployment/kv-create-1.png)
