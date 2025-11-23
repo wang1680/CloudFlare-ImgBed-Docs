@@ -57,7 +57,7 @@
 40. :white_check_mark:~~搜索功能增强~~
 41. :white_check_mark:~~支持粘贴多个链接，支持外链管理~~
 42. :hourglass_flowing_sand:上传文件记录MD5，支持文件硬链接
-43. :hourglass_flowing_sand:上传页面增加最近上传展示
+43. :white_check_mark:~~上传页面增加最近上传展示~~（2025.11.23已完成）
 44. :white_check_mark:~~支持从后台管理处配置上传页默认设置~~
 45. :white_check_mark:~~增加公告功能~~
 46. :hourglass_flowing_sand:支持访问图片时设置宽高参数

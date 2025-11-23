@@ -57,7 +57,7 @@
 40. :white_check_mark: ~~Enhanced search function~~
 41. :white_check_mark: ~~Support pasting multiple links, external link management~~
 42. :hourglass_flowing_sand: Record MD5 on upload, support file hard link
-43. :hourglass_flowing_sand: Show recent uploads on upload page
+43. :white_check_mark: ~~Show recent uploads on upload page~~ (Completed on 2025.11.23)
 44. :white_check_mark: ~~Configure upload page defaults from admin~~
 45. :white_check_mark: ~~Add announcement feature~~
 46. :hourglass_flowing_sand: Show width/height params when accessing images

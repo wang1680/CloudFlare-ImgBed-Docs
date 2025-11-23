@@ -3,7 +3,13 @@
 ## Recent Updates
 
 Add Features:
-- Optimized admin panel tag management user experience
+- Upload page adds history feature
+
+
+## 2025.11.23
+
+Add Features:
+- Upload page adds history feature
 
 ## 2025.11.19
 
