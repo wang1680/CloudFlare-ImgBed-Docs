@@ -3,8 +3,17 @@
 ## Recent Updates
 
 Add Features:
-- Upload page adds history feature
+- Optimized chunked upload logic to synchronous upload for better stability
+- Frontend supports concurrent chunk uploads to improve speed
+- Added retry mechanism for failed chunk uploads
 
+
+## 2025.11.24
+
+Add Features:
+- Optimized chunked upload logic to synchronous upload for better stability
+- Frontend supports concurrent chunk uploads to improve speed
+- Added retry mechanism for failed chunk uploads
 
 ## 2025.11.23
 

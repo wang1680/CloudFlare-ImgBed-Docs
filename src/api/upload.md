@@ -32,6 +32,29 @@
 |--------|------|------|------|
 | `file` | File | 是 | 要上传的文件 |
 
+### 分块上传参数
+
+使用分块上传时，需要以下额外参数：
+
+| 参数名 | 类型 | 必需 | 说明 |
+|--------|------|------|------|
+| `initChunked` | boolean | 否 | 设置为 `true` 以初始化分块上传会话 |
+| `chunked` | boolean | 否 | 上传分块或合并时设置为 `true` |
+| `merge` | boolean | 否 | 请求合并分块时设置为 `true` |
+| `uploadId` | string | 是* | 分块上传和合并请求必需（由初始化返回） |
+| `chunkIndex` | integer | 是* | 上传分块时必需（从0开始的索引） |
+| `totalChunks` | integer | 是* | 初始化、上传分块和合并请求必需 |
+| `originalFileName`| string | 是* | 初始化、上传分块和合并请求必需 |
+| `originalFileType`| string | 是* | 初始化、上传分块和合并请求必需 |
+
+### 分块上传流程
+
+1.  **初始化**：发送 POST 请求，携带 `initChunked=true`、`totalChunks`、`originalFileName` 和 `originalFileType`。服务器返回 `uploadId`。
+2.  **上传分块**：对于每个分块，发送 POST 请求，携带 `chunked=true`、`uploadId`、`chunkIndex`、`totalChunks`、`originalFileName`、`originalFileType` 和分块 `file`。
+    *   **注意**：分块上传是同步的。服务器会等待分块上传到存储提供商后才响应。
+3.  **合并**：所有分块上传完成后，发送 POST 请求，携带 `chunked=true`、`merge=true`、`uploadId`、`totalChunks`、`originalFileName` 和 `originalFileType`。
+    *   **注意**：合并过程是同步的。服务器会等待文件合并完成并返回最终结果。
+
 ## 响应格式
 
 `data[0].src`为获得的图片链接（注意不包含域名，需要自己添加）
@@ -58,6 +81,3 @@
   }
 ]
 ```
-
-
-
