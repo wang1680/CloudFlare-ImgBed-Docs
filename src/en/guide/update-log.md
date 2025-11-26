@@ -2,11 +2,13 @@
 
 ## Recent Updates
 
-Add Features:
-- Optimized chunked upload logic to synchronous upload for better stability
-- Frontend supports concurrent chunk uploads to improve speed
-- Added retry mechanism for failed chunk uploads
+Fix Bugs:
+- Fixed issue with moving files causing path errors
 
+## 2025.11.27
+
+Fix Bugs:
+- Fixed issue with moving files causing path errors
 
 ## 2025.11.24
 
