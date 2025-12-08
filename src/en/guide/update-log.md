@@ -5,12 +5,14 @@
 Add Features:
 - Default content moderation feature is now disabled
 - Updated dependencies
+- Beautified some page display effects
 
 ## 2025.12.8
 
 Add Features:
 - Default content moderation feature is now disabled
 - Updated dependencies
+- Beautified some page display effects
 
 ## 2025.11.27
 
