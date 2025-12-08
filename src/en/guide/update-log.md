@@ -2,8 +2,15 @@
 
 ## Recent Updates
 
-Fix Bugs:
-- Fixed issue with moving files causing path errors
+Add Features:
+- Default content moderation feature is now disabled
+- Updated dependencies
+
+## 2025.12.8
+
+Add Features:
+- Default content moderation feature is now disabled
+- Updated dependencies
 
 ## 2025.11.27
 
