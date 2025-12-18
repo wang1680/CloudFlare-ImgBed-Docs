@@ -70,7 +70,7 @@ Security-related settings are configured in "System Settings" → "Security Sett
 
 #### Image Moderation
 
-The moderation channels support both nsfwjs and moderatecontent.com. The project comes with a default moderation channel (nsfwjs), but no service availability guarantee is provided. For high-frequency use of the moderation feature, it is recommended to configure it yourself by following the steps below.
+The moderation channels support both nsfwjs and moderatecontent.com. Please configure it yourself by following the steps below.
 
 ##### 1.moderatecontent.com
 

@@ -73,7 +73,7 @@
 
 #### 图像审查
 
-审查渠道支持 `nsfwjs` 和 `moderatecontent.com`，项目自带默认审查渠道（nsfwjs），但不做服务可用性保证，如需高频使用审查功能，建议根据如下步骤自行配置。
+审查渠道支持 `nsfwjs` 和 `moderatecontent.com`，可根据如下步骤自行配置。
 
 ##### 1.moderatecontent.com
 
