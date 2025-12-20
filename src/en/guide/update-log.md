@@ -3,8 +3,16 @@
 ## Recent Updates
 
 Add Features:
-- Default content moderation feature is now disabled
-- Beautified some page display effects
+- Beautified admin panel gallery and user management page display effects
+- Added list view support for admin panel gallery
+- Added long-press operations for admin panel gallery on mobile devices
+
+## 2025.12.20
+
+Add Features:
+- Beautified admin panel gallery and user management page display effects
+- Added list view support for admin panel gallery
+- Added long-press operations for admin panel gallery on mobile devices
 
 ## 2025.12.18
 
