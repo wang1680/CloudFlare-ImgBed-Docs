@@ -3,9 +3,12 @@
 ## Recent Updates
 
 Add Features:
-- Beautified admin panel gallery and user management page display effects
-- Added list view support for admin panel gallery
-- Added long-press operations for admin panel gallery on mobile devices
+- Beautified some pages display effects
+
+## 2025.12.24
+
+Add Features:
+- Beautified some pages display effects
 
 ## 2025.12.20
 
