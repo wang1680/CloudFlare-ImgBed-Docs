@@ -5,6 +5,11 @@
 Add Features:
 - 美化管理端部分页面显示效果
 
+## 2025.12.25
+
+Add Features:
+- 美化管理端部分页面显示效果
+
 ## 2025.12.24
 
 Add Features:

@@ -5,6 +5,11 @@
 Add Features:
 - Beautified some pages display effects
 
+## 2025.12.25
+
+Add Features:
+- Beautified some pages display effects
+
 ## 2025.12.24
 
 Add Features:
