@@ -3,7 +3,14 @@
 ## Recent Updates
 
 Add Features:
-- Beautified some pages display effects
+- Cancel paste upload file type limit
+- Beautified upload page display effects
+
+## 2025.12.27
+
+Add Features:
+- Cancel paste upload file type limit
+- Beautified upload page display effects
 
 ## 2025.12.25
 
