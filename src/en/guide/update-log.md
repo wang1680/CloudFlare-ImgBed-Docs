@@ -3,8 +3,12 @@
 ## Recent Updates
 
 Add Features:
-- Cancel paste upload file type limit
-- Beautified upload page display effects
+- Beautified scrollbar style
+
+## 2025.12.29
+
+Add Features:
+- Beautified scrollbar style
 
 ## 2025.12.27
 
