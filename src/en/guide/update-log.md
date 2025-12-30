@@ -3,7 +3,12 @@
 ## Recent Updates
 
 Add Features:
-- Beautified scrollbar style
+- Support for R2/S3 channels capacity limit
+
+## 2025.12.30
+
+Add Features:
+- Support for R2/S3 channels capacity limit
 
 ## 2025.12.29
 
