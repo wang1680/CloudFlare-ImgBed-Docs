@@ -95,7 +95,7 @@ The above are tested S3 compatible storage providers. Other S3 compatible provid
 - `S3_ENDPOINT`: Service endpoint URL
 - `S3_REGION`: Storage region (optional)
 
-## 5. Discord Channel
+## 5. Discord Channel (by _[@林酱](https://github.com/lintonxue00)_)
 
 ### 5.1 Create Discord Bot
 
@@ -117,7 +117,7 @@ The above are tested S3 compatible storage providers. Other S3 compatible provid
 - Ensure the Bot has permissions to send messages and attachments
 :::
 
-## 6. HuggingFace Channel
+## 6. HuggingFace Channel (by _[@林酱](https://github.com/lintonxue00)_)
 
 ### 6.1 Create HuggingFace Account
 

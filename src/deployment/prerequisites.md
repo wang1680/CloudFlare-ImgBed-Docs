@@ -99,7 +99,7 @@
 - `S3_ENDPOINT`：服务端点 URL
 - `S3_REGION`：存储区域（可选）
 
-## 5. Discord 渠道
+## 5. Discord 渠道（由 _[@林酱](https://github.com/lintonxue00)_ 佬贡献）
 
 ### 5.1 创建 Discord Bot
 
@@ -121,7 +121,7 @@
 - 需要确保 Bot 有发送消息和附件的权限
 :::
 
-## 6. HuggingFace 渠道
+## 6. HuggingFace 渠道（由 _[@林酱](https://github.com/lintonxue00)_ 佬贡献）
 
 ### 6.1 创建 HuggingFace 账号
 
