@@ -3,11 +3,18 @@
 ## Recent Updates
 
 Add Features:
-- Added Discord storage channel support (support chunk upload)
-- Added HuggingFace storage channel support (with large file direct upload)
-- Optimized error handling for file uploads
-- Support canceling uploads when deleting files that are being uploaded
-- Telegram channel retry automatically disables server-side compression
+- Added public browse feature (visitor gallery), allows public access to files in specified directories
+
+Fix Bugs:
+- Fixed HuggingFace large file upload issues
+
+## 2026.01.01
+
+Add Features:
+- Added public browse feature (visitor gallery), allows public access to files in specified directories
+
+Fix Bugs:
+- Fixed HuggingFace large file upload issues
 
 ## 2025.12.31
 

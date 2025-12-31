@@ -152,6 +152,15 @@ This helps developers capture and locate bugs, but may collect information such 
 ### Random Image API
 - Directory: Directories with random image permissions, default is root directory, multiple directories separated by commas; all directories use absolute paths, e.g., `/img/cover`, indicating that files in this directory and all its subdirectories can be accessed by the random image API.
 
+### Public Browse (Visitor Gallery)
+Allows unauthenticated users to access files in specified directories, useful for creating public galleries or album displays.
+- Enable Public Browse: Turn on or off the public browse feature
+- Allowed Directories: Directories with public access permissions, multiple directories separated by commas; all directories use absolute paths, e.g., `/img/gallery,/img/wallpapers`
+
+::: tip Note
+Once enabled, users can access the public gallery via the `/browse/directory-name` path, e.g., `/browse/img/gallery`
+:::
+
 ### CloudFlare API Token
 Under normal circumstances, due to the existence of CloudFlare CDN cache, operations such as deletion, blacklisting, and whitelisting in the admin backend will not take effect immediately and need to wait until the cache expires. To make operations take effect immediately, it is recommended to set this item as follows:
 - `CF_ZONE_ID`: Cloudflare Zone ID of the bound domain
