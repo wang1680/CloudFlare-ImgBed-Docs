@@ -10,6 +10,8 @@
 | Telegram Bot | 完全免费、无限容量 | 大于20MB文件需分片存储 |
 | Cloudflare R2 | 无文件大小限制、企业级性能 | 超出10G免费额度后收费，需要绑定支付方式 |
 | S3 兼容存储 | 选择多样、价格灵活 | 根据服务商定价 |
+| Discord | 完全免费、简单易用 | 大于10MB文件需分片存储 |
+| HuggingFace | 完全免费、支持大文件直传 | 需要 HuggingFace 账号 |
 
 ## 2. Telegram Bot 渠道
 
@@ -96,6 +98,52 @@
 - `S3_BUCKET_NAME`：存储桶名称
 - `S3_ENDPOINT`：服务端点 URL
 - `S3_REGION`：存储区域（可选）
+
+## 5. Discord 渠道
+
+### 5.1 创建 Discord Bot
+
+- 访问 [Discord Developer Portal](https://discord.com/developers/applications)
+- 点击 "New Application" 创建应用
+- 进入 "Bot" 页面，点击 "Add Bot"
+- 复制 Bot Token
+
+### 5.2 获取 Channel ID
+
+- 在 Discord 客户端中启用开发者模式（用户设置 → 高级 → 开发者模式）
+- 创建一个用于存储文件的频道
+- 右键点击频道，选择 "复制频道 ID"
+- 将 Bot 添加到服务器并授予发送文件的权限
+
+::: warning 注意
+- 普通用户文件大小限制为 10MB
+- Nitro 用户文件大小限制为 25MB
+- 需要确保 Bot 有发送消息和附件的权限
+:::
+
+## 6. HuggingFace 渠道
+
+### 6.1 创建 HuggingFace 账号
+
+- 访问 [HuggingFace](https://huggingface.co/) 并注册账号
+
+### 6.2 获取 Access Token
+
+- 登录后访问 [Token 设置页面](https://huggingface.co/settings/tokens)
+- 点击 "New token" 创建新 Token
+- 选择 "Write" 权限
+- 复制生成的 Token
+
+### 6.3 创建 Dataset 仓库
+
+- 访问 [新建 Dataset 页面](https://huggingface.co/new-dataset)
+- 输入仓库名称
+- 选择是否为私有仓库
+- 记录完整仓库名（格式：`username/repo-name`）
+
+::: tip 提示
+HuggingFace 渠道支持大文件直传，推荐用于上传超过 20MB 的文件。
+:::
 
 
 ## 🚀 下一步

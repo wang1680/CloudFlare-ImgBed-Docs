@@ -3,7 +3,14 @@
 ## 最近更新
 
 Add Features:
-- 支持R2/S3渠道容量限制
+- 新增 Discord 存储渠道支持（支持分块上传）
+- 新增 HuggingFace 存储渠道支持（支持大文件直传）
+
+## 2025.12.31
+
+Add Features:
+- 新增 Discord 存储渠道支持（支持分块上传）
+- 新增 HuggingFace 存储渠道支持（支持大文件直传）
 
 ## 2025.12.30
 

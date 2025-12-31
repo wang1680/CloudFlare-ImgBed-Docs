@@ -19,9 +19,11 @@ CloudFlare ImgBed provides rich features to meet the needs of different users.
 
 | Channel Type | File Size Limit | Cost | Features |
 |--------------|----------------|------|----------|
-| Telegram Bot | Unlimited | Free | Stable and reliable, supports compression |
+| Telegram Bot | Single file 20M | Free | Stable and reliable, supports compression |
 | Cloudflare R2 | Unlimited | Free within 10GB | High performance, enterprise-grade |
 | S3 API | Varies by provider | Varies by provider | Strong compatibility, diverse options |
+| Discord | Single file 10MB (Nitro 25MB) | Free | Simple and easy to use |
+| HuggingFace | Unlimited | Free | Supports large file direct upload |
 
 ### File Management
 

@@ -12,6 +12,8 @@ The project supports different storage channels as backend storage. Each channel
 | Telegram Bot | Completely free, unlimited capacity | Files larger than 20MB need to be stored in chunks |
 | Cloudflare R2 | No file size limit, enterprise-grade performance | Charges after 10GB free quota, requires payment method |
 | S3 Compatible Storage | Diverse options, flexible pricing | Pricing varies by provider |
+| Discord | Completely free, simple and easy to use | Files larger than 10MB need to be stored in chunks |
+| HuggingFace | Completely free, supports large file direct upload | Requires HuggingFace account |
 
 ## 2. Telegram Bot Channel
 
@@ -92,6 +94,52 @@ The above are tested S3 compatible storage providers. Other S3 compatible provid
 - `S3_BUCKET_NAME`: Bucket name
 - `S3_ENDPOINT`: Service endpoint URL
 - `S3_REGION`: Storage region (optional)
+
+## 5. Discord Channel
+
+### 5.1 Create Discord Bot
+
+- Visit [Discord Developer Portal](https://discord.com/developers/applications)
+- Click "New Application" to create an application
+- Go to "Bot" page, click "Add Bot"
+- Copy the Bot Token
+
+### 5.2 Get Channel ID
+
+- Enable Developer Mode in Discord client (User Settings → Advanced → Developer Mode)
+- Create a channel for storing files
+- Right-click the channel, select "Copy Channel ID"
+- Add the Bot to the server and grant file sending permissions
+
+::: warning Note
+- Regular users have a 10MB file size limit
+- Nitro users have a 25MB file size limit
+- Ensure the Bot has permissions to send messages and attachments
+:::
+
+## 6. HuggingFace Channel
+
+### 6.1 Create HuggingFace Account
+
+- Visit [HuggingFace](https://huggingface.co/) and register an account
+
+### 6.2 Get Access Token
+
+- After logging in, visit [Token Settings Page](https://huggingface.co/settings/tokens)
+- Click "New token" to create a new Token
+- Select "Write" permission
+- Copy the generated Token
+
+### 6.3 Create Dataset Repository
+
+- Visit [New Dataset Page](https://huggingface.co/new-dataset)
+- Enter repository name
+- Choose whether it is a private repository
+- Record the full repository name (format: `username/repo-name`)
+
+::: tip Note
+HuggingFace channel supports large file direct upload, recommended for uploading files larger than 20MB.
+:::
 
 
 ## 🚀 Next Steps

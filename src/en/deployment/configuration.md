@@ -57,6 +57,29 @@ Fill in the S3 channel configuration in the admin backend:
 - **PathStyle**: Path style (enable this option for compatibility with older S3 versions)
 - **Region**: Storage region (optional)
 
+### Configure Discord Channel
+
+Fill in the Discord channel configuration in the admin backend:
+
+- **Channel Name**: Custom name (e.g., Main Channel)
+- **Bot Token**: Discord Bot Token
+- **Channel ID**: Discord Channel ID
+- **Is Nitro**: Whether the account is Nitro (Nitro users have 25MB single file limit, regular users have 10MB)
+- **Proxy URL**: (Optional) Custom proxy address
+
+### Configure HuggingFace Channel
+
+Fill in the HuggingFace channel configuration in the admin backend:
+
+- **Channel Name**: Custom name (e.g., Main Channel)
+- **Token**: HuggingFace Access Token (obtain from https://huggingface.co/settings/tokens)
+- **Repo**: Repository name (format: username/repo-name, use dataset type repository)
+- **Is Private**: Whether the repository is private
+
+::: tip Note
+HuggingFace channel supports large file direct upload, suitable for uploading files larger than 20MB. For large files, the system will automatically use LFS protocol for chunked uploads.
+:::
+
 ## 🔒 Security Settings
 
 Security-related settings are configured in "System Settings" → "Security Settings" in the admin backend
@@ -112,7 +135,7 @@ Frontend web-related settings are configured in "System Settings" → "Web Setti
 | bkOpacity | Background Image Transparency | Float in (0,1] | Displayed background image transparency, default is `1`.<br />If you think the display effect is poor, you can customize it, like `0.8` |
 | urlPrefix | Default URL Prefix | String | Only supports `string` type, set to custom global default link prefix, this prefix will override the original default prefix, but will not override user-customized link prefixes |
 | announcement | Announcement | String | Only supports `string` type, can be HTML format, set to your custom announcement content (if any) |
-| defaultUploadChannel | Default Upload Channel | String | Only supports `string` type, set to your custom default upload channel, supports `telegram` (Telegram channel), `cfr2` (Cloudflare R2), and `s3` (S3 channel) |
+| defaultUploadChannel | Default Upload Channel | String | Only supports `string` type, set to your custom default upload channel, supports `telegram` (Telegram channel), `cfr2` (Cloudflare R2), `s3` (S3 channel), `discord` (Discord channel), and `huggingface` (HuggingFace channel) |
 | defaultUploadNameType | Default Naming Method | String | Only supports `string` type, set to your custom default upload file naming method, supports `default` (default), `index` (only prefix), `original` (only original name), and `short` (short link) |
 | loginBkImg | Login Page Background | List/String | 1. When field type is `list`, list elements are image links to be added to the carousel list (when list has only one image, it becomes a fixed background), like `["1.jpg","2.jpg"]`<br />2. When field type is `string`, currently **only supports** string value `bing`, setting this value enables bing random image carousel mode. |
 | uploadBkImg | Upload Page Background | List/String | Same as loginBkImg |

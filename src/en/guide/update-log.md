@@ -3,7 +3,14 @@
 ## Recent Updates
 
 Add Features:
-- Support for R2/S3 channels capacity limit
+- Added Discord storage channel support (support chunk upload)
+- Added HuggingFace storage channel support (with large file direct upload)
+
+## 2025.12.31
+
+Add Features:
+- Added Discord storage channel support (support chunk upload)
+- Added HuggingFace storage channel support (with large file direct upload)
 
 ## 2025.12.30
 
