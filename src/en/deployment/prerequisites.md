@@ -130,13 +130,6 @@ The above are tested S3 compatible storage providers. Other S3 compatible provid
 - Select "Write" permission
 - Copy the generated Token
 
-### 6.3 Create Dataset Repository
-
-- Visit [New Dataset Page](https://huggingface.co/new-dataset)
-- Enter repository name
-- Choose whether it is a private repository
-- Record the full repository name (format: `username/repo-name`)
-
 ::: tip Note
 HuggingFace channel supports large file direct upload, recommended for uploading files larger than 20MB.
 :::

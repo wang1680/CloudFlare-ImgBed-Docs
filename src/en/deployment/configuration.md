@@ -61,7 +61,7 @@ Fill in the S3 channel configuration in the admin backend:
 
 Fill in the Discord channel configuration in the admin backend:
 
-- **Channel Name**: Custom name (e.g., Main Channel)
+- **Channel Name**: Custom name
 - **Bot Token**: Discord Bot Token
 - **Channel ID**: Discord Channel ID
 - **Is Nitro**: Whether the account is Nitro (Nitro users have 25MB single file limit, regular users have 10MB)
@@ -71,9 +71,9 @@ Fill in the Discord channel configuration in the admin backend:
 
 Fill in the HuggingFace channel configuration in the admin backend:
 
-- **Channel Name**: Custom name (e.g., Main Channel)
+- **Channel Name**: Custom name
 - **Token**: HuggingFace Access Token (obtain from https://huggingface.co/settings/tokens)
-- **Repo**: Repository name (format: username/repo-name, use dataset type repository)
+- **Repo**: Repository name (format: username/repo-name, username must be filled correctly, it will automatically create a dataset type repository)
 - **Is Private**: Whether the repository is private
 
 ::: tip Note

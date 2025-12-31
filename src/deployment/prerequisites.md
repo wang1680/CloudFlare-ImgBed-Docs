@@ -134,13 +134,6 @@
 - 选择 "Write" 权限
 - 复制生成的 Token
 
-### 6.3 创建 Dataset 仓库
-
-- 访问 [新建 Dataset 页面](https://huggingface.co/new-dataset)
-- 输入仓库名称
-- 选择是否为私有仓库
-- 记录完整仓库名（格式：`username/repo-name`）
-
 ::: tip 提示
 HuggingFace 渠道支持大文件直传，推荐用于上传超过 20MB 的文件。
 :::

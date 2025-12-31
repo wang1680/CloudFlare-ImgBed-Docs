@@ -63,7 +63,7 @@
 
 在管理后台的 Discord 渠道配置中填入：
 
-- **渠道名称**：自定义名称（如：主渠道）
+- **渠道名称**：自定义名称
 - **Bot Token**：Discord Bot Token
 - **Channel ID**：Discord 频道 ID
 - **Is Nitro**：是否为 Nitro 用户（Nitro 用户单文件限制为 25MB，普通用户为 10MB）
@@ -73,9 +73,9 @@
 
 在管理后台的 HuggingFace 渠道配置中填入：
 
-- **渠道名称**：自定义名称（如：主渠道）
+- **渠道名称**：自定义名称
 - **Token**：HuggingFace Access Token（从 https://huggingface.co/settings/tokens 获取）
-- **Repo**：仓库名称（格式：username/repo-name，使用 dataset 类型仓库）
+- **Repo**：仓库名称（格式：username/repo-name，用户名须填写正确，会自动创建 dataset 类型仓库）
 - **Is Private**：是否为私有仓库
 
 ::: tip 提示
