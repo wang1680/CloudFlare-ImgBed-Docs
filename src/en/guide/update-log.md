@@ -5,12 +5,18 @@
 Add Features:
 - Added Discord storage channel support (support chunk upload)
 - Added HuggingFace storage channel support (with large file direct upload)
+- Optimized error handling for file uploads
+- Support canceling uploads when deleting files that are being uploaded
+- Telegram channel retry automatically disables server-side compression
 
 ## 2025.12.31
 
 Add Features:
 - Added Discord storage channel support (support chunk upload)
 - Added HuggingFace storage channel support (with large file direct upload)
+- Optimized error handling for file uploads
+- Support canceling uploads when deleting files that are being uploaded
+- Telegram channel retry automatically disables server-side compression
 
 ## 2025.12.30
 
