@@ -3,18 +3,20 @@
 ## Recent Updates
 
 Add Features:
-- Added public browse feature (visitor gallery), allows public access to files in specified directories
+- Added public browse feature (visitor gallery)
 
 Fix Bugs:
 - Fixed HuggingFace large file upload issues
+- Fixed Telegram channel retry failure issues
 
 ## 2026.01.01
 
 Add Features:
-- Added public browse feature (visitor gallery), allows public access to files in specified directories
+- Added public browse feature (visitor gallery)
 
 Fix Bugs:
 - Fixed HuggingFace large file upload issues
+- Fixed Telegram channel retry failure issues
 
 ## 2025.12.31
 

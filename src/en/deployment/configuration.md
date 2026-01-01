@@ -152,7 +152,7 @@ This helps developers capture and locate bugs, but may collect information such 
 ### Random Image API
 - Directory: Directories with random image permissions, default is root directory, multiple directories separated by commas; all directories use absolute paths, e.g., `/img/cover`, indicating that files in this directory and all its subdirectories can be accessed by the random image API.
 
-### Public Browse (Visitor Gallery)
+### Visitor Gallery
 Allows unauthenticated users to access files in specified directories, useful for creating public galleries or album displays.
 - Enable Public Browse: Turn on or off the public browse feature
 - Allowed Directories: Directories with public access permissions, multiple directories separated by commas; all directories use absolute paths (either start with `/` or not), e.g., `/img/gallery,/img/wallpapers`
