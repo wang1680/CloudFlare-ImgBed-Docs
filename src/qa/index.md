@@ -42,4 +42,9 @@
 ## Q: 后台进行删除、拉黑等操作时不能立即生效
 
 - 与CDN缓存有关
-- 详见[[重要\]关于CDN缓存的说明（删除、拉黑等操作延迟生效解决方案） · Issue #123 · MarSeventh/CloudFlare-ImgBed (github.com)](https://github.com/MarSeventh/CloudFlare-ImgBed/issues/123)
+- 详见[[重要]关于CDN缓存的说明（删除、拉黑等操作延迟生效解决方案） · Issue #123 · MarSeventh/CloudFlare-ImgBed (github.com)](https://github.com/MarSeventh/CloudFlare-ImgBed/issues/123)
+
+## Q: S3 设置为 OpenList 自带的 S3 映射后上传失败
+
+- 查看是否关闭了 **系统设置 -> 上传设置 -> S3 -> 路径风格** 开关，如未开启请将其开启
+- 关于 **路径风格** 的解释，可查看 [AWS S3兼容 - 又拍云-文档帮助中心]https://help.upyun.com/knowledge-base/aws-s3兼容/
