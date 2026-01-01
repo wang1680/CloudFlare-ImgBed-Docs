@@ -43,3 +43,8 @@ This section collects common questions and solutions encountered by users when u
 
 - Related to CDN cache
 - See [[Important] About CDN Cache Instructions (Solution for Delayed Effect of Delete, Blacklist Operations) · Issue #123 · MarSeventh/CloudFlare-ImgBed (github.com)](https://github.com/MarSeventh/CloudFlare-ImgBed/issues/123)
+
+## Q: Upload fails after setting S3 to the built-in S3 mapping of OpenList
+
+- Check whether the **System Settings -> Upload Settings -> S3 -> Path Style** option is enabled; if not, please enable it
+- For an explanation of **Path Style**, see [AWS S3 Compatibility - UPYUN Documentation Help Center](https://help.upyun.com/knowledge-base/aws-s3兼容/)
