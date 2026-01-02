@@ -2,12 +2,13 @@
 
 ## 最近更新
 
-Add Features:
-- 新增公开浏览功能（访客图库）
+Fix Bugs:
+- 修复 Discord 渠道文件过期失效的问题
+
+## 2026.01.02
 
 Fix Bugs:
-- 修复 HuggingFace 大文件上传问题
-- 修复 Telegram 渠道重试失败问题
+- 修复 Discord 渠道文件过期失效的问题
 
 ## 2026.01.01
 

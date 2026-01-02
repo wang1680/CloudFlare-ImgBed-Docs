@@ -2,12 +2,13 @@
 
 ## Recent Updates
 
-Add Features:
-- Added public browse feature (visitor gallery)
+Fix Bugs:
+- Fixed Discord channel file expiration issue
+
+## 2026.01.02
 
 Fix Bugs:
-- Fixed HuggingFace large file upload issues
-- Fixed Telegram channel retry failure issues
+- Fixed Discord channel file expiration issue
 
 ## 2026.01.01
 
