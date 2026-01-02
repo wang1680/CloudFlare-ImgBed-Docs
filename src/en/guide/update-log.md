@@ -2,8 +2,15 @@
 
 ## Recent Updates
 
-Fix Bugs:
-- Fixed Discord channel file expiration issue
+Add Features:
+- Visitor gallery experience optimization
+- Discord channel access optimization
+
+## 2026.01.03
+
+Add Features:
+- Visitor gallery experience optimization
+- Discord channel access optimization
 
 ## 2026.01.02
 

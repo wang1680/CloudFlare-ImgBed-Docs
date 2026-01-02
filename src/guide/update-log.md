@@ -2,8 +2,15 @@
 
 ## 最近更新
 
-Fix Bugs:
-- 修复 Discord 渠道文件过期失效的问题
+Add Features:
+- 访客图库体验优化
+- Discord 渠道访问优化
+
+## 2026.01.03
+
+Add Features:
+- 访客图库体验优化
+- Discord 渠道访问优化
 
 ## 2026.01.02
 

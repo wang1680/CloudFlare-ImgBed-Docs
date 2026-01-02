@@ -115,6 +115,7 @@ The above are tested S3 compatible storage providers. Other S3 compatible provid
 - Regular users have a 10MB file size limit
 - Nitro users have a 25MB file size limit
 - Ensure the Bot has permissions to send messages and attachments
+- Discord has API rate limits, not recommended for high-concurrency scenarios
 :::
 
 ## 6. HuggingFace Channel (by _[@林酱](https://github.com/lintonxue00)_)

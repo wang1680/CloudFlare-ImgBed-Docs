@@ -119,6 +119,7 @@
 - 普通用户文件大小限制为 10MB
 - Nitro 用户文件大小限制为 25MB
 - 需要确保 Bot 有发送消息和附件的权限
+- Discord 官方有接口频率限制，不建议将此渠道用作大规模并发场景
 :::
 
 ## 6. HuggingFace 渠道（由 _[@林酱](https://github.com/lintonxue00)_ 佬贡献）
