@@ -3,8 +3,14 @@
 ## Recent Updates
 
 Add Features:
-- Visitor gallery experience optimization
-- Discord channel access optimization
+- Telegram channel supports proxy settings
+- Optimized upload settings page user experience
+
+## 2026.01.07
+
+Add Features:
+- Telegram channel supports proxy settings
+- Optimized upload settings page user experience
 
 ## 2026.01.03
 
