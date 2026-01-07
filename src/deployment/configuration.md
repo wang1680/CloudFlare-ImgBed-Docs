@@ -167,6 +167,10 @@ docker run -d -p 127.0.0.1:5000:5000/tcp \
 | uploadBkImg   | 上传页背景图   | 列表/字符串   | 同loginBkImg |
 | footerLink    | 页脚传送门链接       | 字符串        | 只支持`字符串`类型，设置为你自定义的传送地址（如个人博客链接） |
 | disableFooter | 隐藏页脚             | boolean       | 支持`boolean`类型，设为`true`时禁用页脚，默认`false`         |
+| defaultConvertToWebp | 默认转换 WebP | boolean | 支持`boolean`类型，设为`true`时默认开启 WebP 转换，默认`false` |
+| defaultCustomerCompress | 默认开启压缩 | boolean | 支持`boolean`类型，设为`true`时默认开启客户端压缩，默认`true` |
+| defaultCompressBar | 默认压缩阈值 | 数字 | 图片大小超过此值将自动压缩，单位 MB，范围 1-20，默认`5` |
+| defaultCompressQuality | 默认期望大小 | 数字 | 压缩后图片大小期望值，单位 MB，范围 0.5-压缩阈值，默认`4` |
 | adminLoginBkImg | 管理页背景图 | 列表/字符串   | 同loginBkImg |
 
 

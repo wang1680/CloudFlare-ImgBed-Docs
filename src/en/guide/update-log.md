@@ -5,12 +5,16 @@
 Add Features:
 - Telegram channel supports proxy settings
 - Optimized upload settings page user experience
+- Support converting images to WebP format before upload
+- Client settings add new default file preprocessing configuration
 
 ## 2026.01.07
 
 Add Features:
 - Telegram channel supports proxy settings
 - Optimized upload settings page user experience
+- Support converting images to WebP format before upload
+- Client settings add new default file preprocessing configuration
 
 ## 2026.01.03
 

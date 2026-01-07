@@ -14,6 +14,7 @@ CloudFlare ImgBed provides rich features to meet the needs of different users.
   - Batch upload (unlimited total number of files)
 - **Real-time Progress Display**: Shows real-time progress during upload
 - **Automatic Compression**: Automatically compresses oversized images to improve upload stability
+- **WebP Conversion**: Supports converting images to WebP format before upload to reduce file size
 
 ### Storage Channels
 
@@ -106,6 +107,7 @@ CloudFlare ImgBed provides rich features to meet the needs of different users.
 - **Load Balancing**: Multi-channel load balancing settings
 - **Cache Management**: Automatic CDN cache cleanup
 - **Announcement System**: Site announcement publishing functionality
+- **Client Default Settings**: Supports configuring default upload channel, naming method, compression settings, etc.
 
 ## 🌐 API Support
 

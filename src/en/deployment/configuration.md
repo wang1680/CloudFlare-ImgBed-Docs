@@ -166,6 +166,10 @@ Frontend web-related settings are configured in "System Settings" → "Web Setti
 | uploadBkImg | Upload Page Background | List/String | Same as loginBkImg |
 | footerLink | Footer Portal Link | String | Only supports `string` type, set to your custom destination address (like personal blog link) |
 | disableFooter | Hide Footer | boolean | Supports `boolean` type, set to `true` to disable footer, default `false` |
+| defaultConvertToWebp | Default WebP Conversion | boolean | Supports `boolean` type, set to `true` to enable WebP conversion by default, default `false` |
+| defaultCustomerCompress | Default Compression | boolean | Supports `boolean` type, set to `true` to enable client compression by default, default `true` |
+| defaultCompressBar | Default Compression Threshold | Number | Images larger than this value will be automatically compressed, unit MB, range 1-20, default `5` |
+| defaultCompressQuality | Default Expected Size | Number | Expected image size after compression, unit MB, range 0.5-compression threshold, default `4` |
 | adminLoginBkImg | Admin Page Background | List/String | Same as loginBkImg |
 
 ## 🛠️ Other Settings
