@@ -22,8 +22,33 @@ Visit `https://your-domain/dashboard`
    - **Channel Name**: Custom name (e.g., Main Channel)
    - **Bot Token**: Token obtained from @BotFather
    - **Chat ID**: Channel ID (retain the `-` sign if present)
+   - **Proxy URL**: (Optional) Custom proxy address for Telegram API requests
    - **Enable Status**: On
 5. Click "Save Settings"
+
+::: tip About Proxy Configuration
+If your server cannot directly access the Telegram API, you can configure a proxy URL. You can use Cloudflare Worker to set up a simple proxy service:
+```javascript
+// worker.js
+export default {
+    async fetch(request) {
+        const url = new URL(request.url);
+        const target = `https://api.telegram.org${url.pathname}${url.search}`;
+        const resp = await fetch(target, {
+            method: request.method,
+            headers: request.headers,
+            body: request.body,
+            redirect: 'follow'
+        });
+        return new Response(resp.body, {
+            status: resp.status,
+            headers: resp.headers
+        });
+    }
+};
+```
+After deploying this Worker, fill in the Worker address in the Proxy URL field.
+:::
 
 ### Configure R2 Channel
 

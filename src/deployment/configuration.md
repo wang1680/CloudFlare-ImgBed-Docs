@@ -22,8 +22,33 @@
    - **渠道名称**：自定义名称（如：主渠道）
    - **Bot Token**：从 @BotFather 获得的 Token
    - **Chat ID**：频道 ID（有`-`号时需要保留）
+   - **代理 URL**：（可选）自定义代理地址，用于代理 Telegram API 请求
    - **启用状态**：开启
 5. 点击 "保存设置"
+
+::: tip 关于代理配置
+如果您的服务器无法直接访问 Telegram API，可以配置代理 URL。您可以使用 Cloudflare Worker 搭建简单的代理服务：
+```javascript
+// worker.js
+export default {
+    async fetch(request) {
+        const url = new URL(request.url);
+        const target = `https://api.telegram.org${url.pathname}${url.search}`;
+        const resp = await fetch(target, {
+            method: request.method,
+            headers: request.headers,
+            body: request.body,
+            redirect: 'follow'
+        });
+        return new Response(resp.body, {
+            status: resp.status,
+            headers: resp.headers
+        });
+    }
+};
+```
+部署此 Worker 后，将 Worker 地址填入代理 URL 字段即可。
+:::
 
 
 ### 配置 R2 渠道
