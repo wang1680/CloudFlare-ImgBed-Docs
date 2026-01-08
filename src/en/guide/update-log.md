@@ -11,6 +11,11 @@ Add Features:
 - System status cards (newest/oldest upload) optimization
 - Upload card adds hover glow effect following mouse
 - Paste upload card edge glow effect optimization
+- HuggingFace large file direct upload supports user-specified file naming method
+- HuggingFace channel file storage path is now consistent with other channels
+
+Fix Bugs:
+- Fixed HuggingFace large file direct upload Content-Type not being set correctly, causing browser unable to preview directly
 
 ## 2026.01.08
 
@@ -23,6 +28,11 @@ Add Features:
 - System status cards (newest/oldest upload) optimization
 - Upload card adds hover glow effect following mouse
 - Paste upload card edge glow effect optimization
+- HuggingFace large file direct upload supports user-specified file naming method
+- HuggingFace channel file storage path is now consistent with other channels
+
+Fix Bugs:
+- Fixed HuggingFace large file direct upload Content-Type not being set correctly, causing browser unable to preview directly
 
 ## 2026.01.07
 
