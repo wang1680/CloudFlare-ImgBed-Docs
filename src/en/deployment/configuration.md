@@ -156,6 +156,7 @@ Frontend web-related settings are configured in "System Settings" → "Web Setti
 | siteIcon | Website Icon | String | Only supports `string` type, set to your custom website icon link |
 | ownerName | Image Hosting Name | String | Only supports `string` type, set to your custom image hosting name (default is `Sanyue`) |
 | logoUrl | Image Hosting Logo | String | Only supports `string` type, set to your custom image hosting logo link |
+| logoLink | Logo Click Link | String | Only supports `string` type, set to the link when clicking the logo, leave empty to use default GitHub link. Only applies to upload page |
 | bkInterval | Background Switch Interval | Positive Integer | Set to background image carousel time, default `3000`, unit `ms`.<br />For example, if you want to switch every 10s, set to `10000`. |
 | bkOpacity | Background Image Transparency | Float in (0,1] | Displayed background image transparency, default is `1`.<br />If you think the display effect is poor, you can customize it, like `0.8` |
 | urlPrefix | Default URL Prefix | String | Only supports `string` type, set to custom global default link prefix, this prefix will override the original default prefix, but will not override user-customized link prefixes |

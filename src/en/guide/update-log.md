@@ -3,10 +3,26 @@
 ## Recent Updates
 
 Add Features:
-- Telegram channel supports proxy settings
-- Optimized upload settings page user experience
-- Support converting images to WebP format before upload
-- Client settings add new default file preprocessing configuration
+- Upload page logo click link supports customization
+- File management page pagination supports displaying total pages and jumping to specific page
+- Upload channel cards optimization
+- Upload channel cards add hover glow effect following mouse
+- System status card icons changed to light blue gradient
+- System status cards (newest/oldest upload) optimization
+- Upload card adds hover glow effect following mouse
+- Paste upload card edge glow effect optimization
+
+## 2026.01.08
+
+Add Features:
+- Upload page logo click link supports customization
+- File management page pagination supports displaying total pages and jumping to specific page
+- Upload channel cards optimization
+- Upload channel cards add hover glow effect following mouse
+- System status card icons changed to light blue gradient
+- System status cards (newest/oldest upload) optimization
+- Upload card adds hover glow effect following mouse
+- Paste upload card edge glow effect optimization
 
 ## 2026.01.07
 
