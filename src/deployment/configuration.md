@@ -207,6 +207,8 @@ WebDAV 服务相关设置，详细介绍和使用方式请查看 [API 文档](..
 - 启用 WebDAV 服务：开启或关闭 WebDAV 服务
 - 用户名：WebDAV 登录用户名
 - 密码：WebDAV 登录密码
+- 上传渠道：通过 WebDAV 上传文件时使用的存储渠道，支持 Telegram、Cloudflare R2、S3、Discord、HuggingFace
+- 指定渠道名：当选择的上传渠道有多个配置时，可指定具体使用哪个渠道名称进行上传
 
 
 ## 🔧 环境变量清单

@@ -204,6 +204,8 @@ WebDAV service related settings, detailed introduction and usage methods can be 
 - Enable WebDAV Service: Turn on or off the WebDAV service
 - Username: WebDAV login username
 - Password: WebDAV login password
+- Upload Channel: Storage channel used when uploading files via WebDAV, supports Telegram, Cloudflare R2, S3, Discord, HuggingFace
+- Channel Name: When the selected upload channel has multiple configurations, specify which channel name to use for uploading
 
 ## 🔧 Environment Variables List
 

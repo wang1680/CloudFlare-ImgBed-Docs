@@ -18,7 +18,8 @@ The Upload API supports uploading files to CloudFlare ImgBed through third parti
 |-----------|------|----------|---------|-------------|
 | `authCode` | string | No | - | Upload authentication code |
 | `serverCompress` | boolean | No | `true` | Server-side compression (only for Telegram channel image files) |
-| `uploadChannel` | string | No | `telegram` | Upload channel: `telegram`, `cfr2`, `s3` |
+| `uploadChannel` | string | No | `telegram` | Upload channel: `telegram`, `cfr2`, `s3`, `discord`, `huggingface` |
+| `channelName` | string | No | - | Specify channel name for selecting a specific channel in multi-channel scenarios. Available channels can be obtained via `/api/channels` |
 | `autoRetry` | boolean | No | `true` | Automatically switch channels and retry on failure |
 | `uploadNameType` | string | No | `default` | File naming method, options are `[default, index, origin, short]`, representing default `prefix_original` naming, `prefix only` naming, `original name only` naming, and `short link` naming method, default is `default` |
 | `returnFormat` | string | No | `default` | Return link format, options are `[default, full]`, representing default `/file/id` format and full link format |

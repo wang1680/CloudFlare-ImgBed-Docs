@@ -19,7 +19,8 @@
 |--------|------|------|--------|------|
 | `authCode` | string | 否 | - | 上传认证码 |
 | `serverCompress` | boolean | 否 | `true` | 服务端压缩（仅针对Telegram渠道的图片文件） |
-| `uploadChannel` | string | 否 | `telegram` | 上传渠道：`telegram`、`cfr2`、`s3` |
+| `uploadChannel` | string | 否 | `telegram` | 上传渠道：`telegram`、`cfr2`、`s3`、`discord`、`huggingface` |
+| `channelName` | string | 否 | - | 指定渠道名称，用于多渠道场景下选择特定渠道上传。可通过 `/api/channels` 获取可用渠道列表 |
 | `autoRetry` | boolean | 否 | `true` | 失败时自动切换渠道重试 |
 | `uploadNameType` | string | 否 | `default` | 文件命名方式，可选值为`[default, index, origin, short]`，分别代表默认`前缀_原名`命名、`仅前缀`命名、`仅原名`命名和`短链接`命名法，默认为`default` |
 | `returnFormat` | string | 否 | `default` | 返回链接格式，可选值为`[default, full]`，分别代表默认的`/file/id`格式、完整链接格式 |
