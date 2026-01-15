@@ -3,10 +3,17 @@
 ## Recent Updates
 
 Add Features:
-- Admin panel folders support copy link feature (recursively copy all file links in folder)
+- Admin panel folders support copy link feature
 - Batch copy links supports mixed folders and files
 - Admin panel list view adds channel name column display
 - Unified folder path format validation rules with upload page
+- Admin panel component refactoring for better code maintainability
+- Mobile directory navigation color unified to blue theme
+- System status pie charts add hover zoom effect
+- System status pie charts tooltip z-index optimization
+- Upload history supports paginated loading to avoid lag with large records
+- Upload history page colors unified with upload page
+- Upload history page open animation changed to circular expansion effect
 
 ## 2026.01.15
 
@@ -15,6 +22,15 @@ Add Features:
 - Batch copy links supports mixed folders and files
 - Admin panel list view adds channel name column display
 - Unified folder path format validation rules with upload page
+- Admin panel component refactoring for better code maintainability
+  - Extracted FileCard, FolderCard, FileListItem components
+  - Extracted FileDetailDialog, MobileActionSheet, MobileDirectoryDrawer components
+- Mobile directory navigation color unified to blue theme
+- System status pie charts add hover zoom effect
+- System status pie charts tooltip z-index optimization
+- Upload history supports paginated loading to avoid lag with large records
+- Upload history page colors unified with upload page
+- Upload history page open animation changed to circular expansion effect
 
 ## 2026.01.10
 
