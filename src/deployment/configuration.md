@@ -163,6 +163,7 @@ docker run -d -p 127.0.0.1:5000:5000/tcp \
 | urlPrefix     | 默认 URL 前缀     | 字符串        | 只支持`字符串`类型，设置为自定义的全局默认链接前缀，该前缀会覆盖原始默认前缀，但不会覆盖用户自定义的链接前缀 |
 | announcement | 公告                 | 字符串        | 只支持`字符串`类型，可以为 HTML 格式，设置为你自定义的公告内容（如有）          |
 | defaultUploadChannel | 默认上传渠道       | 字符串        | 只支持`字符串`类型，设置为你自定义的默认上传渠道，支持`telegram`（Telegram 渠道）、`cfr2`（Cloudflare R2）、`s3`（S3 渠道）、`discord`（Discord 渠道）和`huggingface`（HuggingFace 渠道） |
+| defaultChannelName | 默认渠道名称       | 字符串        | 只支持`字符串`类型，指定默认使用的渠道名称，需先选择上传渠道。当同一渠道类型配置了多个渠道时，可通过此项指定默认使用哪个渠道 |
 | defaultUploadNameType | 默认命名方式       | 字符串        | 只支持`字符串`类型，设置为你自定义的默认上传文件命名方式，支持`default`（默认）、`index`（仅前缀）、`original`（仅原名）和`short`（短链接） |
 | loginBkImg    | 登录页背景图   | 列表/字符串   | 1、当字段类型为`列表`时，列表中元素为需要添加到轮播列表中的图片链接（列表中只有一张图时即为固定背景），形如`["1.jpg","2.jpg"]`<br />2、当字段类型为`字符串`时，目前**仅支持**字符串值为`bing`，设置为该值时启用bing随机图片轮播模式。 |
 | uploadBkImg   | 上传页背景图   | 列表/字符串   | 同loginBkImg |

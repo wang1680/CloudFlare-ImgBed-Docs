@@ -3,10 +3,18 @@
 ## Recent Updates
 
 Add Features:
-- Support specifying channel name when uploading (select specific channel in multi-channel scenarios)
-- WebDAV supports configuring upload channel and specifying channel name
-- Admin panel file details now displays channel name
-- Added API to get available channels list (`/api/channels`)
+- Admin panel folders support copy link feature (recursively copy all file links in folder)
+- Batch copy links supports mixed folders and files
+- Admin panel list view adds channel name column display
+- Unified folder path format validation rules with upload page
+
+## 2026.01.15
+
+Add Features:
+- Admin panel folders support copy link feature (recursively copy all file links in folder)
+- Batch copy links supports mixed folders and files
+- Admin panel list view adds channel name column display
+- Unified folder path format validation rules with upload page
 
 ## 2026.01.10
 
