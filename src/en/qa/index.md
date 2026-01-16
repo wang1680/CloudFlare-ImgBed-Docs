@@ -48,3 +48,7 @@ This section collects common questions and solutions encountered by users when u
 
 - Check whether the **System Settings -> Upload Settings -> S3 -> Path Style** option is enabled; if not, please enable it
 - For an explanation of **Path Style**, see [AWS S3 Compatibility - UPYUN Documentation Help Center](https://help.upyun.com/knowledge-base/aws-s3兼容/)
+
+## Q: How to add a new R2 channel?
+
+- Add a S3 channel instead
