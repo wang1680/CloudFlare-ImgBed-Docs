@@ -3,6 +3,20 @@
 ## Recent Updates
 
 Add Features:
+- Discord and HuggingFace channels support image moderation for small file uploads
+- Optimized moderatecontent.com moderation channel request method
+- Channel name selector maintains empty state after clearing and page refresh
+
+## 2026.01.17
+
+Add Features:
+- Discord and HuggingFace channels support image moderation for small file uploads
+- Optimized moderatecontent.com moderation channel request method, using POST to avoid URL encoding issues
+- Channel name selector maintains empty state after clearing and page refresh
+
+## 2026.01.15
+
+Add Features:
 - Admin panel folders support copy link feature
 - Batch copy links supports mixed folders and files
 - Admin panel list view adds channel name column display

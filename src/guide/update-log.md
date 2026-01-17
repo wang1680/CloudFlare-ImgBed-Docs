@@ -3,6 +3,20 @@
 ## 最近更新
 
 Add Features:
+- Discord 和 HuggingFace 渠道小文件上传支持图像审查
+- 优化 moderatecontent.com 审查渠道请求方式
+- 渠道名称选择框清空后刷新页面保持为空状态
+
+## 2026.01.17
+
+Add Features:
+- Discord 和 HuggingFace 渠道小文件上传支持图像审查
+- 优化 moderatecontent.com 审查渠道请求方式，改用 POST 方法避免 URL 编码问题
+- 渠道名称选择框清空后刷新页面保持为空状态
+
+## 2026.01.15
+
+Add Features:
 - 管理面板文件夹支持复制链接功能
 - 批量复制链接支持文件夹和文件混合复制
 - 管理面板列表视图新增渠道名称列显示
