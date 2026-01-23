@@ -3,9 +3,18 @@
 ## Recent Updates
 
 Add Features:
-- Discord and HuggingFace channels support image moderation for small file uploads
-- Optimized moderatecontent.com moderation channel request method
-- Channel name selector maintains empty state after clearing and page refresh
+- Batch index rebuild feature to avoid Cloudflare Workers CPU time limits
+- Batch backup and restore optimization with chunked processing for large files
+- Settings page save button changed to floating component with light/dark theme support
+- Mobile settings page layout optimization
+
+## 2026.01.23
+
+Add Features:
+- Batch index rebuild feature to avoid Cloudflare Workers CPU time limits
+- Batch backup and restore optimization with chunked processing for large files
+- Settings page save button changed to floating component with light/dark theme support
+- Mobile settings page layout optimization
 
 ## 2026.01.17
 

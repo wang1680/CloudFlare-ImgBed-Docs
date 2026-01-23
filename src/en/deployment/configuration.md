@@ -81,6 +81,7 @@ Fill in the S3 channel configuration in the admin backend:
 - **Endpoint**: Service endpoint (complete URL, e.g., https://s3.us-east-005.backblazeb2.com)
 - **PathStyle**: Path style (enable this option for compatibility with older S3 versions)
 - **Region**: Storage region (optional)
+- **CDN Domain**: (Optional) Custom CDN acceleration domain. The file will firstly read from CDN if configured.
 
 ### Configure Discord Channel
 

@@ -83,6 +83,7 @@ export default {
 - **Endpoint**：服务端点（完整 URL，如 https://s3.us-east-005.backblazeb2.com）
 - **PathStyle**：路径样式（如需兼容旧 S3 版本，开启此选项）
 - **Region**：存储区域（可选）
+- **CDN 域名**：（可选）自定义 CDN 加速域名，设置后优先通过CDN读取文件
 
 ### 配置 Discord 渠道
 
