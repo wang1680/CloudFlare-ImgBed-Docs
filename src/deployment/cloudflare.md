@@ -104,7 +104,7 @@ KV 数据库和 D1 数据库**只需要配置其中一个**即可，不需要同
 
 1. 创建完成后，点击进入数据库详情页
 2. 选择 "控制台" 选项卡
-3. 在 SQL 输入框中逐段粘贴并执行初始化语句（见[项目仓库](https://github.com/MarSeventh/CloudFlare-ImgBed/blob/main/database/init.sql)）
+3. 在 SQL 输入框中粘贴并执行注释区域以下的内容（见[项目仓库](https://github.com/MarSeventh/CloudFlare-ImgBed/blob/main/database/init.sql)）
 4. 点击 "执行"
 
 #### 绑定 D1 到项目
