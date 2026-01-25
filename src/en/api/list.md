@@ -23,9 +23,13 @@ The List API supports retrieving file lists from CloudFlare ImgBed.
 | `search` | string | No | `""` | Search keyword, supports filename search |
 | `includeTags` | string | No | `""` | Include tags filter, multiple tags separated by comma, files must contain all specified tags |
 | `excludeTags` | string | No | `""` | Exclude tags filter, multiple tags separated by comma, files cannot contain any specified tags |
-| `channel` | string | No | `""` | Filter by storage channel: `telegram`, `cfr2`, `s3` |
-| `listType` | string | No | `""` | Filter by review result type: `None`, `Block`, `White` |
-| `action` | string | No | `""` | Special operations: `rebuild`, `info` |
+| `channel` | string | No | `""` | Filter by storage channel, multiple values separated by comma: `TelegramNew`, `CloudflareR2`, `S3`, `Discord`, `HuggingFace`, `External` |
+| `channelName` | string | No | `""` | Filter by channel name, multiple values separated by comma |
+| `listType` | string | No | `""` | Blacklist/whitelist filter, multiple values separated by comma: `White` (whitelist), `Block` (blacklist), `None` (not set) |
+| `accessStatus` | string | No | `""` | Access status filter, multiple values separated by comma: `normal` (accessible), `blocked` (blocked) |
+| `label` | string | No | `""` | Content review filter, multiple values separated by comma: `normal` (normal), `teen` (12+ content), `adult` (adult content) |
+| `fileType` | string | No | `""` | File type filter, multiple values separated by comma: `image` (images), `video` (videos), `audio` (audio), `other` (other) |
+| `action` | string | No | `""` | Special operations: `rebuild`, `info`, `merge-operations`, `delete-operations`, `index-storage-stats` |
 
 ## Feature Description
 
@@ -44,6 +48,67 @@ Supports precise file filtering by tags:
 - **Exclude Tags (`excludeTags`)**: Files cannot contain any of the specified tags
 - Tag matching is case-insensitive and supports multilingual tags (Chinese, Japanese, Korean, etc.)
 - Include and exclude tags can be used together for complex filtering
+
+### Multi-dimensional Filtering
+
+#### Channel Filtering (`channel`)
+Filter files by storage channel, supports multiple selection (OR logic):
+- `TelegramNew` - Telegram
+- `CloudflareR2` - Cloudflare R2
+- `S3` - S3
+- `Discord` - Discord
+- `HuggingFace` - HuggingFace
+- `External` - External links
+
+Example: `channel=TelegramNew,CloudflareR2` returns files stored in Telegram or Cloudflare R2
+
+#### Channel Name Filtering (`channelName`)
+Filter by specific channel name, supports multiple selection (OR logic). Channel name is a user-defined storage channel identifier.
+
+#### Blacklist/Whitelist Filtering (`listType`)
+Filter by file's blacklist/whitelist status, supports multiple selection (OR logic):
+- `White` - Whitelist files
+- `Block` - Blacklist files
+- `None` - Not set (includes empty, undefined, null, or string 'None')
+
+Example: `listType=White,None` returns whitelist or unset files
+
+#### Access Status Filtering (`accessStatus`)
+Filter by file's access status, supports multiple selection (OR logic):
+- `normal` - Normal (accessible)
+- `blocked` - Blocked (not accessible)
+
+**Logic**:
+- **Blocked**: `ListType === 'Block' || (Label === 'adult' && ListType !== 'White')`
+- **Normal**: All other cases
+
+**Note**: Whitelist takes priority. Even if the content review result is adult content (`Label === 'adult'`), as long as it's in the whitelist (`ListType === 'White'`), it's considered normal status.
+
+Example: `accessStatus=normal` returns all normally accessible files
+
+#### Content Review Filtering (`label`)
+Filter by content review result, supports multiple selection (OR logic):
+- `normal` - Normal content (matches Label as 'everyone', 'None', '', null, undefined)
+- `teen` - 12+ content (matches Label as 'teen')
+- `adult` - Adult content (matches Label as 'adult')
+
+Example: `label=normal,teen` returns normal or 12+ content files
+
+#### File Type Filtering (`fileType`)
+Filter by file MIME type, supports multiple selection (OR logic):
+- `image` - Images (FileType starts with 'image/')
+- `video` - Videos (FileType starts with 'video/')
+- `audio` - Audio (FileType starts with 'audio/')
+- `other` - Other (not in the above three categories)
+
+Example: `fileType=image,video` returns all image and video files
+
+### Combined Filtering
+All filter parameters can be combined to achieve complex query requirements. For example:
+```
+/api/manage/list?listType=White&fileType=image&channel=TelegramNew&accessStatus=normal
+```
+Returns: whitelist + images + Telegram channel + normal access status files
 
 ### Special Operations
 
@@ -144,7 +209,59 @@ curl --location --request GET 'https://your.domain/api/manage/list?dir=photos/20
 ### Filter by Storage Channel
 
 ```bash
-curl --location --request GET 'https://your.domain/api/manage/list?channel=telegram' \
+curl --location --request GET 'https://your.domain/api/manage/list?channel=TelegramNew' \
+--header 'Authorization: Bearer your_token'
+```
+
+### Filter by Blacklist/Whitelist
+
+```bash
+# Get whitelist files
+curl --location --request GET 'https://your.domain/api/manage/list?listType=White' \
+--header 'Authorization: Bearer your_token'
+```
+
+### Filter by Access Status
+
+```bash
+# Get all normally accessible files
+curl --location --request GET 'https://your.domain/api/manage/list?accessStatus=normal' \
+--header 'Authorization: Bearer your_token'
+
+# Get all blocked files
+curl --location --request GET 'https://your.domain/api/manage/list?accessStatus=blocked' \
+--header 'Authorization: Bearer your_token'
+```
+
+### Filter by File Type
+
+```bash
+# Get all image files
+curl --location --request GET 'https://your.domain/api/manage/list?fileType=image' \
+--header 'Authorization: Bearer your_token'
+
+# Get image and video files
+curl --location --request GET 'https://your.domain/api/manage/list?fileType=image,video' \
+--header 'Authorization: Bearer your_token'
+```
+
+### Filter by Content Review
+
+```bash
+# Get normal content files
+curl --location --request GET 'https://your.domain/api/manage/list?label=normal' \
+--header 'Authorization: Bearer your_token'
+```
+
+### Combined Filtering
+
+```bash
+# Whitelist + images + Telegram channel
+curl --location --request GET 'https://your.domain/api/manage/list?listType=White&fileType=image&channel=TelegramNew' \
+--header 'Authorization: Bearer your_token'
+
+# Normal access status + image type
+curl --location --request GET 'https://your.domain/api/manage/list?accessStatus=normal&fileType=image' \
 --header 'Authorization: Bearer your_token'
 ```
 

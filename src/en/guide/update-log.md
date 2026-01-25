@@ -3,10 +3,14 @@
 ## Recent Updates
 
 Add Features:
-- Batch index rebuild feature to avoid Cloudflare Workers CPU time limits
-- Batch backup and restore optimization with chunked processing for large files
-- Settings page save button changed to floating component with light/dark theme support
-- Mobile settings page layout optimization
+- Admin panel supports multi-dimensional filtering by channel type, channel name, access status, file type, etc.
+- Optimized admin panel search display effects
+
+## 2026.01.25
+
+Add Features:
+- Admin panel supports multi-dimensional filtering by channel type, channel name, access status, file type, etc.
+- Optimized admin panel search display effects
 
 ## 2026.01.23
 
