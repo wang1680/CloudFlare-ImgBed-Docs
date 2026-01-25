@@ -65,6 +65,22 @@
 #### 渠道名称筛选 (`channelName`)
 按具体渠道名称筛选，支持多选（OR 逻辑）。渠道名称是用户自定义的存储渠道标识。
 
+**支持的格式**：
+- `name` - 只匹配渠道名称
+- `type:name` - 同时匹配渠道类型和名称（推荐，用于区分不同类型的同名渠道）
+
+**类型标识**：
+- `telegram` - Telegram
+- `cfr2` - Cloudflare R2
+- `s3` - S3
+- `discord` - Discord
+- `huggingface` - HuggingFace
+
+示例：
+- `channelName=default` - 匹配所有名为 "default" 的渠道
+- `channelName=telegram:default` - 只匹配 Telegram 类型中名为 "default" 的渠道
+- `channelName=telegram:default,s3:backup` - 匹配 Telegram 的 "default" 或 S3 的 "backup"
+
 #### 黑白名单筛选 (`listType`)
 按文件的黑白名单状态筛选，支持多选（OR 逻辑）：
 - `White` - 白名单文件
@@ -251,6 +267,22 @@ curl --location --request GET 'https://your.domain/api/manage/list?fileType=imag
 ```bash
 # 获取正常内容的文件
 curl --location --request GET 'https://your.domain/api/manage/list?label=normal' \
+--header 'Authorization: Bearer your_token'
+```
+
+### 按渠道名称筛选
+
+```bash
+# 获取特定渠道名称的文件
+curl --location --request GET 'https://your.domain/api/manage/list?channelName=default' \
+--header 'Authorization: Bearer your_token'
+
+# 获取特定类型和名称的渠道文件（推荐）
+curl --location --request GET 'https://your.domain/api/manage/list?channelName=telegram:default' \
+--header 'Authorization: Bearer your_token'
+
+# 获取多个渠道的文件
+curl --location --request GET 'https://your.domain/api/manage/list?channelName=telegram:default,s3:backup' \
 --header 'Authorization: Bearer your_token'
 ```
 
