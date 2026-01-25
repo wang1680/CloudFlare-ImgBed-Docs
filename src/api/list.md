@@ -49,7 +49,7 @@
 - 标签匹配不区分大小写，支持中文、日文、韩文等多语言标签
 - 可以同时使用包含和排除标签进行复合筛选
 
-### 多维度筛选
+### 其他维度筛选
 
 #### 渠道筛选 (`channel`)
 按存储渠道筛选文件，支持多选（OR 逻辑）：
@@ -103,7 +103,7 @@
 
 示例：`fileType=image,video` 返回所有图片和视频文件
 
-### 筛选组合使用
+### 组合筛选
 所有筛选参数可以组合使用，实现复杂的查询需求。例如：
 ```
 /api/manage/list?listType=White&fileType=image&channel=TelegramNew&accessStatus=normal

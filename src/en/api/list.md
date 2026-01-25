@@ -49,7 +49,7 @@ Supports precise file filtering by tags:
 - Tag matching is case-insensitive and supports multilingual tags (Chinese, Japanese, Korean, etc.)
 - Include and exclude tags can be used together for complex filtering
 
-### Multi-dimensional Filtering
+### Other Dimensions Filtering
 
 #### Channel Filtering (`channel`)
 Filter files by storage channel, supports multiple selection (OR logic):
