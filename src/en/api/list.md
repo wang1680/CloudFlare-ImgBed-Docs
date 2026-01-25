@@ -70,16 +70,16 @@ Filter by specific channel name, supports multiple selection (OR logic). Channel
 - `type:name` - Match both channel type and name (recommended, for distinguishing same-named channels of different types)
 
 **Type identifiers**:
-- `telegram` - Telegram
-- `cfr2` - Cloudflare R2
-- `s3` - S3
-- `discord` - Discord
-- `huggingface` - HuggingFace
+- `TelegramNew` - Telegram
+- `CloudflareR2` - Cloudflare R2
+- `S3` - S3
+- `Discord` - Discord
+- `HuggingFace` - HuggingFace
 
 Examples:
 - `channelName=default` - Match all channels named "default"
-- `channelName=telegram:default` - Match only "default" channel in Telegram type
-- `channelName=telegram:default,s3:backup` - Match Telegram's "default" or S3's "backup"
+- `channelName=TelegramNew:default` - Match only "default" channel in Telegram type
+- `channelName=TelegramNew:default,S3:backup` - Match Telegram's "default" or S3's "backup"
 
 #### Blacklist/Whitelist Filtering (`listType`)
 Filter by file's blacklist/whitelist status, supports multiple selection (OR logic):
@@ -277,11 +277,11 @@ curl --location --request GET 'https://your.domain/api/manage/list?channelName=d
 --header 'Authorization: Bearer your_token'
 
 # Get files from specific type and name (recommended)
-curl --location --request GET 'https://your.domain/api/manage/list?channelName=telegram:default' \
+curl --location --request GET 'https://your.domain/api/manage/list?channelName=TelegramNew:default' \
 --header 'Authorization: Bearer your_token'
 
 # Get files from multiple channels
-curl --location --request GET 'https://your.domain/api/manage/list?channelName=telegram:default,s3:backup' \
+curl --location --request GET 'https://your.domain/api/manage/list?channelName=TelegramNew:default,S3:backup' \
 --header 'Authorization: Bearer your_token'
 ```
 
