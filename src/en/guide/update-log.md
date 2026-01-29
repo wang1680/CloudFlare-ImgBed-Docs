@@ -3,8 +3,12 @@
 ## Recent Updates
 
 Add Features:
-- Admin panel supports multi-dimensional filtering by channel type, channel name, access status, file type, etc.
-- Optimized admin panel search display effects
+- Support custom background images for admin panel
+
+## 2026.01.29
+
+Add Features:
+- Support custom background images for admin panel
 
 ## 2026.01.25
 

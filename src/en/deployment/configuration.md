@@ -173,7 +173,8 @@ Frontend web-related settings are configured in "System Settings" → "Web Setti
 | defaultCustomerCompress | Default Compression | boolean | Supports `boolean` type, set to `true` to enable client compression by default, default `true` |
 | defaultCompressBar | Default Compression Threshold | Number | Images larger than this value will be automatically compressed, unit MB, range 1-20, default `5` |
 | defaultCompressQuality | Default Expected Size | Number | Expected image size after compression, unit MB, range 0.5-compression threshold, default `4` |
-| adminLoginBkImg | Admin Page Background | List/String | Same as loginBkImg |
+| adminLoginBkImg | Admin Login Page Background | List/String | Same as loginBkImg |
+| adminBkImg | Admin Page Background | List/String | Same as loginBkImg |
 
 ## 🛠️ Other Settings
 Other setting items are configured in "System Settings" → "Other Settings" in the admin backend
