@@ -3,7 +3,24 @@
 ## Recent Updates
 
 Add Features:
-- Support custom background images for admin panel
+- Random image API adds `orientation` parameter for filtering by image orientation (landscape/portrait/square)
+- Auto-extract image dimensions (Width, Height) during upload via file header magic number detection
+- Record file size in bytes (FileSizeBytes) during upload for more accurate capacity statistics
+- Admin panel file details now displays image dimensions and orientation
+- Admin panel file size display optimized with auto unit selection (B/KB/MB)
+- Public browse API adds caching mechanism for faster access
+- Blacklist/whitelist operations now auto-clear related API caches
+
+## 2026.01.30
+
+Add Features:
+- Random image API adds `orientation` parameter for filtering by image orientation (landscape/portrait/square)
+- Auto-extract image dimensions (Width, Height) during upload via file header magic number detection
+- Record file size in bytes (FileSizeBytes) during upload for more accurate capacity statistics
+- Admin panel file details now displays image dimensions and orientation
+- Admin panel file size display optimized with auto unit selection (B/KB/MB)
+- Public browse API adds caching mechanism for faster access
+- Blacklist/whitelist operations now auto-clear related API caches
 
 ## 2026.01.29
 

@@ -16,6 +16,7 @@ The Random Image API allows you to randomly get an image from the image hosting,
 | `type` | string | No | `path` | Return content type, set to `img` to directly return image (form parameter doesn't work in this case), set to `url` to return complete url link |
 | `form` | string | No | `json` | Response format, set to `text` to directly return text |
 | `dir` | string | No | - | Specify directory, use relative path, e.g., `img/test` will return files from this directory and all subdirectories |
+| `orientation` | string | No | - | Image orientation filter, options: `landscape`, `portrait`, `square` |
 
 ## Response Format
 
@@ -27,11 +28,28 @@ The Random Image API allows you to randomly get an image from the image hosting,
 
 ## Examples
 
-### Request Example    
+### Basic Request
 
 ```bash
-curl --location --request GET 'https://your.domain/random' \\
---header 'User-Agent: Apifox/1.0.0 (https://apifox.com)'
+curl --location --request GET 'https://your.domain/random'
+```
+
+### Get Landscape Image
+
+```bash
+curl --location --request GET 'https://your.domain/random?orientation=landscape'
+```
+
+### Get Portrait Image from Specific Directory
+
+```bash
+curl --location --request GET 'https://your.domain/random?dir=wallpaper&orientation=portrait'
+```
+
+### Return Image Directly
+
+```bash
+curl --location --request GET 'https://your.domain/random?type=img&orientation=landscape'
 ```
 
 ### Response Example
@@ -40,4 +58,27 @@ curl --location --request GET 'https://your.domain/random' \\
 {
  "url": "/file/4fab4d423d039b4665a27.jpg"
 }
+```
+
+## Use Cases
+
+### Random Website Background
+
+```html
+<img src="https://your.domain/random?type=img&orientation=landscape" alt="Random Background">
+```
+
+### CSS Background Image
+
+```css
+.hero {
+  background-image: url('https://your.domain/random?type=img&orientation=landscape');
+  background-size: cover;
+}
+```
+
+### Mobile Wallpaper API
+
+```
+https://your.domain/random?type=img&dir=mobile&orientation=portrait
 ```
