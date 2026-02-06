@@ -2,14 +2,23 @@
 
 ## 最近更新
 
-Add Features:
-- 随机图 API 新增 `orientation` 参数，支持按图片方向筛选（横图/竖图/方图）
-- 上传时自动提取图片尺寸信息（Width、Height），通过文件头魔数检测格式
-- 上传时记录文件字节大小（FileSizeBytes），容量统计更精确
-- 管理面板文件详情展示图片尺寸和方向信息
-- 管理面板文件大小显示优化，自动选择合适单位（B/KB/MB）
-- 公开浏览 API 增加缓存机制，提升访问速度
-- 黑白名单操作时自动清除相关 API 缓存
+Refactor:
+- 上传页面组件拆分重构，提升代码可维护性
+  - 提取 UploadFileItem 组件（文件列表项展示）
+  - 提取 UploadSettingsDialog 组件（上传设置弹窗）
+  - 提取 urlBuilder.js 工具函数（链接格式生成）
+  - 提取 sha256.js 工具函数（SHA256 计算）
+- 清理重构后残留的无用 CSS 样式和冗余方法
+
+## 2026.02.06
+
+Refactor:
+- 上传页面组件拆分重构，提升代码可维护性
+  - 提取 UploadFileItem 组件（文件列表项展示）
+  - 提取 UploadSettingsDialog 组件（上传设置弹窗）
+  - 提取 urlBuilder.js 工具函数（链接格式生成）
+  - 提取 sha256.js 工具函数（SHA256 计算）
+- 清理重构后残留的无用 CSS 样式和冗余方法
 
 ## 2026.01.30
 

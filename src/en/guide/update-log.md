@@ -2,14 +2,23 @@
 
 ## Recent Updates
 
-Add Features:
-- Random image API adds `orientation` parameter for filtering by image orientation (landscape/portrait/square)
-- Auto-extract image dimensions (Width, Height) during upload via file header magic number detection
-- Record file size in bytes (FileSizeBytes) during upload for more accurate capacity statistics
-- Admin panel file details now displays image dimensions and orientation
-- Admin panel file size display optimized with auto unit selection (B/KB/MB)
-- Public browse API adds caching mechanism for faster access
-- Blacklist/whitelist operations now auto-clear related API caches
+Refactor:
+- Upload page component refactoring for better code maintainability
+  - Extracted UploadFileItem component (file list item display)
+  - Extracted UploadSettingsDialog component (upload settings dialog)
+  - Extracted urlBuilder.js utility (URL format generation)
+  - Extracted sha256.js utility (SHA256 computation)
+- Cleaned up unused CSS styles and redundant methods left over from refactoring
+
+## 2026.02.06
+
+Refactor:
+- Upload page component refactoring for better code maintainability
+  - Extracted UploadFileItem component (file list item display)
+  - Extracted UploadSettingsDialog component (upload settings dialog)
+  - Extracted urlBuilder.js utility (URL format generation)
+  - Extracted sha256.js utility (SHA256 computation)
+- Cleaned up unused CSS styles and redundant methods left over from refactoring
 
 ## 2026.01.30
 
