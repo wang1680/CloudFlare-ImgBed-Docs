@@ -3,12 +3,24 @@
 ## 最近更新
 
 Refactor:
-- 上传页面组件拆分重构，提升代码可维护性
-  - 提取 UploadFileItem 组件（文件列表项展示）
-  - 提取 UploadSettingsDialog 组件（上传设置弹窗）
-  - 提取 urlBuilder.js 工具函数（链接格式生成）
-  - 提取 sha256.js 工具函数（SHA256 计算）
-- 清理重构后残留的无用 CSS 样式和冗余方法
+- 组件目录结构重组，按页面模块分类（dashboard、config、upload、browse）
+
+Add Features:
+- 管理面板卡片视图支持从空白区域框选多选文件
+  - 支持 Shift/Ctrl/Cmd 修饰键追加选中
+  - 框选过程中自动滚动、防止文本选中
+  - 仅桌面端卡片视图生效（屏幕宽度 > 768px）
+
+## 2026.02.07
+
+Refactor:
+- 组件目录结构重组，按页面模块分类（dashboard、config、upload、browse）
+
+Add Features:
+- 管理面板卡片视图支持从空白区域框选多选文件
+  - 支持 Shift/Ctrl/Cmd 修饰键追加选中
+  - 框选过程中自动滚动、防止文本选中
+  - 仅桌面端卡片视图生效（屏幕宽度 > 768px）
 
 ## 2026.02.06
 

@@ -3,12 +3,24 @@
 ## Recent Updates
 
 Refactor:
-- Upload page component refactoring for better code maintainability
-  - Extracted UploadFileItem component (file list item display)
-  - Extracted UploadSettingsDialog component (upload settings dialog)
-  - Extracted urlBuilder.js utility (URL format generation)
-  - Extracted sha256.js utility (SHA256 computation)
-- Cleaned up unused CSS styles and redundant methods left over from refactoring
+- Reorganized component directory structure by page module (dashboard, config, upload, browse)
+
+Add Features:
+- Admin panel card view supports rubber-band (drag) multi-selection from blank areas
+  - Supports Shift/Ctrl/Cmd modifier keys for appending selections
+  - Auto-scroll and text selection prevention during drag
+  - Only active in desktop card view (screen width > 768px)
+
+## 2026.02.07
+
+Refactor:
+- Reorganized component directory structure by page module (dashboard, config, upload, browse)
+
+Add Features:
+- Admin panel card view supports rubber-band (drag) multi-selection from blank areas
+  - Supports Shift/Ctrl/Cmd modifier keys for appending selections
+  - Auto-scroll and text selection prevention during drag
+  - Only active in desktop card view (screen width > 768px)
 
 ## 2026.02.06
 
