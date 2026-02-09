@@ -3,15 +3,16 @@
 ## Recent Updates
 
 Add Features:
-- Admin panel card view supports rubber-band (drag) multi-selection from blank areas
-  - Supports Shift/Ctrl/Cmd modifier keys for appending selections
-  - Auto-scroll and text selection prevention during drag
-  - Only active in desktop card view (screen width > 768px)
-- File detail dialog supports editing metadata (file name, file type) with real-time sync to file list
-- File detail dialog supports renaming File ID (URL path identifier) with frontend format validation and backend duplicate detection
+- Random API supports returning image according to the device (orientation=auto)
+- Admin panel list view supports rubber-band (drag) multi-selection from blank areas
+- Admin panel remembers list/card view selection, automatically restores last view mode after page refresh
 
-Refactor:
-- Reorganized component directory structure by page module (dashboard, config, upload, browse)
+## 2026.02.09
+
+Add Features:
+- Random API supports returning image according to the device (orientation=auto)
+- Admin panel list view supports rubber-band (drag) multi-selection from blank areas
+- Admin panel remembers list/card view selection, automatically restores last view mode after page refresh
 
 ## 2026.02.07
 
