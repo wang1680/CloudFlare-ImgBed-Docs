@@ -64,7 +64,14 @@ Mode: Docker (Native Node.js)
 服务默认运行在 `8080` 端口，可通过环境变量 `PORT` 修改：
 
 ```bash
+# Linux / macOS
 PORT=9090 npm run start:docker
+
+# Windows (CMD)
+set PORT=9090 && npm run start:docker
+
+# Windows (PowerShell)
+$env:PORT=9090; npm run start:docker
 ```
 
 ### 持久化数据

@@ -64,7 +64,14 @@ At this point, under normal circumstances, the project has been successfully dep
 The service runs on port `8080` by default. You can change it via the `PORT` environment variable:
 
 ```bash
+# Linux / macOS
 PORT=9090 npm run start:docker
+
+# Windows (CMD)
+set PORT=9090 && npm run start:docker
+
+# Windows (PowerShell)
+$env:PORT=9090; npm run start:docker
 ```
 
 ### Data Persistence
