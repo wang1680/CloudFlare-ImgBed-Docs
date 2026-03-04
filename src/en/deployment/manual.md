@@ -18,6 +18,7 @@ Due to the complex variety of server operating systems and hardware versions, th
 
 Install the corresponding `node.js` for your server operating system. Version `v22.5.1` has been tested to work normally.
 
+
 ### 2. Get Project Code
 
 ```bash
@@ -34,53 +35,41 @@ Switch to the project root directory and run `npm install` to install required d
 npm install
 ```
 
-### 4. Create Configuration File
+### 4. Start Service
 
-Create a `wrangler.toml` configuration file in the project root directory, containing project name, environment variables, etc.
-
-```toml
-name = "cloudflare-imgbed"
-compatibility_date = "2024-07-24"
-
-# If you need to set environment variables, you can add them here
-# [vars]
-# AUTH_CODE = "your_auth_code"
-# TG_BOT_TOKEN = "your_bot_token"
-# TG_CHAT_ID = "your_chat_id"
-```
-
-For details, see the official documentation: [Configuration - Wrangler (cloudflare.com)](https://developers.cloudflare.com/workers/wrangler/configuration/)
-
-### 5. Start Service
-
-Run `npm run start` in the project root directory:
+Run `npm run start:docker` in the project root directory:
 
 ```bash
-npm run start
+npm run start:docker
 ```
 
 After normal startup, the console output should be similar to:
 
 ```
-⎔ Starting local server...
-⎔ Using namespace binding img_url
-⎔ Using R2 binding img_r2
-✅ Ready on http://localhost:8080
+Database initialized successfully
+Server running at http://0.0.0.0:8080
+Data directory: /your/path
+Mode: Docker (Native Node.js)
 ```
 
 ![Service Started Successfully](/images/deployment/manual-console.png)
 
 At this point, under normal circumstances, the project has been successfully deployed. The program runs on port `8080` by default.
 
+
 ## ⚙️ Custom Configuration
 
 ### Modify Port
 
-You can modify the startup port by editing the start script in `package.json` or using environment variables.
+The service runs on port `8080` by default. You can change it via the `PORT` environment variable:
 
-### Environment Variables
+```bash
+PORT=9090 npm run start:docker
+```
 
-Most configurations have been moved to the admin backend after v2.0. You can complete the configuration through the web interface.
+### Data Persistence
+
+Data is automatically saved in the `./data` folder under the project directory. Make sure this directory has sufficient read/write permissions.
 
 ## 🚀 Next Steps
 

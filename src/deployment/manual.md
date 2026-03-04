@@ -35,38 +35,21 @@ cd CloudFlare-ImgBed
 npm install
 ```
 
-### 4. 创建配置文件
+### 4. 启动服务
 
-在项目根目录下新建`wrangler.toml`配置文件，其内容为项目名称，环境变量等。
-
-```toml
-name = "cloudflare-imgbed"
-compatibility_date = "2024-07-24"
-
-# 如果需要设置环境变量，可以在这里添加
-# [vars]
-# AUTH_CODE = "your_auth_code"
-# TG_BOT_TOKEN = "your_bot_token"
-# TG_CHAT_ID = "your_chat_id"
-```
-
-详情参见官方文档：[Configuration - Wrangler (cloudflare.com)](https://developers.cloudflare.com/workers/wrangler/configuration/)
-
-### 5. 启动服务
-
-在项目根目录下运行`npm run start`：
+在项目根目录下运行`npm run start:docker`：
 
 ```bash
-npm run start
+npm run start:docker
 ```
 
 正常启动后，控制台输出类似如下内容：
 
 ```
-⎔ Starting local server...
-⎔ Using namespace binding img_url
-⎔ Using R2 binding img_r2
-✅ Ready on http://localhost:8080
+Database initialized successfully
+Server running at http://0.0.0.0:8080
+Data directory: /your/path
+Mode: Docker (Native Node.js)
 ```
 
 ![服务启动成功](/images/deployment/manual-console.png)
@@ -78,18 +61,11 @@ npm run start
 
 ### 修改端口
 
-如需修改端口，可在`package.json`中修改`start`脚本的`port`参数：
+服务默认运行在 `8080` 端口，可通过环境变量 `PORT` 修改：
 
-```json
-"scripts": {
-    "ci-test": "concurrently --kill-others \"npm start\" \"wait-on http://localhost:8080 && mocha\"",
-    "test": "mocha",
-    "start": "npx wrangler pages dev ./ --kv \"img_url\" --r2 \"img_r2\" --port 8080 --persist-to ./data"
-}
+```bash
+PORT=9090 npm run start:docker
 ```
-
-将`--port 8080`修改为你想要的端口号。
-
 
 ### 持久化数据
 

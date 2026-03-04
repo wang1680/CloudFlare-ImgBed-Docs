@@ -3,12 +3,18 @@
 ## Recent Updates
 
 Add Features:
-- Added directory tree picker component, supports visual directory selection when uploading or moving files
-- channels and fetchRes APIs now support dual authentication
+- Upload page directory input supports auto-suggestion and completion
 
-Fix Bugs:
-- Fixed Element Plus component property warnings
-- Fixed S3 chunk upload failure issue
+Refactor:
+- Docker architecture rebuild, optimized performance and memory management (read the announcement before upgrading!)
+
+## 2026.03.04
+
+Add Features:
+- Upload page directory input supports auto-suggestion and completion
+
+Refactor:
+- Docker architecture rebuild, optimized performance and memory management (read the announcement before upgrading!)
 
 ## 2026.02.28
 

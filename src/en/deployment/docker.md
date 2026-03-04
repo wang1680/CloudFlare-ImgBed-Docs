@@ -2,6 +2,7 @@
 
 Docker deployment is suitable for users with their own servers, providing more control and customization capabilities.
 
+
 ## 🚀 Quick Deployment
 
 ### Method 1: Docker Compose (Recommended)
@@ -23,19 +24,7 @@ wget https://raw.githubusercontent.com/MarSeventh/CloudFlare-ImgBed/main/docker-
 curl -o docker-compose.yml https://raw.githubusercontent.com/MarSeventh/CloudFlare-ImgBed/main/docker-compose.yml
 ```
 
-3. **Create Configuration File**
-
-Create `wrangler.toml` file:
-
-```toml
-name = "cloudflare-imgbed"
-compatibility_date = "2024-07-24"
-
-# Optional: Add environment variables, most configurations have been migrated to admin backend after v2.0
-# [vars]
-```
-
-4. **Start Service**
+3. **Start Service**
 
 ```bash
 # Start service (run in background)
@@ -45,9 +34,10 @@ docker compose up -d
 docker compose logs -f
 ```
 
-5. **Access Service**
+4. **Access Service**
 
 Open browser and visit: `http://your-server-ip:7658`
+
 
 ### Method 2: Docker Command
 
@@ -58,35 +48,22 @@ mkdir cloudflare-imgbed
 cd cloudflare-imgbed
 ```
 
-2. **Create Configuration File**
-
-Create `wrangler.toml` file:
-
-```toml
-name = "cloudflare-imgbed"
-compatibility_date = "2024-07-24"
-
-# Optional: Add environment variables, most configurations have been migrated to admin backend after v2.0
-# [vars]
-```
-
-3. **Pull Image**
+2. **Pull Image**
 ```bash
 docker pull marseventh/cloudflare-imgbed:latest
 ```
 
-4. **Run Container**
+3. **Run Container**
 
 ```bash
-docker run -d \\
-  --name cloudflare-imgbed \\
-  -p 7658:8080 \\
-  -v $(pwd)/data:/app/data \\
-  -v $(pwd)/wrangler.toml:/app/wrangler.toml \\
+docker run -d \
+  --name cloudflare-imgbed \
+  -p 7658:8080 \
+  -v $(pwd)/data:/app/data \
   marseventh/cloudflare-imgbed:latest
 ```
 
-5. **Access Service**
+4. **Access Service**
 
 Open browser and visit: `http://your-server-ip:7658`
 
@@ -97,7 +74,7 @@ Open browser and visit: `http://your-server-ip:7658`
 | Path | Description | Required |
 |------|-------------|----------|
 | `./data:/app/data` | Data persistence directory | Yes |
-| `./wrangler.toml:/app/wrangler.toml` | Configuration file | Yes |
+
 
 ## 🚀 Next Steps
 

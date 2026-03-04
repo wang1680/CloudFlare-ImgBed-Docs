@@ -24,19 +24,7 @@ wget https://raw.githubusercontent.com/MarSeventh/CloudFlare-ImgBed/main/docker-
 curl -o docker-compose.yml https://raw.githubusercontent.com/MarSeventh/CloudFlare-ImgBed/main/docker-compose.yml
 ```
 
-3. **创建配置文件**
-
-创建 `wrangler.toml` 文件：
-
-```toml
-name = "cloudflare-imgbed"
-compatibility_date = "2024-07-24"
-
-# 可选：添加环境变量，v2.0 版本后大部分配置已迁移到管理后台
-# [vars]
-```
-
-4. **启动服务**
+3. **启动服务**
 
 ```bash
 # 启动服务（后台运行）
@@ -46,7 +34,7 @@ docker compose up -d
 docker compose logs -f
 ```
 
-5. **访问服务**
+4. **访问服务**
 
 打开浏览器访问：`http://your-server-ip:7658`
 
@@ -60,35 +48,22 @@ mkdir cloudflare-imgbed
 cd cloudflare-imgbed
 ```
 
-2. **创建配置文件**
-
-创建 `wrangler.toml` 文件：
-
-```toml
-name = "cloudflare-imgbed"
-compatibility_date = "2024-07-24"
-
-# 可选：添加环境变量，v2.0 版本后大部分配置已迁移到管理后台
-# [vars]
-```
-
-3. **拉取镜像**
+2. **拉取镜像**
 ```bash
 docker pull marseventh/cloudflare-imgbed:latest
 ```
 
-4. **运行容器**
+3. **运行容器**
 
 ```bash
 docker run -d \
   --name cloudflare-imgbed \
   -p 7658:8080 \
   -v $(pwd)/data:/app/data \
-  -v $(pwd)/wrangler.toml:/app/wrangler.toml \
   marseventh/cloudflare-imgbed:latest
 ```
 
-5. **访问服务**
+4. **访问服务**
 
 打开浏览器访问：`http://your-server-ip:7658`
 
@@ -99,7 +74,6 @@ docker run -d \
 | 路径 | 说明 | 是否必需 |
 |------|------|----------|
 | `./data:/app/data` | 数据持久化目录 | 是 |
-| `./wrangler.toml:/app/wrangler.toml` | 配置文件 | 是 |
 
 
 ## 🚀 下一步
