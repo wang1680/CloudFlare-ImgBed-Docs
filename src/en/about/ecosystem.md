@@ -15,6 +15,10 @@ Everyone is welcome to contribute to the ecosystem of this project! Below are so
 - **Upload files to image hosting via TG BOT**: [Project Link](https://github.com/uki0xc/img-up-bot?tab=readme-ov-file) (_Author: [uki0xc](https://github.com/uki0xc)_)
 - **Automatic Metadata Backup**: [Project Link](https://github.com/imysen/cloudflare-imgbed-auto-backup) (_Author: [yunsen](https://github.com/imysen)_)
 
+## Agent
+
+- **OpenClaw file Transfer**: [Project Link](https://github.com/MarSeventh/cfbed-upload-skill)
+
 ## Wonderful Content
 
 ### Related Video Tutorials

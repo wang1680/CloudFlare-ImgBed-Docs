@@ -15,6 +15,9 @@
 - **向TG BOT发送文件上传图床**：[项目链接](https://github.com/uki0xc/img-up-bot?tab=readme-ov-file) （_作者：[uki0xc](https://github.com/uki0xc)_）
 - **自动备份元数据**：[项目链接](https://github.com/imysen/cloudflare-imgbed-auto-backup) （_作者：[邹云森森](https://github.com/imysen)_）
 
+## Agent
+- **OpenClaw文件中转**：[项目链接](https://github.com/MarSeventh/cfbed-upload-skill)
+
 ## 优质内容推荐
 
 ### 相关视频教程
