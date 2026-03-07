@@ -17,7 +17,7 @@ Everyone is welcome to contribute to the ecosystem of this project! Below are so
 
 ## Agent
 
-- **OpenClaw file Transfer**: [Project Link](https://github.com/MarSeventh/cfbed-upload-skill)
+- **OpenClaw File Transfer**: [Project Link](https://github.com/MarSeventh/cfbed-upload-skill)
 
 ## Wonderful Content
 
