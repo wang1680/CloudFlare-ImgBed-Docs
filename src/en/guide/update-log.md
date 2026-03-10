@@ -3,10 +3,26 @@
 ## Recent Updates
 
 Add Features:
-- Upload page directory input supports auto-suggestion and completion
+- API Token supports setting expiration time (seconds/minutes/hours/days/months/years)
+- API Token supports auto-deletion after expiration
+- Token list adds status column and expiration time column
+- Token validation automatically checks expiration status
+- Added Token Management API documentation
 
-Refactor:
-- Docker architecture rebuild, optimized performance and memory management (read the announcement before upgrading!)
+Fix Bugs:
+- Fixed some text files failing to upload via HuggingFace channel
+
+## 2026.03.10
+
+Add Features:
+- API Token supports setting expiration time (seconds/minutes/hours/days/months/years)
+- API Token supports auto-deletion after expiration
+- Token list adds status column and expiration time column
+- Token validation automatically checks expiration status
+- Added Token Management API documentation
+
+Fix Bugs:
+- Fixed some text files failing to upload via HuggingFace channel
 
 ## 2026.03.04
 

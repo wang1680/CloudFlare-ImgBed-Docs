@@ -61,6 +61,7 @@ export default defineConfig({
               { text: 'Delete API', link: '/en/api/delete' },
               { text: 'List API', link: '/en/api/list' },
               { text: 'Random Image API', link: '/en/api/random' },
+              { text: 'Token Management API', link: '/en/api/token' },
               { text: 'WebDAV', link: '/en/api/webdav' }
             ]
           },
@@ -140,6 +141,7 @@ export default defineConfig({
           { text: '删除 API', link: '/api/delete' },
           { text: '列出 API', link: '/api/list' },
           { text: '随机图 API', link: '/api/random' },
+          { text: 'Token 管理 API', link: '/api/token' },
           { text: 'WebDAV', link: '/api/webdav' }
         ]
       },

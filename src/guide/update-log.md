@@ -3,10 +3,26 @@
 ## 最近更新
 
 Add Features:
-- 上传页面输入目录支持自动建议和补全
+- API Token 支持设置过期时间（秒/分钟/小时/天/月/年）
+- API Token 支持过期后自动删除
+- Token 列表新增状态列和过期时间列
+- Token 验证时自动检查过期状态
+- 新增 Token 管理 API 文档
 
-Refactor:
-- Docker架构重构，优化性能和内存管理（升级前阅读公告！）
+Fix Bugs:
+- 修复部分文本文件在 HuggingFace 渠道上传失败的问题
+
+## 2026.03.10
+
+Add Features:
+- API Token 支持设置过期时间（秒/分钟/小时/天/月/年）
+- API Token 支持过期后自动删除
+- Token 列表新增状态列和过期时间列
+- Token 验证时自动检查过期状态
+- 新增 Token 管理 API 文档
+
+Fix Bugs:
+- 修复部分文本文件在 HuggingFace 渠道上传失败的问题
 
 ## 2026.03.04
 
