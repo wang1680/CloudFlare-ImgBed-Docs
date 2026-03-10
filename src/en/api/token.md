@@ -5,7 +5,7 @@ The Token Management API supports creating, listing, updating, and deleting API 
 ## Basic Information
 
 - **Endpoint**: `/api/manage/apiTokens`
-- **Authentication**: Admin Basic Auth or API Token
+- **Authentication**: Admin Basic Auth or API Token (with `manage` permission)
 - **Content Type**: `application/json`
 
 ## List All Tokens
@@ -49,7 +49,7 @@ Retrieves all API Tokens. The system automatically cleans up expired Tokens that
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
 | `name` | string | Yes | - | Token name |
-| `permissions` | string[] | Yes | - | Permission list, options: `upload`, `delete`, `list` |
+| `permissions` | string[] | Yes | - | Permission list, options: `upload`, `delete`, `list`, `manage` |
 | `owner` | string | Yes | - | Token owner |
 | `expiresAt` | string \| null | No | `null` | Expiration time in ISO 8601 format, `null` means never expires |
 | `autoDelete` | boolean | No | `false` | Whether to auto-delete after expiration |
