@@ -3,14 +3,28 @@
 ## Recent Updates
 
 Add Features:
-- API Token supports setting expiration time (seconds/minutes/hours/days/months/years)
-- API Token supports auto-deletion after expiration
-- Token list adds status column and expiration time column
-- Token validation automatically checks expiration status
-- Added Token Management API documentation
+- Added bilingual (Chinese/English) i18n support, users can freely switch language in the UI
+- Integrated vue-i18n, all page text supports dynamic Chinese/English switching
+- Added language switcher component on login, upload, and admin pages
+- Element Plus component library locale syncs with the interface language
+- Language preference auto-saved to localStorage and restored on next visit
+- Backend page config API now includes English fields (label_en, category_en, tooltip_en, etc.)
+- System config sidebar width auto-fits content, compatible with both Chinese and English text
+- Upload page desktop toolbar consolidated into a "more" dropdown for cleaner layout
+- Main repo README switched to English by default, Chinese version moved to README_zh.md
 
-Fix Bugs:
-- Fixed some text files failing to upload via HuggingFace channel
+## 2026.03.28
+
+Add Features:
+- Added bilingual (Chinese/English) i18n support, users can freely switch language in the UI
+- Integrated vue-i18n, all page text supports dynamic Chinese/English switching
+- Added language switcher component on login, upload, and admin pages
+- Element Plus component library locale syncs with the interface language
+- Language preference auto-saved to localStorage and restored on next visit
+- Backend page config API now includes English fields (label_en, category_en, tooltip_en, etc.)
+- System config sidebar width auto-fits content, compatible with both Chinese and English text
+- Upload page desktop toolbar consolidated into a "more" dropdown for cleaner layout
+- Main repo README switched to English by default, Chinese version moved to README_zh.md
 
 ## 2026.03.10
 
