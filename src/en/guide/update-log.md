@@ -3,6 +3,7 @@
 ## Recent Updates
 
 Add Features:
+- Improve background transition smoothness
 - Added bilingual (Chinese/English) i18n support, users can freely switch language in the UI
 - Integrated vue-i18n, all page text supports dynamic Chinese/English switching
 - Added language switcher component on login, upload, and admin pages
