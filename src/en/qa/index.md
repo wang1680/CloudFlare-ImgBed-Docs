@@ -52,3 +52,16 @@ This section collects common questions and solutions encountered by users when u
 ## Q: How to add a new R2 channel?
 
 - Add a S3 channel instead
+
+## Q: What to do if I forgot the admin/user password?
+
+You can reset authentication via the `resetAuth` endpoint:
+
+1. Set the `RESET_KEY` environment variable (any string, preferably complex), then restart the service
+2. Visit `https://your.domain/api/auth/resetAuth?key=YOUR_RESET_KEY` in your browser
+3. On success, authentication credentials are cleared (other security settings like domain whitelist and moderation config are preserved). You can then access the admin panel directly to set a new password
+4. **Make sure to remove or change the `RESET_KEY` environment variable after use**
+
+## Q: How to clear an existing password (switch to no-password access)?
+
+Go to **System Settings -> Security Settings -> Authentication Management**, check the **Clear Password** checkbox next to the password input field, then click Save. Clearing the admin password will also clear the admin username.
