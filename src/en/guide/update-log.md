@@ -6,6 +6,8 @@ Add Features:
 - Improve background transition smoothness
 
 Security:
+- Upgraded password hashing to PBKDF2 for stronger security
+- Unified auth logic by refactoring backend auth core into authCore with authScope parameter to distinguish admin/user contexts
 - Auth system hardening: passwords now stored with SHA-256 + salt hashing, backward compatible with existing plaintext passwords
 - Session management switched to HttpOnly Cookies (admin_session / user_session), passwords no longer stored on the client side
 - Frontend no longer stores passwords/credentials in localStorage or Cookies
@@ -15,6 +17,13 @@ Security:
 - Added "Clear Password" feature to remove existing authentication
 - Added `/api/auth/resetAuth` endpoint for password recovery via RESET_KEY environment variable
 - Auth-related endpoints moved to `/api/auth/` subdirectory
+
+Fix Bugs:
+- Fixed unauthorized popup appearing when redirecting to login page while not logged in
+- Fixed duplicate auth error messages when changing password
+- Fixed save button sending duplicate requests on click
+
+Add Features:
 - Added bilingual (Chinese/English) i18n support, users can freely switch language in the UI
 - Integrated vue-i18n, all page text supports dynamic Chinese/English switching
 - Added language switcher component on login, upload, and admin pages
@@ -24,6 +33,17 @@ Security:
 - System config sidebar width auto-fits content, compatible with both Chinese and English text
 - Upload page desktop toolbar consolidated into a "more" dropdown for cleaner layout
 - Main repo README switched to English by default, Chinese version moved to README_zh.md
+
+## 2026.04.18
+
+Security:
+- Upgraded password hashing to PBKDF2 for stronger security
+- Unified auth logic by refactoring backend auth core into authCore with authScope parameter to distinguish admin/user contexts
+
+Fix Bugs:
+- Fixed unauthorized popup appearing when redirecting to login page while not logged in
+- Fixed duplicate auth error messages when changing password
+- Fixed save button sending duplicate requests on click
 
 ## 2026.04.17
 
