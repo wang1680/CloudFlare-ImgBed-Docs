@@ -334,7 +334,7 @@ Body: <文件二进制内容>
 
 **分片上传**（有 `chunk_size`）：
 
-将文件按 `chunk_size` 切分，依次 PUT 到 `header["1"]`、`header["2"]` ... 对应的 URL，收集每个响应的 `ETag`。全部上传完成后，POST 到 `uploadAction.href` 完成合并：
+将文件按 `chunk_size` 切分，依次 PUT 到 `header["00001"]`、`header["00002"]` ... 对应的 URL，收集每个响应的 `ETag`。全部上传完成后，POST 到 `uploadAction.href` 完成合并：
 
 ```
 POST <uploadAction.href>

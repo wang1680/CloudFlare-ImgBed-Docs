@@ -334,7 +334,7 @@ Body: <file binary content>
 
 **Multipart upload** (has `chunk_size`):
 
-Split the file by `chunk_size`, PUT each part to `header["1"]`, `header["2"]`, etc., collecting the `ETag` from each response. After all parts are uploaded, complete the upload:
+Split the file by `chunk_size`, PUT each part to `header["00001"]`, `header["00002"]`, etc., collecting the `ETag` from each response. After all parts are uploaded, complete the upload:
 
 ```
 POST <uploadAction.href>
