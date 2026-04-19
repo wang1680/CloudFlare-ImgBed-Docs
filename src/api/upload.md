@@ -318,7 +318,7 @@ Authorization: Bearer <API_TOKEN>
 **关键字段说明：**
 - `needsLfs: false`：文件无需 LFS（极小的文本文件），直接跳到第三步提交
 - `alreadyExists: true`：文件已存在于 LFS，跳过第二步直接提交
-- `uploadAction.header.chunk_size`：如果存在此字段，说明 HuggingFace 要求分片上传，`header` 中的数字键（`"1"`, `"2"`, ...）为各分片的预签名上传 URL
+- `uploadAction.header.chunk_size`：如果存在此字段，说明 HuggingFace 要求分片上传，`header` 中的零填充数字键（`"00001"`, `"00002"`, ...）为各分片的预签名上传 URL
 
 #### 第二步：上传文件到 HuggingFace S3
 

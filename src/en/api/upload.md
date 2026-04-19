@@ -318,7 +318,7 @@ Authorization: Bearer <API_TOKEN>
 **Key fields:**
 - `needsLfs: false` — file doesn't need LFS (tiny text files), skip to Step 3
 - `alreadyExists: true` — file already in LFS, skip Step 2 and go to Step 3
-- `uploadAction.header.chunk_size` — if present, HuggingFace requires multipart upload; numeric keys (`"1"`, `"2"`, ...) in `header` are pre-signed URLs for each part
+- `uploadAction.header.chunk_size` — if present, HuggingFace requires multipart upload; zoro-padding numeric keys (`"00001"`, `"00002"`, ...) in `header` are pre-signed URLs for each part
 
 #### Step 2: Upload File to HuggingFace S3
 
