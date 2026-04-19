@@ -2,37 +2,24 @@
 
 ## Recent Updates
 
+Fix Bugs:
+- Fixed SQLITE_TOOBIG error caused by saving raw chunk data on upload failure when using D1 database
+- Fixed unauthorized popup appearing when redirecting to login page while not logged in
+- Fixed duplicate auth error messages when changing password
+- Fixed save button sending duplicate requests on click
+
 Add Features:
 - Improve background transition smoothness
 
 Security:
 - Upgraded password hashing to PBKDF2 for stronger security
 - Unified auth logic by refactoring backend auth core into authCore with authScope parameter to distinguish admin/user contexts
-- Auth system hardening: passwords now stored with SHA-256 + salt hashing, backward compatible with existing plaintext passwords
-- Session management switched to HttpOnly Cookies (admin_session / user_session), passwords no longer stored on the client side
-- Frontend no longer stores passwords/credentials in localStorage or Cookies
-- Admin and user sessions use independent cookies, fully isolated
-- Changing a password automatically clears all sessions of the corresponding type
-- Security settings page no longer exposes password/hash values to the frontend
-- Added "Clear Password" feature to remove existing authentication
-- Added `/api/auth/resetAuth` endpoint for password recovery via RESET_KEY environment variable
-- Auth-related endpoints moved to `/api/auth/` subdirectory
+
+
+## 2026.04.19
 
 Fix Bugs:
-- Fixed unauthorized popup appearing when redirecting to login page while not logged in
-- Fixed duplicate auth error messages when changing password
-- Fixed save button sending duplicate requests on click
-
-Add Features:
-- Added bilingual (Chinese/English) i18n support, users can freely switch language in the UI
-- Integrated vue-i18n, all page text supports dynamic Chinese/English switching
-- Added language switcher component on login, upload, and admin pages
-- Element Plus component library locale syncs with the interface language
-- Language preference auto-saved to localStorage and restored on next visit
-- Backend page config API now includes English fields (label_en, category_en, tooltip_en, etc.)
-- System config sidebar width auto-fits content, compatible with both Chinese and English text
-- Upload page desktop toolbar consolidated into a "more" dropdown for cleaner layout
-- Main repo README switched to English by default, Chinese version moved to README_zh.md
+- Fixed SQLITE_TOOBIG error caused by saving raw chunk data on upload failure when using D1 database
 
 ## 2026.04.18
 
