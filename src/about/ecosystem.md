@@ -12,6 +12,7 @@
 
 ## 应用
 
+- **桌面客户端**：[项目链接](https://github.com/MarSeventh/satellite) （**官方开发**）
 - **向TG BOT发送文件上传图床**：[项目链接](https://github.com/uki0xc/img-up-bot?tab=readme-ov-file) （_作者：[uki0xc](https://github.com/uki0xc)_）
 - **自动备份元数据**：[项目链接](https://github.com/imysen/cloudflare-imgbed-auto-backup) （_作者：[邹云森森](https://github.com/imysen)_）
 

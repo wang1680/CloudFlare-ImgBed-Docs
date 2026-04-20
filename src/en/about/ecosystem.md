@@ -12,6 +12,7 @@ Everyone is welcome to contribute to the ecosystem of this project! Below are so
 
 ## Applications
 
+- **Desktop software**: [Project Link](https://github.com/MarSeventh/satellite) (**from the official**)
 - **Upload files to image hosting via TG BOT**: [Project Link](https://github.com/uki0xc/img-up-bot?tab=readme-ov-file) (_Author: [uki0xc](https://github.com/uki0xc)_)
 - **Automatic Metadata Backup**: [Project Link](https://github.com/imysen/cloudflare-imgbed-auto-backup) (_Author: [yunsen](https://github.com/imysen)_)
 
