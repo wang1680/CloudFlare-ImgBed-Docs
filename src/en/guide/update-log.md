@@ -2,19 +2,20 @@
 
 ## Recent Updates
 
-Fix Bugs:
-- Fixed SQLITE_TOOBIG error caused by saving raw chunk data on upload failure when using D1 database
-- Fixed unauthorized popup appearing when redirecting to login page while not logged in
-- Fixed duplicate auth error messages when changing password
-- Fixed save button sending duplicate requests on click
+Add Features:
+- Added session security policy settings: support enabling Cookie Secure mode (HTTPS-only transmission)
+- Support configuring separate session max age for user and admin sessions (in days)
+- Backend session creation and destruction now dynamically adjust Cookie attributes based on security policy config
+- Session security policy settings support Chinese/English i18n
+
+
+## 2026.04.21
 
 Add Features:
-- Improve background transition smoothness
-
-Security:
-- Upgraded password hashing to PBKDF2 for stronger security
-- Unified auth logic by refactoring backend auth core into authCore with authScope parameter to distinguish admin/user contexts
-
+- Added session security policy settings: support enabling Cookie Secure mode (HTTPS-only transmission)
+- Support configuring separate session max age for user and admin sessions (in days)
+- Backend session creation and destruction now dynamically adjust Cookie attributes based on security policy config
+- Session security policy settings support Chinese/English i18n
 
 ## 2026.04.19
 

@@ -150,6 +150,10 @@ When enabled, a directory tree picker button will be displayed on the upload pag
 - Domain Filtering
   - Allowed Domains: List of domains allowed to access (leave empty to allow all domains, otherwise manually add the image hosting's own domain)
 - Whitelist Mode: When enabled, only files added to the whitelist can be accessed
+- Session Security Policy
+  - **Secure Mode**: When enabled, the Session Cookie will include the `Secure` attribute and only be transmitted over HTTPS connections. Make sure your site has HTTPS enabled, otherwise the browser will not send the Cookie and login will fail. Disabled by default.
+  - **User Session Max Age**: How long a user session remains valid after login, in days, minimum 1, default `14` days.
+  - **Admin Session Max Age**: How long an admin session remains valid after login, in days, minimum 1, default `14` days.
 
 ## 🌐 Web Settings
 
