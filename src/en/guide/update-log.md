@@ -3,6 +3,7 @@
 ## Recent Updates
 
 Add Features:
+- Added Cloudflare Workers deployment method, supporting one-click deployment via GitHub Actions
 - Added session security policy settings: support enabling Cookie Secure mode (HTTPS-only transmission)
 - Support configuring separate session max age for user and admin sessions (in days)
 - Backend session creation and destruction now dynamically adjust Cookie attributes based on security policy config

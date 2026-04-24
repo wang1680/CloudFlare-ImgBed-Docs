@@ -45,7 +45,8 @@ export default defineConfig({
             collapsed: false,
             items: [
               { text: 'Prerequisites', link: '/en/deployment/prerequisites' },
-              { text: 'Cloudflare Deployment', link: '/en/deployment/cloudflare' },
+              { text: 'Cloudflare Pages Deployment', link: '/en/deployment/cloudflare' },
+              { text: 'Cloudflare Workers Deployment', link: '/en/deployment/worker' },
               { text: 'Docker Deployment', link: '/en/deployment/docker' },
               { text: 'Manual Deployment', link: '/en/deployment/manual' },
               { text: 'Version Update', link: '/en/deployment/update' },
@@ -125,7 +126,8 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: '前期准备', link: '/deployment/prerequisites' },
-          { text: 'Cloudflare 部署', link: '/deployment/cloudflare' },
+          { text: 'Cloudflare Pages 部署', link: '/deployment/cloudflare' },
+          { text: 'Cloudflare Workers 部署', link: '/deployment/worker' },
           { text: 'Docker 部署', link: '/deployment/docker' },
           { text: '手动部署', link: '/deployment/manual' },
           { text: '版本更新', link: '/deployment/update' },

@@ -3,6 +3,7 @@
 ## 最近更新
 
 Add Features:
+- 新增 Cloudflare Workers 部署方式，支持通过 GitHub Actions 一键部署
 - 新增会话安全策略配置：支持开启 Cookie Secure 模式（仅 HTTPS 传输）
 - 支持分别配置用户端和管理员端的会话有效期（天数）
 - 后端 Session 创建与销毁逻辑根据安全策略配置动态调整 Cookie 属性
