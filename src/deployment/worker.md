@@ -3,8 +3,8 @@
 Cloudflare Workers 部署是 Pages 部署之外的另一种 Serverless 部署方式。与 Pages 相比，Workers 提供更灵活的路由控制和更高的自定义能力，适合需要精细控制部署流程的用户。
 
 ::: tip Pages vs Workers
-- **Pages 部署**：更简单，适合大多数用户，通过 Cloudflare Dashboard 可视化操作即可完成
-- **Workers 部署**：通过 GitHub Actions 自动化部署，适合熟悉 CI/CD 流程的用户
+- **Pages 部署**：更简单，适合大多数用户，通过 Cloudflare Dashboard 可视化操作即可完成，支持自动更新
+- **Workers 部署**：通过 GitHub Actions 部署，适合熟悉 CI/CD 流程的用户，不支持自动更新，需要手动触发 Action 部署新版本
 
 两种方式功能完全一致，选择适合自己的即可。
 :::

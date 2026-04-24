@@ -3,8 +3,8 @@
 Cloudflare Workers deployment is an alternative serverless deployment method alongside Pages. Compared to Pages, Workers offers more flexible routing control and higher customizability, suitable for users who need fine-grained control over the deployment process.
 
 ::: tip Pages vs Workers
-- **Pages deployment**: Simpler, suitable for most users, can be completed through the Cloudflare Dashboard UI
-- **Workers deployment**: Automated deployment via GitHub Actions, suitable for users familiar with CI/CD workflows
+- **Pages deployment**: Simpler, suitable for most users, can be completed through the Cloudflare Dashboard UI, supports automatic updates
+- **Workers deployment**: Deployed via GitHub Actions, suitable for users familiar with CI/CD workflows, does not support automatic updates — you need to manually trigger the Action to deploy new versions
 
 Both methods provide identical functionality. Choose whichever suits you best.
 :::
