@@ -2,7 +2,7 @@
 
 Use different update methods depending on your deployment method.
 
-## Cloudflare Deployment
+## Cloudflare Pages Deployment
 
 ### Automatic Updates
 
@@ -19,6 +19,13 @@ Enable GitHub Actions automatic sync:
 4. Cloudflare Pages will automatically redeploy
 
 ![Sync Updates](/images/deployment/sync-fork.png)
+
+## Cloudflare Workers Deployment
+
+1. Go to your forked repository
+2. Click "Sync fork" to sync upstream updates
+3. Go to the **Actions** page, select **Deploy to Cloudflare Workers**
+4. Click **Run workflow**, select the branch and run the deployment
 
 ## Docker Deployment
 

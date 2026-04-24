@@ -2,7 +2,7 @@
 
 根据不同的部署方式，使用不同的更新方式。
 
-## Cloudflare 部署
+## Cloudflare Pages 部署
 
 ### 自动更新
 
@@ -19,6 +19,13 @@
 4. Cloudflare Pages 将自动重新部署
 
 ![同步更新](/images/deployment/sync-fork.png)
+
+## Cloudflare Workers 部署
+
+1. 进入您 Fork 的仓库
+2. 点击 "Sync fork" 同步上游更新
+3. 进入 **Actions** 页面，选择 **Deploy to Cloudflare Workers**
+4. 点击 **Run workflow**，选择分支后执行部署
 
 ## Docker 部署
 
