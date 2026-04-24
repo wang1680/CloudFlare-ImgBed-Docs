@@ -35,7 +35,7 @@ Cloudflare Pages is the recommended deployment method, offering free hosting, gl
 | Project name | `cloudflare-imgbed` (or custom) | Project identifier |
 | Production branch | `main` | Production environment branch |
 | Build command | `npm install` | **Important: v2.0 new build command** |
-| Build output directory | `/` | Keep default |
+| Build output directory | `/frontend-dist` | Frontend build output directory |
 
 ![Configure Project Settings](/images/deployment/pages-build-config.png)
 
