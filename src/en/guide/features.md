@@ -45,6 +45,13 @@ CloudFlare ImgBed provides rich features to meet the needs of different users.
 - **Settings Memory**: Automatically saves user upload preferences
 - **One-click Copy**: Click link to automatically copy to clipboard
 - **Error Retry**: Failed files support re-upload
+- **Directory Suggestions**: Upload page directory input supports auto-suggestion and completion
+
+## 🌐 Internationalization
+
+- **Bilingual Support**: All page text supports dynamic Chinese/English switching
+- **Language Memory**: Language preference auto-saved and restored on next visit
+- **Component Sync**: Element Plus component library locale syncs with the interface language
 
 ## 🎨 Interface Features
 
@@ -72,9 +79,14 @@ CloudFlare ImgBed provides rich features to meet the needs of different users.
 
 ### Authentication
 
+- **Password Security**: PBKDF2 password hashing, backward compatible with automatic upgrade from plaintext passwords
+- **Session Management**: HttpOnly Cookie sessions, admin and user sessions fully isolated
+- **Session Security Policy**: Supports Cookie Secure mode (HTTPS-only), configurable session max age
 - **Admin Authentication**: Backend management page password protection
 - **Upload Authentication**: Web and API upload authentication codes
+- **API Token**: Supports expiration time, auto-deletion after expiry
 - **Access Control**: Domain whitelist restrictions
+- **Password Reset**: Supports resetting authentication via environment variable for password recovery
 
 ### Content Security
 
@@ -89,11 +101,15 @@ CloudFlare ImgBed provides rich features to meet the needs of different users.
 
 ### File Management
 
-- **Gallery Browse**: Visual file browsing interface
+- **Gallery Browse**: Visual file browsing interface with card view and list view
+- **Rubber-band Selection**: Card view supports drag multi-selection from blank areas
 - **Paginated Loading**: Efficient loading for large numbers of files
 - **Batch Operations**: Supports operations in user-selected order
-- **File Movement**: Supports moving files between directories
-- **Tag Management**: Add and manage tags for files
+- **File Movement**: Supports moving files between directories with visual directory tree picker
+- **Tag Management**: Add and manage tags for files with autocomplete
+- **Metadata Editing**: Supports editing file name, file type, and renaming File ID
+- **Backup & Restore**: Supports batch backup and restore of file data
+- **Index Rebuild**: Supports batch index rebuild to avoid CPU time limits
 
 ### User Management
 
@@ -126,14 +142,20 @@ CloudFlare ImgBed provides rich features to meet the needs of different users.
 - **PicGo Support**: Perfect compatibility with PicGo image hosting tool
 - **Cross-origin Support**: API supports cross-origin access
 
-## 📊 Performance Optimization
+## 📊 Deployment & Operations
 
-### Loading Optimization
+### Multiple Deployment Methods
+
+- **Cloudflare Pages**: Recommended, visual setup, supports automatic updates
+- **Cloudflare Workers**: One-click deployment via GitHub Actions
+- **Docker**: Self-hosted server deployment
+
+### Performance Optimization
 
 - **CDN Acceleration**: Global Cloudflare CDN network
-- **Cache Strategy**: Fine-grained cache strategy
+- **Cache Strategy**: Fine-grained cache strategy with automatic cache clearing after operations
 
 ### Stability
 
-- **Failover**: Automatic fault detection and switching
-- **Monitoring and Alerting**: Real-time service status monitoring
+- **Failover**: Automatic channel switching and retry on upload failure
+- **Large File Chunking**: Supports chunked upload for large files to improve stability

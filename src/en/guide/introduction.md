@@ -25,7 +25,7 @@
         </a>
     </div>
 </div>
-CloudFlare ImgBed is an open-source file hosting solution based on Cloudflare Pages, providing users with free, stable, and efficient file storage services. The project supports multiple storage channels and offers both serverless and server-based deployment options to meet different user needs.
+CloudFlare ImgBed is an open-source file hosting solution based on Cloudflare, providing users with free, stable, and efficient file storage services. The project supports multiple storage channels and offers both serverless and server-based deployment options to meet different user needs.
 
 <div style="position: relative; padding: 30% 45%;">
     <iframe 
@@ -55,13 +55,21 @@ CloudFlare ImgBed is an open-source file hosting solution based on Cloudflare Pa
 
 ## Technical Architecture
 
-- **Frontend Interface**: Built with Vue.js, supports responsive design
+- **Frontend Interface**: Built with Vue.js, supports responsive design and Chinese/English bilingual switching
 - **Backend API**: Serverless architecture based on Cloudflare Workers
-- **Storage Layer**: Supports multiple storage backends (Telegram, R2, S3)
-- **Database**: Uses Cloudflare KV for metadata storage
+- **Storage Layer**: Supports multiple storage backends (Telegram, R2, S3, Discord, HuggingFace)
+- **Database**: Supports both Cloudflare KV and D1 databases
+- **Deployment**: Supports Cloudflare Pages, Cloudflare Workers, and Docker deployment
 
 
 ## Version History
+
+### v2.6 Security & Internationalization
+
+- 🔐 Auth system hardening: PBKDF2 password hashing, HttpOnly Cookie session management
+- 🌐 Chinese/English bilingual i18n support
+- ☁️ Added Cloudflare Workers deployment with GitHub Actions one-click deploy
+- ⏰ API Token supports expiration time
 
 ### v2.0 Major Update
 
