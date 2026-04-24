@@ -22,10 +22,15 @@
 
 ## Cloudflare Workers 部署
 
+### 自动更新（推荐）
+
+启用 **Upstream Sync** Action 后，上游仓库有更新时会自动同步到 `main` 分支并触发部署，无需手动操作。
+
+### 手动更新
+
 1. 进入您 Fork 的仓库
 2. 点击 "Sync fork" 同步上游更新
-3. 进入 **Actions** 页面，选择 **Deploy to Cloudflare Workers**
-4. 点击 **Run workflow**，选择分支后执行部署
+3. 同步完成后会自动触发部署；也可以进入 **Actions** 页面手动运行 **Deploy to Cloudflare Workers**
 
 ## Docker 部署
 

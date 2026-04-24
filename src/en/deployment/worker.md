@@ -4,7 +4,7 @@ Cloudflare Workers deployment is an alternative serverless deployment method alo
 
 ::: tip Pages vs Workers
 - **Pages deployment**: Simpler, suitable for most users, can be completed through the Cloudflare Dashboard UI, supports automatic updates
-- **Workers deployment**: Deployed via GitHub Actions, suitable for users familiar with CI/CD workflows, does not support automatic updates — you need to manually trigger the Action to deploy new versions
+- **Workers deployment**: Deployed via GitHub Actions, suitable for users familiar with CI/CD workflows, supports auto-deploy on push to main branch, can also be triggered manually
 
 Both methods provide identical functionality. Choose whichever suits you best.
 :::
@@ -67,6 +67,7 @@ In your forked repository, go to **Settings → Secrets and variables → Action
 | `D1_DATABASE_ID` | D1 Database ID | Pick one |
 | `KV_NAMESPACE_ID` | KV Namespace ID | Pick one |
 | `R2_BUCKET_NAME` | R2 Bucket name | Optional |
+| `WORKER_NAME` | Worker name (default `cloudflare-imgbed`) | Optional |
 | `WORKER_VARS` | Business environment variables (JSON format) | Optional |
 
 ::: details WORKER_VARS Format
@@ -88,12 +89,24 @@ All configuration is passed through Secrets. GitHub Secrets are encrypted and wi
 
 ## 🚀 Step 4: Run Deployment
 
+### Manual Deployment
+
 1. Go to the **Actions** page of your forked repository
 2. Select **Deploy to Cloudflare Workers** on the left
 3. Click **Run workflow**
 4. Select the branch to deploy (default `main`)
-5. Optionally modify the Worker name (default `cloudflare-imgbed`)
+5. Optionally modify the Worker name (defaults to `WORKER_NAME` Secret, or `cloudflare-imgbed` if not set)
 6. Click **Run workflow** to start deployment
+
+### Automatic Deployment
+
+Once Secrets are configured, every push to the `main` branch (including syncing upstream updates via Sync fork) will automatically trigger deployment.
+
+::: tip Works with Auto Sync
+The repository includes an **Upstream Sync** Action that automatically syncs upstream updates daily. Once enabled, new upstream versions will be synced to your `main` branch and automatically trigger Worker deployment, achieving fully automatic updates.
+
+To enable: Go to the **Actions** page of your forked repository, find **Upstream Sync**, and click **Enable workflow**.
+:::
 
 The deployment process automatically completes the following steps:
 - Install dependencies
@@ -106,10 +119,16 @@ After deployment, access your site at `https://<worker-name>.<account-subdomain>
 
 ## 🔄 Updating
 
-When the upstream repository has updates:
+Workers deployment supports two update methods:
 
-1. Sync the upstream updates in your forked repository (Sync fork)
-2. Re-run the **Deploy to Cloudflare Workers** Action
+### Automatic Updates (Recommended)
+
+After enabling the **Upstream Sync** Action, updates from the upstream repository will be automatically synced and trigger deployment without manual intervention.
+
+### Manual Updates
+
+1. Sync upstream updates in your forked repository (Sync fork)
+2. This will automatically trigger deployment; you can also manually run **Deploy to Cloudflare Workers** from the Actions page
 
 ## 🚀 Next Steps
 

@@ -22,10 +22,15 @@ Enable GitHub Actions automatic sync:
 
 ## Cloudflare Workers Deployment
 
+### Automatic Updates (Recommended)
+
+After enabling the **Upstream Sync** Action, updates from the upstream repository will be automatically synced to the `main` branch and trigger deployment without manual intervention.
+
+### Manual Updates
+
 1. Go to your forked repository
 2. Click "Sync fork" to sync upstream updates
-3. Go to the **Actions** page, select **Deploy to Cloudflare Workers**
-4. Click **Run workflow**, select the branch and run the deployment
+3. This will automatically trigger deployment; you can also manually run **Deploy to Cloudflare Workers** from the **Actions** page
 
 ## Docker Deployment
 
