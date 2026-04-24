@@ -36,18 +36,18 @@ The database stores file metadata. Choose between KV or D1 (pick one).
 | Read/Write Performance | High | Lower |
 | Free Quota | Less | More |
 
-#### D1 Database (Recommended)
-
-1. In Dashboard, select "Storage & Databases" → "D1 SQL Database"
-2. Click "Create database", name it `img_d1`
-3. After creation, **save the Database ID**
-4. In the "Console" tab, execute the initialization SQL (see [init.sql](https://github.com/MarSeventh/CloudFlare-ImgBed/blob/main/database/init.sql))
-
 #### KV Database
 
 1. In Dashboard, select "Storage & Databases" → "Workers KV"
 2. Click "Create instance", name it `img_url`
 3. After creation, **save the Namespace ID**
+
+#### D1 Database
+
+1. In Dashboard, select "Storage & Databases" → "D1 SQL Database"
+2. Click "Create database", name it `img_d1`
+3. After creation, **save the Database ID**
+4. In the "Console" tab, execute the initialization SQL (see [init.sql](https://github.com/MarSeventh/CloudFlare-ImgBed/blob/main/database/init.sql))
 
 ### 2.3 Create R2 Bucket (Optional)
 
@@ -77,6 +77,9 @@ In your forked repository, go to **Settings → Secrets and variables → Action
 ```
 
 For all available environment variables, refer to the [Configuration Guide](/en/deployment/configuration).
+
+::: warning Not recommended unless necessary
+All business settings (storage channels, moderation policies, etc.) can be configured through the admin panel after deployment. Only use `WORKER_VARS` for special environment variables that cannot be set via the admin panel.
 :::
 
 ::: warning Security Note

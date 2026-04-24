@@ -36,18 +36,18 @@ Cloudflare Workers 部署是 Pages 部署之外的另一种 Serverless 部署方
 | 读写性能 | 高 | 较低 |
 | 免费额度 | 少 | 多 |
 
-#### D1 数据库（推荐）
-
-1. 在 Dashboard 中选择 "存储和数据库" → "D1 SQL 数据库"
-2. 点击 "创建数据库"，名称填 `img_d1`
-3. 创建完成后，**记录数据库 ID**
-4. 在 "控制台" 选项卡中执行初始化 SQL（见 [init.sql](https://github.com/MarSeventh/CloudFlare-ImgBed/blob/main/database/init.sql)）
-
 #### KV 数据库
 
 1. 在 Dashboard 中选择 "存储和数据库" → "Workers KV"
 2. 点击 "创建实例"，名称填 `img_url`
 3. 创建完成后，**记录命名空间 ID**
+
+#### D1 数据库
+
+1. 在 Dashboard 中选择 "存储和数据库" → "D1 SQL 数据库"
+2. 点击 "创建数据库"，名称填 `img_d1`
+3. 创建完成后，**记录数据库 ID**
+4. 在 "控制台" 选项卡中执行初始化 SQL（见 [init.sql](https://github.com/MarSeventh/CloudFlare-ImgBed/blob/main/database/init.sql)）
 
 ### 2.3 创建 R2 存储桶（可选）
 
@@ -77,6 +77,9 @@ Cloudflare Workers 部署是 Pages 部署之外的另一种 Serverless 部署方
 ```
 
 所有可用的环境变量请参考 [配置说明](/deployment/configuration)。
+
+::: warning 非必要不建议在此处配置
+所有业务设置（存储渠道、审查策略等）都可以在部署完成后通过管理面板进行配置，无需在此处填写。仅当管理面板无法覆盖的特殊环境变量才需要通过 `WORKER_VARS` 配置。
 :::
 
 ::: warning 安全提示
