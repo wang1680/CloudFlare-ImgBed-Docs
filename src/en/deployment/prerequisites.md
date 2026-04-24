@@ -140,6 +140,7 @@ HuggingFace channel supports large file direct upload, recommended for uploading
 
 After completing the preparation work, you can choose the appropriate deployment method:
 
-- [Cloudflare Deployment](/en/deployment/cloudflare)
+- [Cloudflare Pages Deployment](/en/deployment/pages)
+- [Cloudflare Workers Deployment](/en/deployment/worker)
 - [Docker Deployment](/en/deployment/docker)
 - [Manual Deployment](/en/deployment/manual)

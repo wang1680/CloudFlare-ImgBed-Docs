@@ -20,7 +20,8 @@ CloudFlare ImgBed supports multiple deployment methods:
 
 | Deployment Method | Difficulty | Cost | Recommendation |
 |------------------|----------|------|---------------|
-| Cloudflare | ⭐ | Free within certain limits | ⭐⭐⭐⭐⭐ |
+| Cloudflare Pages | ⭐ | Free within certain limits | ⭐⭐⭐⭐⭐ |
+| Cloudflare Workers | ⭐⭐ | Free within certain limits | ⭐⭐⭐⭐ |
 | Docker | ⭐⭐ | Server costs | ⭐⭐⭐⭐⭐ |
 | Manual Deployment | ⭐⭐⭐ | Server costs | ⭐⭐⭐ |
 
@@ -30,9 +31,13 @@ CloudFlare ImgBed supports multiple deployment methods:
 
 Regardless of which deployment method you choose, you need to configure some necessary settings according to your desired storage channels. See [Prerequisites](/en/deployment/prerequisites).
 
-### Cloudflare Deployment
+### Cloudflare Pages Deployment
 
-Cloudflare-based deployment method requires no server and is suitable for most users. See [Cloudflare Deployment Guide](/en/deployment/cloudflare).
+Cloudflare Pages-based deployment requires no server, with visual Dashboard setup and automatic updates, suitable for most users. See [Cloudflare Pages Deployment Guide](/en/deployment/pages).
+
+### Cloudflare Workers Deployment
+
+Cloudflare Workers-based deployment via GitHub Actions one-click deploy, requires manual trigger for updates. See [Cloudflare Workers Deployment Guide](/en/deployment/worker).
 
 ### Docker Deployment
 

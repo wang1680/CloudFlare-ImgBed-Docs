@@ -22,7 +22,7 @@ hero:
 features:
   - icon: 🚀
     title: 轻松部署
-    details: 支持 Cloudflare Pages 免费托管和 Docker 部署，满足不同需求
+    details: 支持 Cloudflare Pages、Cloudflare Workers 免费托管和 Docker 部署，满足不同需求
   
   - icon: 📁
     title: 多种渠道

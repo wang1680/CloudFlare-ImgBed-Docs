@@ -20,7 +20,8 @@ CloudFlare ImgBed 支持多种部署方式：
 
 | 部署方式 | 难度 | 费用 | 推荐指数 |
 |---------|------|------|---------|
-| Cloudflare | ⭐ | 一定额度内免费 | ⭐⭐⭐⭐⭐ |
+| Cloudflare Pages | ⭐ | 一定额度内免费 | ⭐⭐⭐⭐⭐ |
+| Cloudflare Workers | ⭐⭐ | 一定额度内免费 | ⭐⭐⭐⭐ |
 | Docker | ⭐⭐ | 服务器费用 | ⭐⭐⭐⭐⭐ |
 | 手动部署 | ⭐⭐⭐ | 服务器费用 | ⭐⭐⭐ |
 
@@ -30,9 +31,13 @@ CloudFlare ImgBed 支持多种部署方式：
 
 无论您选择哪种部署方式，都需要按照所需存储渠道进行一些必要配置，参见 [前期准备](/deployment/prerequisites)。
 
-### Cloudflare 部署
+### Cloudflare Pages 部署
 
-基于 Cloudflare 的部署方式，无需服务器，适合大多数用户，参见 [Cloudflare 部署指南](/deployment/cloudflare)。
+基于 Cloudflare Pages 的部署方式，无需服务器，通过 Dashboard 可视化操作，支持自动更新，适合大多数用户，参见 [Cloudflare Pages 部署指南](/deployment/pages)。
+
+### Cloudflare Workers 部署
+
+基于 Cloudflare Workers 的部署方式，通过 GitHub Actions 一键部署，需要手动触发更新，参见 [Cloudflare Workers 部署指南](/deployment/worker)。
 
 ### Docker 部署
 

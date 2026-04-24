@@ -22,7 +22,7 @@ hero:
 features:
   - icon: 🚀
     title: Easy Deployment
-    details: Supports free hosting on Cloudflare Pages and Docker deployment to meet different needs
+    details: Supports free hosting on Cloudflare Pages, Cloudflare Workers and Docker deployment to meet different needs
   
   - icon: 📁
     title: Multiple Storage Channels
