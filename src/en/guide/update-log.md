@@ -9,6 +9,10 @@ Add Features:
 - Backend session creation and destruction now dynamically adjust Cookie attributes based on security policy config
 - Session security policy settings support Chinese/English i18n
 
+## 2026.04.24
+
+Add Features:
+- Added Cloudflare Workers deployment method, supporting one-click deployment via GitHub Actions
 
 ## 2026.04.21
 

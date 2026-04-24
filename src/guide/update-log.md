@@ -10,6 +10,11 @@ Add Features:
 - 会话安全策略配置支持中英文国际化
 
 
+## 2026.04.24
+
+Add Features:
+- 新增 Cloudflare Workers 部署方式，支持通过 GitHub Actions 一键部署
+
 ## 2026.04.21
 
 Add Features:
