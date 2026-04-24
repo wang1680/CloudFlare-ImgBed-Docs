@@ -22,7 +22,7 @@
 
 ## Cloudflare Workers 部署
 
-### 自动更新（推荐）
+### 自动更新
 
 启用 **Upstream Sync** Action 后，上游仓库有更新时会自动同步到 `main` 分支并触发部署，无需手动操作。
 

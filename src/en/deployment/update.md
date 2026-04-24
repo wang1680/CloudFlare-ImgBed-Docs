@@ -22,7 +22,7 @@ Enable GitHub Actions automatic sync:
 
 ## Cloudflare Workers Deployment
 
-### Automatic Updates (Recommended)
+### Automatic Updates
 
 After enabling the **Upstream Sync** Action, updates from the upstream repository will be automatically synced to the `main` branch and trigger deployment without manual intervention.
 
