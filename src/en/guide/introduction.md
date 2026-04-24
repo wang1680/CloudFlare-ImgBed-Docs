@@ -64,20 +64,17 @@ CloudFlare ImgBed is an open-source file hosting solution based on Cloudflare, p
 
 ## Version History
 
-### v2.6 Security & Internationalization
-
-- 🔐 Auth system hardening: PBKDF2 password hashing, HttpOnly Cookie session management
-- 🌐 Chinese/English bilingual i18n support
-- ☁️ Added Cloudflare Workers deployment with GitHub Actions one-click deploy
-- ⏰ API Token supports expiration time
-
-### v2.0 Major Update
+### v2.x Major Update
 
 - 🎨 Brand new UI design with dark mode support
 - 📁 Directory functionality launched, supports file categorization management
 - 🔧 S3 API channel integration, supports more storage service providers
 - ⚡ Multi-channel load balancing, improves upload success rate
 - 🎯 Short link naming convention, more concise file links
+- 🔐 Auth system hardening: PBKDF2 password hashing, HttpOnly Cookie session management
+- 🌐 Chinese/English bilingual i18n support
+- ☁️ Added Cloudflare Workers deployment with GitHub Actions one-click deploy
+- ⏰ API Token supports expiration time
 
 ### v1.x Feature Foundation
 
