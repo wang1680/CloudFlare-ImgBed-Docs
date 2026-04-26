@@ -8,8 +8,8 @@
 
 启用 GitHub Actions 自动同步：
 
-1. 进入您 Fork 的仓库
-2. 启用 Actions
+1. 进入您 Fork 的仓库的 `Actions` 页面
+2. 启用 **Upstream Sync** Action
 
 ### 手动更新
 

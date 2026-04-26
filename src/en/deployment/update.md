@@ -8,7 +8,7 @@ Use different update methods depending on your deployment method.
 
 Enable GitHub Actions automatic sync:
 
-1. Go to your forked repository
+1. Go to the `Actions` page in your forked repository 
 2. Enable Actions
 
 ### Manual Updates
