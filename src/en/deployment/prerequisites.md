@@ -14,6 +14,7 @@ The project supports different storage channels as backend storage. Each channel
 | S3 Compatible Storage | Diverse options, flexible pricing | Pricing varies by provider |
 | Discord | Completely free, simple and easy to use | Files larger than 10MB need to be stored in chunks |
 | HuggingFace | Completely free, supports large file direct upload | Requires HuggingFace account |
+| WebDAV | Wide compatibility, supports self-hosted storage | Pricing varies by provider |
 
 ## 2. Telegram Bot Channel
 
@@ -133,6 +134,22 @@ The above are tested S3 compatible storage providers. Other S3 compatible provid
 
 ::: tip Note
 HuggingFace channel supports large file direct upload, recommended for uploading files larger than 20MB.
+:::
+
+## 7. WebDAV Channel
+
+The WebDAV channel allows you to use any WebDAV-compatible storage service as the backend, such as Nextcloud, Alist, Nutstore, etc.
+
+### 7.1 Required Information
+
+- **WebDAV Base URL**: Full URL of the WebDAV service (e.g., `https://dav.example.com/remote.php/dav/files/user/imgbed/`)
+- **Username**: (Optional) WebDAV authentication username
+- **Password**: (Optional) WebDAV authentication password
+- **Public Access URL**: (Optional) If the WebDAV storage has a public HTTP/CDN address, the server can read files directly from this URL when configured
+- **Custom Headers**: (Optional) Additional HTTP headers in JSON format
+
+::: tip Note
+The WebDAV channel has wide compatibility and is suitable for users who already have a WebDAV storage service.
 :::
 
 

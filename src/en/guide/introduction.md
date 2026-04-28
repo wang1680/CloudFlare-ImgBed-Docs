@@ -57,7 +57,7 @@ CloudFlare ImgBed is an open-source file hosting solution based on Cloudflare, p
 
 - **Frontend Interface**: Built with Vue.js, supports responsive design and Chinese/English bilingual switching
 - **Backend API**: Serverless architecture based on Cloudflare Workers
-- **Storage Layer**: Supports multiple storage backends (Telegram, R2, S3, Discord, HuggingFace)
+- **Storage Layer**: Supports multiple storage backends (Telegram, R2, S3, Discord, HuggingFace, WebDAV)
 - **Database**: Supports both Cloudflare KV and D1 databases
 - **Deployment**: Supports Cloudflare Pages, Cloudflare Workers, and Docker deployment
 

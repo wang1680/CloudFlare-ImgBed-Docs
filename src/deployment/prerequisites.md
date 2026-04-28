@@ -12,6 +12,7 @@
 | S3 兼容存储 | 选择多样、价格灵活 | 根据服务商定价 |
 | Discord | 完全免费、简单易用 | 大于10MB文件需分片存储 |
 | HuggingFace | 完全免费、支持大文件直传 | 需要 HuggingFace 账号 |
+| WebDAV | 兼容性广、支持自建存储 | 根据服务商定价 |
 
 ## 2. Telegram Bot 渠道
 
@@ -137,6 +138,22 @@
 
 ::: tip 提示
 HuggingFace 渠道支持大文件直传，推荐用于上传超过 20MB 的文件。
+:::
+
+## 7. WebDAV 渠道
+
+WebDAV 渠道允许您使用任何支持 WebDAV 协议的存储服务作为后端存储，例如 Nextcloud、Alist、坚果云等。
+
+### 7.1 需要准备的信息
+
+- **WebDAV 基础地址**：WebDAV 服务的完整 URL（如 `https://dav.example.com/remote.php/dav/files/user/imgbed/`）
+- **用户名**：（可选）WebDAV 认证用户名
+- **密码**：（可选）WebDAV 认证密码
+- **公开访问链接**：（可选）如果 WebDAV 存储有对应的公开 HTTP/CDN 地址，配置后服务端支持直接从该地址读取文件
+- **自定义请求头**：（可选）额外的 HTTP 请求头，JSON 格式
+
+::: tip 提示
+WebDAV 渠道兼容性广泛，适合已有 WebDAV 存储服务的用户。
 :::
 
 

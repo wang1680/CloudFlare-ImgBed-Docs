@@ -2,17 +2,31 @@
 
 ## Recent Updates
 
-Refactor:
-- Reworked login page keyboard avoidance: replaced media query approach with visualViewport API to detect virtual keyboard, fixing false triggers on narrow screens without a keyboard
-- Optimized mobile login card spacing, reduced input height and field gaps for better visibility when keyboard is open
 
 Add Features:
 - Added Cloudflare Workers deployment method, supporting one-click deployment via GitHub Actions
 - Added session security policy settings: support enabling Cookie Secure mode (HTTPS-only transmission)
 - Support configuring separate session max age for user and admin sessions (in days)
-- Backend session creation and destruction now dynamically adjust Cookie attributes based on security policy config
-- Session security policy settings support Chinese/English i18n
+- Added WebDAV storage channel, allowing third-party WebDAV services to be used as upload backends with upload, read, delete, move, rename, and channel-list support
 
+Security:
+- Session storage keys migrated to the `manage@session@` prefix to prevent session data from entering the file index and backup exports
+
+Fix Bugs:
+- Fixed D1 adapter routing for `manage@` configuration keys so blocklists, sessions, and other settings no longer get written to the files table
+- Fixed D1 settings backup reads so `manage@` settings data can be listed correctly
+
+## 2026.04.28
+
+Add Features:
+- Added WebDAV storage channel, allowing third-party WebDAV services to be used as upload backends with upload, read, delete, move, rename, and channel-list support
+
+Security:
+- Session storage keys migrated to the `manage@session@` prefix to prevent session data from entering the file index and backup exports
+
+Fix Bugs:
+- Fixed D1 adapter routing for `manage@` configuration keys so blocklists, sessions, and other settings no longer get written to the files table
+- Fixed D1 settings backup reads so `manage@` settings data can be listed correctly
 
 ## 2026.04.27
 

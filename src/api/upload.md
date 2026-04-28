@@ -28,7 +28,7 @@
 | 参数名 | 类型 | 必需 | 默认值 | 说明 |
 |--------|------|------|--------|------|
 | `authCode` | string | 否 | - | 上传认证码 |
-| `uploadChannel` | string | 否 | `telegram` | 上传渠道：`telegram`、`cfr2`、`s3`、`discord`、`huggingface` |
+| `uploadChannel` | string | 否 | `telegram` | 上传渠道：`telegram`、`cfr2`、`s3`、`discord`、`huggingface`、`webdav` |
 | `channelName` | string | 否 | - | 指定渠道名称（多渠道场景），可通过 `/api/channels` 获取可用列表 |
 | `serverCompress` | boolean | 否 | `true` | 服务端压缩（仅 Telegram 渠道图片） |
 | `autoRetry` | boolean | 否 | `true` | 失败时自动切换渠道重试 |

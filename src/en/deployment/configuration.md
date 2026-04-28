@@ -106,6 +106,19 @@ Fill in the HuggingFace channel configuration in the admin backend:
 HuggingFace channel supports large file direct upload, suitable for uploading files larger than 20MB. For large files, the system will automatically use LFS protocol for chunked uploads.
 :::
 
+### Configure WebDAV Channel
+
+Fill in the WebDAV channel configuration in the admin backend:
+
+- **Channel Name**: Custom name
+- **WebDAV Base URL**: Full URL of the WebDAV service (e.g., `https://dav.example.com/remote.php/dav/files/user/imgbed/`)
+- **Username**: (Optional) WebDAV authentication username
+- **Password**: (Optional) WebDAV authentication password
+- **Public Access URL**: (Optional) Public HTTP/CDN address. When configured, the server can read files directly from this URL
+- **Custom Headers**: (Optional) Additional HTTP headers in JSON object format (e.g., `{"X-Api-Key":"value"}`)
+- **Auto Create Directory**: Automatically create parent directories before uploading files, enabled by default
+
+
 ## 🔒 Security Settings
 
 Security-related settings are configured in "System Settings" → "Security Settings" in the admin backend
@@ -170,7 +183,7 @@ Frontend web-related settings are configured in "System Settings" → "Web Setti
 | bkOpacity | Background Image Transparency | Float in (0,1] | Displayed background image transparency, default is `1`.<br />If you think the display effect is poor, you can customize it, like `0.8` |
 | urlPrefix | Default URL Prefix | String | Only supports `string` type, set to custom global default link prefix, this prefix will override the original default prefix, but will not override user-customized link prefixes |
 | announcement | Announcement | String | Only supports `string` type, can be HTML format, set to your custom announcement content (if any) |
-| defaultUploadChannel | Default Upload Channel | String | Only supports `string` type, set to your custom default upload channel, supports `telegram` (Telegram channel), `cfr2` (Cloudflare R2), `s3` (S3 channel), `discord` (Discord channel), and `huggingface` (HuggingFace channel) |
+| defaultUploadChannel | Default Upload Channel | String | Only supports `string` type, set to your custom default upload channel, supports `telegram` (Telegram channel), `cfr2` (Cloudflare R2), `s3` (S3 channel), `discord` (Discord channel), `huggingface` (HuggingFace channel), and `webdav` (WebDAV channel) |
 | defaultChannelName | Default Channel Name | String | Only supports `string` type, specify the default channel name to use, requires selecting an upload channel first. When multiple channels are configured for the same channel type, this can specify which channel to use by default |
 | defaultUploadNameType | Default Naming Method | String | Only supports `string` type, set to your custom default upload file naming method, supports `default` (default), `index` (only prefix), `original` (only original name), and `short` (short link) |
 | loginBkImg | Login Page Background | List/String | 1. When field type is `list`, list elements are image links to be added to the carousel list (when list has only one image, it becomes a fixed background), like `["1.jpg","2.jpg"]`<br />2. When field type is `string`, currently **only supports** string value `bing`, setting this value enables bing random image carousel mode. |
@@ -215,7 +228,7 @@ WebDAV service related settings, detailed introduction and usage methods can be 
 - Enable WebDAV Service: Turn on or off the WebDAV service
 - Username: WebDAV login username
 - Password: WebDAV login password
-- Upload Channel: Storage channel used when uploading files via WebDAV, supports Telegram, Cloudflare R2, S3, Discord, HuggingFace
+- Upload Channel: Storage channel used when uploading files via WebDAV, supports Telegram, Cloudflare R2, S3, Discord, HuggingFace, WebDAV
 - Channel Name: When the selected upload channel has multiple configurations, specify which channel name to use for uploading
 
 ## 🔧 Environment Variables List

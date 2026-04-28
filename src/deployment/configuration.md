@@ -108,6 +108,18 @@ export default {
 HuggingFace 渠道支持大文件直传，适合上传超过 20MB 的文件。对于大文件，系统会自动使用 LFS 协议进行分片上传。
 :::
 
+### 配置 WebDAV 渠道
+
+在管理后台的 WebDAV 渠道配置中填入：
+
+- **渠道名称**：自定义名称
+- **WebDAV 基础地址**：WebDAV 服务的完整 URL（如 `https://dav.example.com/remote.php/dav/files/user/imgbed/`）
+- **用户名**：（可选）WebDAV 认证用户名
+- **密码**：（可选）WebDAV 认证密码
+- **公开访问链接**：（可选）公开 HTTP/CDN 地址，配置后服务端支持直接从该地址读取文件
+- **自定义请求头**：（可选）额外的 HTTP 请求头，JSON 对象格式（如 `{"X-Api-Key":"value"}`）
+- **自动创建目录**：上传文件前自动创建父级目录，默认开启
+
 
 ## 🔒 安全设置
 
@@ -171,7 +183,7 @@ docker run -d -p 127.0.0.1:5000:5000/tcp \
 | bkOpacity     | 背景图透明度         | (0,1]的浮点数 | 展示的背景图透明度，默认为`1`。<br />如果你觉得显示效果不佳，可以自定义，如`0.8` |
 | urlPrefix     | 默认 URL 前缀     | 字符串        | 只支持`字符串`类型，设置为自定义的全局默认链接前缀，该前缀会覆盖原始默认前缀，但不会覆盖用户自定义的链接前缀 |
 | announcement | 公告                 | 字符串        | 只支持`字符串`类型，可以为 HTML 格式，设置为你自定义的公告内容（如有）          |
-| defaultUploadChannel | 默认上传渠道       | 字符串        | 只支持`字符串`类型，设置为你自定义的默认上传渠道，支持`telegram`（Telegram 渠道）、`cfr2`（Cloudflare R2）、`s3`（S3 渠道）、`discord`（Discord 渠道）和`huggingface`（HuggingFace 渠道） |
+| defaultUploadChannel | 默认上传渠道       | 字符串        | 只支持`字符串`类型，设置为你自定义的默认上传渠道，支持`telegram`（Telegram 渠道）、`cfr2`（Cloudflare R2）、`s3`（S3 渠道）、`discord`（Discord 渠道）、`huggingface`（HuggingFace 渠道）和`webdav`（WebDAV 渠道） |
 | defaultChannelName | 默认渠道名称       | 字符串        | 只支持`字符串`类型，指定默认使用的渠道名称，需先选择上传渠道。当同一渠道类型配置了多个渠道时，可通过此项指定默认使用哪个渠道 |
 | defaultUploadNameType | 默认命名方式       | 字符串        | 只支持`字符串`类型，设置为你自定义的默认上传文件命名方式，支持`default`（默认）、`index`（仅前缀）、`original`（仅原名）和`short`（短链接） |
 | loginBkImg    | 登录页背景图   | 列表/字符串   | 1、当字段类型为`列表`时，列表中元素为需要添加到轮播列表中的图片链接（列表中只有一张图时即为固定背景），形如`["1.jpg","2.jpg"]`<br />2、当字段类型为`字符串`时，目前**仅支持**字符串值为`bing`，设置为该值时启用bing随机图片轮播模式。 |
@@ -218,7 +230,7 @@ WebDAV 服务相关设置，详细介绍和使用方式请查看 [API 文档](..
 - 启用 WebDAV 服务：开启或关闭 WebDAV 服务
 - 用户名：WebDAV 登录用户名
 - 密码：WebDAV 登录密码
-- 上传渠道：通过 WebDAV 上传文件时使用的存储渠道，支持 Telegram、Cloudflare R2、S3、Discord、HuggingFace
+- 上传渠道：通过 WebDAV 上传文件时使用的存储渠道，支持 Telegram、Cloudflare R2、S3、Discord、HuggingFace、WebDAV
 - 指定渠道名：当选择的上传渠道有多个配置时，可指定具体使用哪个渠道名称进行上传
 
 

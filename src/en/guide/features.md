@@ -25,6 +25,7 @@ CloudFlare ImgBed provides rich features to meet the needs of different users.
 | S3 API | Varies by provider | Varies by provider | Strong compatibility, diverse options |
 | Discord | Single file 10MB (Nitro 25MB) | Free | Simple and easy to use |
 | HuggingFace | Unlimited | Free | Supports large file direct upload |
+| WebDAV | Varies by provider | Varies by provider | Wide compatibility, supports self-hosted storage |
 
 ### File Management
 

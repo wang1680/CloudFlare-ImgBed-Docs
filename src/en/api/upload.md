@@ -28,7 +28,7 @@ Upload a file directly via the `/upload` endpoint. Suitable for small files.
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
 | `authCode` | string | No | - | Upload authentication code |
-| `uploadChannel` | string | No | `telegram` | Storage channel: `telegram`, `cfr2`, `s3`, `discord`, `huggingface` |
+| `uploadChannel` | string | No | `telegram` | Storage channel: `telegram`, `cfr2`, `s3`, `discord`, `huggingface`, `webdav` |
 | `channelName` | string | No | - | Specific channel name (multi-channel scenarios). Get available list via `/api/channels` |
 | `serverCompress` | boolean | No | `true` | Server-side compression (Telegram channel images only) |
 | `autoRetry` | boolean | No | `true` | Auto-retry with another channel on failure |
