@@ -10,11 +10,25 @@ Add Features:
 - Added WebDAV storage channel, allowing third-party WebDAV services to be used as upload backends with upload, read, delete, move, rename, and channel-list support
 
 Security:
+- Admin file previews no longer trust `from=admin` or same-origin Referer, and now require a verified admin session before allowing admin previews
+- Manage APIs now get a default non-cacheable response header to prevent browser or CDN caching from causing stale state after GET-style management operations
+- Reduced mutation response payloads for manage APIs to avoid returning unnecessary metadata or sensitive data from blocklist, tag, and API Token update endpoints
 - Session storage keys migrated to the `manage@session@` prefix to prevent session data from entering the file index and backup exports
 
 Fix Bugs:
+- Fixed blocklist/whitelist toggles in the admin panel potentially returning cached old responses, which could show success without updating the actual state
 - Fixed D1 adapter routing for `manage@` configuration keys so blocklists, sessions, and other settings no longer get written to the files table
 - Fixed D1 settings backup reads so `manage@` settings data can be listed correctly
+
+## 2026.04.29
+
+Security:
+- Admin file previews no longer trust `from=admin` or same-origin Referer, and now require a verified admin session before allowing admin previews
+- Manage APIs now get a default non-cacheable response header to prevent browser or CDN caching from causing stale state after GET-style management operations
+- Reduced mutation response payloads for manage APIs to avoid returning unnecessary metadata or sensitive data from blocklist, tag, and API Token update endpoints
+
+Fix Bugs:
+- Fixed blocklist/whitelist toggles in the admin panel potentially returning cached old responses, which could show success without updating the actual state
 
 ## 2026.04.28
 
