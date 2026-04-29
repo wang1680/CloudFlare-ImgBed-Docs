@@ -15,6 +15,9 @@ Security:
 - Reduced mutation response payloads for manage APIs to avoid returning unnecessary metadata or sensitive data from blocklist, tag, and API Token update endpoints
 - Session storage keys migrated to the `manage@session@` prefix to prevent session data from entering the file index and backup exports
 
+Optimization:
+- Optimized data loading on the admin user management page: the user list API now aggregates IP summaries in a single pass and returns summary rows only, while per-user file records are lazy-loaded on row expansion to reduce Worker CPU usage and response payload size
+
 Fix Bugs:
 - Fixed blocklist/whitelist toggles in the admin panel potentially returning cached old responses, which could show success without updating the actual state
 - Fixed D1 adapter routing for `manage@` configuration keys so blocklists, sessions, and other settings no longer get written to the files table
@@ -26,6 +29,9 @@ Security:
 - Admin file previews no longer trust `from=admin` or same-origin Referer, and now require a verified admin session before allowing admin previews
 - Manage APIs now get a default non-cacheable response header to prevent browser or CDN caching from causing stale state after GET-style management operations
 - Reduced mutation response payloads for manage APIs to avoid returning unnecessary metadata or sensitive data from blocklist, tag, and API Token update endpoints
+
+Optimization:
+- Optimized data loading on the admin user management page: the user list API now aggregates IP summaries in a single pass and returns summary rows only, while per-user file records are lazy-loaded on row expansion to reduce Worker CPU usage and response payload size
 
 Fix Bugs:
 - Fixed blocklist/whitelist toggles in the admin panel potentially returning cached old responses, which could show success without updating the actual state
