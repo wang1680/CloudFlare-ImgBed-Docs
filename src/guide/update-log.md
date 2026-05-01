@@ -13,6 +13,7 @@ Security:
 - 管理端 API 默认补充不可缓存响应头，避免 GET 型管理操作被浏览器或 CDN 缓存导致状态不同步
 - 精简管理端变更接口响应内容，避免黑白名单、标签和 API Token 更新接口返回不必要的元数据或敏感信息
 - 会话存储键迁移为 `manage@session@` 前缀，避免会话数据混入文件索引和备份导出
+- WebDAV 内部调用改用专用 API Token 认证，不再使用管理员密码构造 Basic Auth，消除密码哈希泄露风险
 
 Optimization:
 - 优化管理端用户管理页面的数据加载方式：用户列表接口改为单次遍历聚合并仅返回 IP 摘要，展开用户时再懒加载对应文件列表，降低 Worker CPU 与响应体开销
@@ -21,6 +22,21 @@ Fix Bugs:
 - 修复管理面板黑名单/白名单切换接口可能因缓存返回旧响应，导致提示成功但状态未实际更新的问题
 - 修复 D1 适配器中 `manage@` 配置项路由到错误数据表的问题，避免黑名单、会话等设置写入文件表
 - 修复 D1 备份读取 `manage@` 配置时无法正确列出 settings 数据的问题
+- 修复 Docker 部署模式下 `[[path]].js` 通配符路由匹配的 off-by-one 错误，导致 `/dav/` 和 `/file/` 根路径返回 404
+- 修复 WebDAV PROPFIND 返回的文件大小始终为 0 的问题（读取了不存在的 `File-Size` 字段，改为 `FileSizeBytes`）
+- 修复 WebDAV PROPFIND 返回的文件 href 缺少 `/dav` 前缀，导致客户端无法下载文件
+- 修复 WebDAV PROPFIND 缺少 `getcontenttype` 属性，导致 Alist 等客户端无法识别文件类型和显示预览图
+
+## 2026.05.01
+
+Security:
+- WebDAV 内部调用改用专用 API Token 认证，不再使用管理员密码构造 Basic Auth，消除密码哈希泄露风险
+
+Fix Bugs:
+- 修复 Docker 部署模式下 `[[path]].js` 通配符路由匹配的 off-by-one 错误，导致 `/dav/` 和 `/file/` 根路径返回 404
+- 修复 WebDAV PROPFIND 返回的文件大小始终为 0 的问题（读取了不存在的 `File-Size` 字段，改为 `FileSizeBytes`）
+- 修复 WebDAV PROPFIND 返回的文件 href 缺少 `/dav` 前缀，导致客户端无法下载文件
+- 修复 WebDAV PROPFIND 缺少 `getcontenttype` 属性，导致 Alist 等客户端无法识别文件类型和显示预览图
 
 ## 2026.04.29
 

@@ -14,6 +14,7 @@ Security:
 - Manage APIs now get a default non-cacheable response header to prevent browser or CDN caching from causing stale state after GET-style management operations
 - Reduced mutation response payloads for manage APIs to avoid returning unnecessary metadata or sensitive data from blocklist, tag, and API Token update endpoints
 - Session storage keys migrated to the `manage@session@` prefix to prevent session data from entering the file index and backup exports
+- WebDAV internal calls now use a dedicated API Token instead of admin password Basic Auth, eliminating the risk of password hash leakage
 
 Optimization:
 - Optimized data loading on the admin user management page: the user list API now aggregates IP summaries in a single pass and returns summary rows only, while per-user file records are lazy-loaded on row expansion to reduce Worker CPU usage and response payload size
@@ -22,6 +23,21 @@ Fix Bugs:
 - Fixed blocklist/whitelist toggles in the admin panel potentially returning cached old responses, which could show success without updating the actual state
 - Fixed D1 adapter routing for `manage@` configuration keys so blocklists, sessions, and other settings no longer get written to the files table
 - Fixed D1 settings backup reads so `manage@` settings data can be listed correctly
+- Fixed off-by-one error in Docker deployment `[[path]].js` catch-all route matching, causing `/dav/` and `/file/` root paths to return 404
+- Fixed WebDAV PROPFIND always reporting file size as 0 (was reading non-existent `File-Size` field, changed to `FileSizeBytes`)
+- Fixed WebDAV PROPFIND file href missing `/dav` prefix, preventing clients from downloading files
+- Fixed WebDAV PROPFIND missing `getcontenttype` property, preventing Alist and other clients from identifying file types and showing previews
+
+## 2026.05.01
+
+Security:
+- WebDAV internal calls now use a dedicated API Token instead of admin password Basic Auth, eliminating the risk of password hash leakage
+
+Fix Bugs:
+- Fixed off-by-one error in Docker deployment `[[path]].js` catch-all route matching, causing `/dav/` and `/file/` root paths to return 404
+- Fixed WebDAV PROPFIND always reporting file size as 0 (was reading non-existent `File-Size` field, changed to `FileSizeBytes`)
+- Fixed WebDAV PROPFIND file href missing `/dav` prefix, preventing clients from downloading files
+- Fixed WebDAV PROPFIND missing `getcontenttype` property, preventing Alist and other clients from identifying file types and showing previews
 
 ## 2026.04.29
 
