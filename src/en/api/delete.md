@@ -71,13 +71,13 @@ When the `folder` parameter is `true`, recursively deletes the specified folder 
 ### Delete Single File
 
 ```bash
-curl --location --request DELETE 'https://your.domain/api/manage/delete/example,image.jpg' \
+curl --location --request GET 'https://your.domain/api/manage/delete/example,image.jpg' \
 --header 'Authorization: Bearer your_token'
 ```
 
 ### Delete Folder
 
 ```bash
-curl --location --request DELETE 'https://your.domain/api/manage/delete/example,folder?folder=true' \
+curl --location --request GET 'https://your.domain/api/manage/delete/example,folder?folder=true' \
 --header 'Authorization: Bearer your_token'
 ```

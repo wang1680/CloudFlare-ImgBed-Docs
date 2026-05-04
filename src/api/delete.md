@@ -70,13 +70,13 @@
 ### 删除单个文件
 
 ```bash
-curl --location --request DELETE 'https://your.domain/api/manage/delete/example/image.jpg' \
+curl --location --request GET 'https://your.domain/api/manage/delete/example/image.jpg' \
 --header 'Authorization: Bearer your_token'
 ```
 
 ### 删除文件夹
 
 ```bash
-curl --location --request DELETE 'https://your.domain/api/manage/delete/example/folder?folder=true' \
+curl --location --request GET 'https://your.domain/api/manage/delete/example/folder?folder=true' \
 --header 'Authorization: Bearer your_token'
 ```
