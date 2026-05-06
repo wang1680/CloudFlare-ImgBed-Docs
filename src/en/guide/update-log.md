@@ -20,6 +20,7 @@ Optimization:
 - Optimized data loading on the admin user management page: the user list API now aggregates IP summaries in a single pass and returns summary rows only, while per-user file records are lazy-loaded on row expansion to reduce Worker CPU usage and response payload size
 
 Fix Bugs:
+- Fixed duplicate `Content-Length` response headers from the Docker native Node server when accessing `/random` through a reverse proxy, which could cause Nginx / Cloudflare to return 502
 - Fixed blocklist/whitelist toggles in the admin panel potentially returning cached old responses, which could show success without updating the actual state
 - Fixed D1 adapter routing for `manage@` configuration keys so blocklists, sessions, and other settings no longer get written to the files table
 - Fixed D1 settings backup reads so `manage@` settings data can be listed correctly
@@ -27,6 +28,11 @@ Fix Bugs:
 - Fixed WebDAV PROPFIND always reporting file size as 0 (was reading non-existent `File-Size` field, changed to `FileSizeBytes`)
 - Fixed WebDAV PROPFIND file href missing `/dav` prefix, preventing clients from downloading files
 - Fixed WebDAV PROPFIND missing `getcontenttype` property, preventing Alist and other clients from identifying file types and showing previews
+
+## 2026.05.06
+
+Fix Bugs:
+- Fixed duplicate `Content-Length` response headers from the Docker native Node server when accessing `/random` through a reverse proxy, which could cause Nginx / Cloudflare to return 502
 
 ## 2026.05.01
 
