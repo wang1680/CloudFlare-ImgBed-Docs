@@ -17,8 +17,6 @@
       </p>
     </div>
 </div>
-
-
 CloudFlare ImgBed 是一个基于 Cloudflare 的开源文件托管解决方案，为用户提供免费、稳定、高效的文件存储服务。项目支持多种存储渠道，支持无服务器和有服务器部署方式，满足不同用户的需求。
 
 <div style="position: relative; padding: 30% 45%;">
