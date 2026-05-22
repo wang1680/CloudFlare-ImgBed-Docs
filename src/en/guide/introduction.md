@@ -1,8 +1,10 @@
 # Project Introduction
 <div style="display: flex; flex-direction: column; align-items: center; gap: 12px; width: 100%;">
-  <a href="https://github.com/MarSeventh/CloudFlare-ImgBed">
-    <img width="80%" alt="logo" src="/images/guide/banner.png"/>
-  </a>
+  <p align="center" style="width: 100%; text-align: center; margin: 0;">
+    <a href="https://github.com/MarSeventh/CloudFlare-ImgBed">
+      <img width="80%" alt="logo" src="/images/guide/banner.png"/>
+    </a>
+  </p>
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 6px;">
     <a href="https://github.com/MarSeventh/CloudFlare-ImgBed/blob/main/LICENSE"><img src="https://img.shields.io/github/license/MarSeventh/CloudFlare-ImgBed" alt="License"/></a>
     <a href="https://github.com/MarSeventh/CloudFlare-ImgBed/releases"><img src="https://img.shields.io/github/release/MarSeventh/CloudFlare-ImgBed" alt="latest version"/></a>
