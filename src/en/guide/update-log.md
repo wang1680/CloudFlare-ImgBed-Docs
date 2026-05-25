@@ -4,30 +4,24 @@
 
 
 Add Features:
-- Added Cloudflare Workers deployment method, supporting one-click deployment via GitHub Actions
-- Added session security policy settings: support enabling Cookie Secure mode (HTTPS-only transmission)
-- Support configuring separate session max age for user and admin sessions (in days)
-- Added WebDAV storage channel, allowing third-party WebDAV services to be used as upload backends with upload, read, delete, move, rename, and channel-list support
-
-Security:
-- Admin file previews no longer trust `from=admin` or same-origin Referer, and now require a verified admin session before allowing admin previews
-- Manage APIs now get a default non-cacheable response header to prevent browser or CDN caching from causing stale state after GET-style management operations
-- Reduced mutation response payloads for manage APIs to avoid returning unnecessary metadata or sensitive data from blocklist, tag, and API Token update endpoints
-- Session storage keys migrated to the `manage@session@` prefix to prevent session data from entering the file index and backup exports
-- WebDAV internal calls now use a dedicated API Token instead of admin password Basic Auth, eliminating the risk of password hash leakage
+- Added an upload trend line chart to the system status page, showing uploads from the last 7 days by default
+- Upload trends can be grouped by channel type or channel name, with a total uploads line
+- Upload trends support date range filtering with a single-month calendar dialog; click twice to select start/end dates or manually enter the date range
+- Dashboard file rename dialog now supports confirming with Enter
 
 Optimization:
-- Optimized data loading on the admin user management page: the user list API now aggregates IP summaries in a single pass and returns summary rows only, while per-user file records are lazy-loaded on row expansion to reduce Worker CPU usage and response payload size
+- Enhanced the `indexinfo` API with upload trend statistics, using linear aggregation into date buckets and capped point/series counts to avoid high CPU usage on the status page
 
-Fix Bugs:
-- Fixed duplicate `Content-Length` response headers from the Docker native Node server when accessing `/random` through a reverse proxy, which could cause Nginx / Cloudflare to return 502
-- Fixed blocklist/whitelist toggles in the admin panel potentially returning cached old responses, which could show success without updating the actual state
-- Fixed D1 adapter routing for `manage@` configuration keys so blocklists, sessions, and other settings no longer get written to the files table
-- Fixed D1 settings backup reads so `manage@` settings data can be listed correctly
-- Fixed off-by-one error in Docker deployment `[[path]].js` catch-all route matching, causing `/dav/` and `/file/` root paths to return 404
-- Fixed WebDAV PROPFIND always reporting file size as 0 (was reading non-existent `File-Size` field, changed to `FileSizeBytes`)
-- Fixed WebDAV PROPFIND file href missing `/dav` prefix, preventing clients from downloading files
-- Fixed WebDAV PROPFIND missing `getcontenttype` property, preventing Alist and other clients from identifying file types and showing previews
+## 2026.05.25
+
+Add Features:
+- Added an upload trend line chart to the system status page, showing uploads from the last 7 days by default
+- Upload trends can be grouped by channel type or channel name, with a total uploads line
+- Upload trends support date range filtering with a single-month calendar dialog; click twice to select start/end dates or manually enter the date range
+- Dashboard file rename dialog now supports confirming with Enter
+
+Optimization:
+- Enhanced the `indexinfo` API with upload trend statistics, using linear aggregation into date buckets and capped point/series counts to avoid high CPU usage on the status page
 
 ## 2026.05.06
 
