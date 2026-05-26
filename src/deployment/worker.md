@@ -96,15 +96,6 @@ Cloudflare Workers 部署是 Pages 部署之外的另一种 Serverless 部署方
 5. 可选修改 Worker 名称（优先级：手动输入 > Secrets 中的 `WORKER_NAME` > `cloudflare-imgbed`）
 6. 点击 **Run workflow** 开始部署
 
-::: tip
-部署过程会自动完成以下步骤：
-- 安装依赖
-- 扫描路由并生成 Worker 入口
-- 收集前端静态资源
-- 根据 Secrets 生成部署配置
-- 部署到 Cloudflare Workers
-:::
-
 部署完成后，可以通过 `https://<worker-name>.<account-subdomain>.workers.dev` 访问。
 
 ## 🔄 更新版本

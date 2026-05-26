@@ -96,15 +96,6 @@ All configuration is passed through Secrets. GitHub Secrets are encrypted and wi
 5. Optionally modify the Worker name (priority: manual input > `WORKER_NAME` Secret > `cloudflare-imgbed`)
 6. Click **Run workflow** to start deployment
 
-::: tip 
-The deployment process automatically completes the following steps:
-- Install dependencies
-- Scan routes and generate Worker entry point
-- Collect frontend static assets
-- Generate deployment config from Secrets
-- Deploy to Cloudflare Workers
-:::
-
 After deployment, access your site at `https://<worker-name>.<account-subdomain>.workers.dev`.
 
 ## 🔄 Updating
