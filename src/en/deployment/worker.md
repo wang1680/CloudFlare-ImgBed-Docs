@@ -89,24 +89,12 @@ All configuration is passed through Secrets. GitHub Secrets are encrypted and wi
 
 ## 🚀 Step 4: Run Deployment
 
-### Manual Deployment
-
 1. Go to the **Actions** page of your forked repository
 2. Select **Deploy to Cloudflare Workers** on the left
 3. Click **Run workflow**
 4. Select the branch to deploy (default `main`)
-5. Optionally modify the Worker name (defaults to `WORKER_NAME` Secret, or `cloudflare-imgbed` if not set)
+5. Optionally modify the Worker name (priority: manual input > `WORKER_NAME` Secret > `cloudflare-imgbed`)
 6. Click **Run workflow** to start deployment
-
-### Automatic Deployment
-
-Once Secrets are configured, every push to the `main` branch (including syncing upstream updates via Sync fork) will automatically trigger deployment.
-
-::: tip Works with Auto Sync
-The repository includes an **Upstream Sync** Action that automatically syncs upstream updates daily. Once enabled, new upstream versions will be synced to your `main` branch and automatically trigger Worker deployment, achieving fully automatic updates.
-
-To enable: Go to the **Actions** page of your forked repository, find **Upstream Sync**, and click **Enable workflow**.
-:::
 
 The deployment process automatically completes the following steps:
 - Install dependencies
@@ -123,7 +111,13 @@ Workers deployment supports two update methods:
 
 ### Automatic Updates (Recommended)
 
-After enabling the **Upstream Sync** Action, updates from the upstream repository will be automatically synced and trigger deployment without manual intervention.
+After configuring Secrets and enabling the **Upstream Sync** Action, updates from the upstream repository will be automatically synced and trigger deployment without manual intervention.
+
+::: tip Enable Upstream Sync
+The repository includes an `Upstream Sync` Action (automatically syncs upstream updates daily). Once enabled, new upstream versions will be synced to your `main` branch and automatically trigger Worker deployment, achieving fully automatic updates.
+
+To enable: Go to the **Actions** page of your forked repository, find **Upstream Sync**, and click **Enable workflow**.
+:::
 
 ### Manual Updates
 

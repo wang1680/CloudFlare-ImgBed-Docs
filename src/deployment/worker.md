@@ -89,24 +89,12 @@ Cloudflare Workers 部署是 Pages 部署之外的另一种 Serverless 部署方
 
 ## 🚀 第四步：运行部署
 
-### 手动部署
-
 1. 进入 Fork 仓库的 **Actions** 页面
 2. 在左侧选择 **Deploy to Cloudflare Workers**
 3. 点击 **Run workflow**
 4. 选择要部署的分支（默认 `main`）
-5. 可选修改 Worker 名称（默认使用 Secrets 中的 `WORKER_NAME`，未配置则为 `cloudflare-imgbed`）
+5. 可选修改 Worker 名称（优先级：手动输入 > Secrets 中的 `WORKER_NAME` > `cloudflare-imgbed`）
 6. 点击 **Run workflow** 开始部署
-
-### 自动部署
-
-配置好 Secrets 后，每次 `main` 分支有 push（包括通过 Sync fork 同步上游更新）时，会自动触发部署。
-
-::: tip 配合自动同步
-仓库内置了 `Upstream Sync` Action（每日自动同步上游更新）。启用后，上游有新版本时会自动同步到你的 `main` 分支，随后自动触发 Worker 部署，实现全自动更新。
-
-启用方式：进入 Fork 仓库的 **Actions** 页面，找到 **Upstream Sync**，点击 **Enable workflow**。
-:::
 
 部署过程会自动完成以下步骤：
 - 安装依赖
@@ -123,7 +111,13 @@ Workers 部署支持两种更新方式：
 
 ### 自动更新（推荐）
 
-启用 **Upstream Sync** Action 后，上游仓库有更新时会自动同步并触发部署，无需手动操作。
+配置好 Secrets ，并启用 **Upstream Sync** Action 后，上游仓库有更新时会自动同步并触发部署，无需手动操作。
+
+::: tip 启用 Upstream Sync
+仓库内置了 `Upstream Sync` Action（每日自动同步上游更新）。启用后，上游有新版本时会自动同步到你的 `main` 分支，随后自动触发 Worker 部署，实现全自动更新。
+
+启用方式：进入 Fork 仓库的 **Actions** 页面，找到 **Upstream Sync**，点击 **Enable workflow**。
+:::
 
 ### 手动更新
 
