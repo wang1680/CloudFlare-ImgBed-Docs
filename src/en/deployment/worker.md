@@ -98,25 +98,6 @@ All configuration is passed through Secrets. GitHub Secrets are encrypted and wi
 
 After deployment, access your site at `https://<worker-name>.<account-subdomain>.workers.dev`.
 
-## 🔄 Updating
-
-Workers deployment supports two update methods:
-
-### Automatic Updates (Recommended)
-
-After configuring Secrets and enabling the **Upstream Sync** Action, updates from the upstream repository will be automatically synced and trigger deployment without manual intervention.
-
-::: tip Enable Upstream Sync
-The repository includes an `Upstream Sync` Action (automatically syncs upstream updates daily). Once enabled, new upstream versions will be synced to your `main` branch and automatically trigger Worker deployment, achieving fully automatic updates.
-
-To enable: Go to the **Actions** page of your forked repository, find **Upstream Sync**, and click **Enable workflow**.
-:::
-
-### Manual Updates
-
-1. Sync upstream updates in your forked repository (Sync fork)
-2. This will automatically trigger deployment; you can also manually run **Deploy to Cloudflare Workers** from the Actions page
-
 ## 🚀 Next Steps
 
 After deployment, you need to add storage channels for the service to work properly. Please refer to the [Configuration Guide](/en/deployment/configuration#🗂%EF%B8%8F-storage-channel-configuration) for setup instructions.

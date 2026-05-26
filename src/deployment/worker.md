@@ -98,25 +98,6 @@ Cloudflare Workers 部署是 Pages 部署之外的另一种 Serverless 部署方
 
 部署完成后，可以通过 `https://<worker-name>.<account-subdomain>.workers.dev` 访问。
 
-## 🔄 更新版本
-
-Workers 部署支持两种更新方式：
-
-### 自动更新（推荐）
-
-配置好 Secrets ，并启用 **Upstream Sync** Action 后，上游仓库有更新时会自动同步并触发部署，无需手动操作。
-
-::: tip 启用 Upstream Sync
-仓库内置了 `Upstream Sync` Action（每日自动同步上游更新）。启用后，上游有新版本时会自动同步到你的 `main` 分支，随后自动触发 Worker 部署，实现全自动更新。
-
-启用方式：进入 Fork 仓库的 **Actions** 页面，找到 **Upstream Sync**，点击 **Enable workflow**。
-:::
-
-### 手动更新
-
-1. 在 Fork 仓库中同步上游更新（Sync fork）
-2. 同步完成后会自动触发部署；也可以手动进入 Actions 页面运行 **Deploy to Cloudflare Workers**
-
 ## 🚀 下一步
 
 部署完成后，需要添加存储渠道才能正常使用。请参考 [配置说明](/deployment/configuration#🗂%EF%B8%8F-存储渠道配置) 进行配置。

@@ -6,10 +6,13 @@ Use different update methods depending on your deployment method.
 
 ### Automatic Updates
 
-Enable GitHub Actions automatic sync:
+After enabling the **Upstream Sync** Action, updates from the upstream repository will be automatically synced and trigger deployment without manual intervention.
 
-1. Go to the `Actions` page in your forked repository 
-2. Enable Actions
+::: tip Enable Upstream Sync
+The repository includes an `Upstream Sync` Action (automatically syncs upstream updates daily). Once enabled, new upstream versions will be synced to your `main` branch and automatically trigger Worker deployment, achieving fully automatic updates.
+
+To enable: Go to the **Actions** page of your forked repository, find **Upstream Sync**, and click **Enable workflow**.
+:::
 
 ### Manual Updates
 
@@ -24,7 +27,13 @@ Enable GitHub Actions automatic sync:
 
 ### Automatic Updates
 
-After enabling the **Upstream Sync** Action, updates from the upstream repository will be automatically synced to the `main` branch and trigger deployment without manual intervention.
+After configuring Secrets and enabling the **Upstream Sync** Action, updates from the upstream repository will be automatically synced and trigger deployment without manual intervention.
+
+::: tip Enable Upstream Sync
+The repository includes an `Upstream Sync` Action (automatically syncs upstream updates daily). Once enabled, new upstream versions will be synced to your `main` branch and automatically trigger Worker deployment, achieving fully automatic updates.
+
+To enable: Go to the **Actions** page of your forked repository, find **Upstream Sync**, and click **Enable workflow**.
+:::
 
 ### Manual Updates
 
