@@ -2,7 +2,6 @@
 
 ## Recent Updates
 
-
 Add Features:
 - Added an upload trend line chart to the system status page, showing uploads from the last 7 days by default
 - Upload trends can be grouped by channel type or channel name, with a total uploads line
@@ -11,6 +10,14 @@ Add Features:
 
 Optimization:
 - Enhanced the `indexinfo` API with upload trend statistics, using linear aggregation into date buckets and capped point/series counts to avoid high CPU usage on the status page
+
+Fix Bugs:
+- Fixed HuggingFace file `HEAD` responses returning `Content-Length: 0`; the handler now uses uploaded metadata (`FileSizeBytes`) to report the actual file size, improving browser and player media probing
+
+## 2026.05.30
+
+Fix Bugs:
+- Fixed HuggingFace file `HEAD` responses returning `Content-Length: 0`; the handler now uses uploaded metadata (`FileSizeBytes`) to report the actual file size, improving browser and player media probing
 
 ## 2026.05.25
 

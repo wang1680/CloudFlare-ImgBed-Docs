@@ -11,6 +11,14 @@ Add Features:
 Optimization:
 - `indexinfo` 接口补充上传趋势统计数据，按日期桶线性聚合并限制最大点数与序列数，避免状态页趋势计算造成过高 CPU 开销
 
+Fix Bugs:
+- 修复 HuggingFace 渠道文件 `HEAD` 请求返回 `Content-Length: 0` 的问题，现在会优先使用上传元数据中的 `FileSizeBytes` 返回真实文件大小，改善浏览器和播放器对媒体文件的预检与进度识别
+
+## 2026.05.30
+
+Fix Bugs:
+- 修复 HuggingFace 渠道文件 `HEAD` 请求返回 `Content-Length: 0` 的问题，现在会优先使用上传元数据中的 `FileSizeBytes` 返回真实文件大小，改善浏览器和播放器对媒体文件的预检与进度识别
+
 ## 2026.05.25
 
 Add Features:
