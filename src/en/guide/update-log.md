@@ -3,16 +3,40 @@
 ## Recent Updates
 
 Add Features:
-- Added an upload trend line chart to the system status page, showing uploads from the last 7 days by default
-- Upload trends can be grouped by channel type or channel name, with a total uploads line
-- Upload trends support date range filtering with a single-month calendar dialog; click twice to select start/end dates or manually enter the date range
-- Dashboard file rename dialog now supports confirming with Enter
+- Added `/upload/huggingface/completeMultipart` to proxy HuggingFace LFS multipart completion for large direct uploads
+- HuggingFace direct upload URL generation now rewrites multipart completion URLs to an internal endpoint, enabling multipart completion in Cloudflare Workers deployments
 
 Optimization:
-- Enhanced the `indexinfo` API with upload trend statistics, using linear aggregation into date buckets and capped point/series counts to avoid high CPU usage on the status page
+- Unified WebDAV credential resolution into the shared channel credential flow, so read, delete, move, and rename operations use the same configuration source
+
+Security:
+- Management file list, batch list, custom file list, and metadata APIs now filter sensitive S3, Telegram, Discord, HuggingFace, and WebDAV credentials from returned metadata
+- File read, delete, move, and rename operations now prefer current channel configuration for credentials, reducing the need to store or expose credentials in file metadata
+- `WebDAVBaseUrl` in metadata now strips URL userinfo to avoid leaking usernames or passwords through management API responses
 
 Fix Bugs:
-- Fixed HuggingFace file `HEAD` responses returning `Content-Length: 0`; the handler now uses uploaded metadata (`FileSizeBytes`) to report the actual file size, improving browser and player media probing
+- Fixed HuggingFace direct upload URL requests requiring `fileType`; files without a MIME type now fall back to `application/octet-stream`
+- Improved HuggingFace multipart completion target and parts validation so invalid requests return 400 instead of 500
+- Fixed WebDAV public URL reads changing the original 404/403 status into 500 when the WebDAV API fallback also failed
+
+## 2026.06.02
+
+Add Features:
+- Added `/upload/huggingface/completeMultipart` to proxy HuggingFace LFS multipart completion for large direct uploads
+- HuggingFace direct upload URL generation now rewrites multipart completion URLs to an internal endpoint, enabling multipart completion in Cloudflare Workers deployments
+
+Optimization:
+- Unified WebDAV credential resolution into the shared channel credential flow, so read, delete, move, and rename operations use the same configuration source
+
+Security:
+- Management file list, batch list, custom file list, and metadata APIs now filter sensitive S3, Telegram, Discord, HuggingFace, and WebDAV credentials from returned metadata
+- File read, delete, move, and rename operations now prefer current channel configuration for credentials, reducing the need to store or expose credentials in file metadata
+- `WebDAVBaseUrl` in metadata now strips URL userinfo to avoid leaking usernames or passwords through management API responses
+
+Fix Bugs:
+- Fixed HuggingFace direct upload URL requests requiring `fileType`; files without a MIME type now fall back to `application/octet-stream`
+- Improved HuggingFace multipart completion target and parts validation so invalid requests return 400 instead of 500
+- Fixed WebDAV public URL reads changing the original 404/403 status into 500 when the WebDAV API fallback also failed
 
 ## 2026.05.30
 

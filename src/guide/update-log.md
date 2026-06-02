@@ -3,16 +3,40 @@
 ## 最近更新
 
 Add Features:
-- 系统状态页新增上传趋势折线图，默认展示最近 7 天上传数量
-- 上传趋势支持按渠道类型或渠道名称分组绘制，并提供上传总数曲线
-- 上传趋势支持日期范围筛选，新增单月日历弹窗，可点击两次选择起止日期，也可手动输入起止日期
-- Dashboard 文件重命名弹窗支持按回车确认
+- 新增 HuggingFace 大文件分片直传完成接口 `/upload/huggingface/completeMultipart`，用于代理完成 LFS multipart 上传
+- HuggingFace 直传获取上传地址时会自动将 multipart 完成地址改写为站点内接口，支持 Cloudflare Workers 部署下完成分片上传
 
 Optimization:
-- `indexinfo` 接口补充上传趋势统计数据，按日期桶线性聚合并限制最大点数与序列数，避免状态页趋势计算造成过高 CPU 开销
+- WebDAV 凭据解析统一到通用渠道凭据链路，读取、删除、移动、重命名等操作使用同一套配置来源
+
+Security:
+- 管理端文件列表、批量列表、自定义文件列表和元数据接口返回 metadata 时会过滤 S3、Telegram、Discord、HuggingFace、WebDAV 等渠道敏感凭据
+- 文件读取、删除、移动、重命名等操作优先从当前渠道配置解析凭据，减少凭据写入或暴露在文件 metadata 中的风险
+- WebDAV metadata 中的 `WebDAVBaseUrl` 会清理 URL userinfo，避免用户名或密码随管理端接口响应泄露
 
 Fix Bugs:
-- 修复 HuggingFace 渠道文件 `HEAD` 请求返回 `Content-Length: 0` 的问题，现在会优先使用上传元数据中的 `FileSizeBytes` 返回真实文件大小，改善浏览器和播放器对媒体文件的预检与进度识别
+- 修复 HuggingFace 直传接口将 `fileType` 作为必填项导致部分无 MIME 类型文件无法获取上传地址的问题，现在默认使用 `application/octet-stream`
+- 改进 HuggingFace multipart 完成接口的目标地址和分片参数校验，非法请求会返回 400 而不是 500
+- 修复 WebDAV 使用公开地址读取失败后，API 回退读取也失败时可能把原始 404/403 状态改写为 500 的问题
+
+## 2026.06.02
+
+Add Features:
+- 新增 HuggingFace 大文件分片直传完成接口 `/upload/huggingface/completeMultipart`，用于代理完成 LFS multipart 上传
+- HuggingFace 直传获取上传地址时会自动将 multipart 完成地址改写为站点内接口，支持 Cloudflare Workers 部署下完成分片上传
+
+Optimization:
+- WebDAV 凭据解析统一到通用渠道凭据链路，读取、删除、移动、重命名等操作使用同一套配置来源
+
+Security:
+- 管理端文件列表、批量列表、自定义文件列表和元数据接口返回 metadata 时会过滤 S3、Telegram、Discord、HuggingFace、WebDAV 等渠道敏感凭据
+- 文件读取、删除、移动、重命名等操作优先从当前渠道配置解析凭据，减少凭据写入或暴露在文件 metadata 中的风险
+- WebDAV metadata 中的 `WebDAVBaseUrl` 会清理 URL userinfo，避免用户名或密码随管理端接口响应泄露
+
+Fix Bugs:
+- 修复 HuggingFace 直传接口将 `fileType` 作为必填项导致部分无 MIME 类型文件无法获取上传地址的问题，现在默认使用 `application/octet-stream`
+- 改进 HuggingFace multipart 完成接口的目标地址和分片参数校验，非法请求会返回 400 而不是 500
+- 修复 WebDAV 使用公开地址读取失败后，API 回退读取也失败时可能把原始 404/403 状态改写为 500 的问题
 
 ## 2026.05.30
 
