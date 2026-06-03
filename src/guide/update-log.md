@@ -2,22 +2,31 @@
 
 ## 最近更新
 
-Add Features:
-- 新增 HuggingFace 大文件分片直传完成接口 `/upload/huggingface/completeMultipart`，用于代理完成 LFS multipart 上传
-- HuggingFace 直传获取上传地址时会自动将 multipart 完成地址改写为站点内接口，支持 Cloudflare Workers 部署下完成分片上传
-
 Optimization:
-- WebDAV 凭据解析统一到通用渠道凭据链路，读取、删除、移动、重命名等操作使用同一套配置来源
+- 精简文件 metadata 持久化内容，S3、Telegram、Discord、HuggingFace、WebDAV 等渠道不再保存可从当前渠道配置读取的配置字段
+- 管理端文件详情会按当前渠道配置动态补齐 S3Location、S3CdnFileUrl、HfFileUrl、WebDAVPublicUrl 等展示字段，配置修改后展示链接会随之刷新
+- 文件读取、删除、移动、重命名统一通过当前渠道配置解析凭据；旧版缺少 `ChannelName` 的 Telegram/TelegramNew 记录会自动匹配 `Telegram_env`
 
 Security:
-- 管理端文件列表、批量列表、自定义文件列表和元数据接口返回 metadata 时会过滤 S3、Telegram、Discord、HuggingFace、WebDAV 等渠道敏感凭据
-- 文件读取、删除、移动、重命名等操作优先从当前渠道配置解析凭据，减少凭据写入或暴露在文件 metadata 中的风险
-- WebDAV metadata 中的 `WebDAVBaseUrl` 会清理 URL userinfo，避免用户名或密码随管理端接口响应泄露
+- 管理端元数据、标签、黑白名单、移动、重命名、备份恢复等写回路径会统一清理敏感字段和配置派生字段，避免旧版备份或旧记录再次写入凭据
 
 Fix Bugs:
-- 修复 HuggingFace 直传接口将 `fileType` 作为必填项导致部分无 MIME 类型文件无法获取上传地址的问题，现在默认使用 `application/octet-stream`
-- 改进 HuggingFace multipart 完成接口的目标地址和分片参数校验，非法请求会返回 400 而不是 500
-- 修复 WebDAV 使用公开地址读取失败后，API 回退读取也失败时可能把原始 404/403 状态改写为 500 的问题
+- 修复修改 S3 endpoint/CDN 等配置后，前端文件详情仍可能显示旧 S3Location 或旧 CDN 链接的问题
+- 修复 S3 文件移动或重命名远端操作失败时，数据库记录仍可能被移动到新路径的问题
+
+## 2026.06.03
+
+Optimization:
+- 精简文件 metadata 持久化内容，S3、Telegram、Discord、HuggingFace、WebDAV 等渠道不再保存可从当前渠道配置读取的配置字段
+- 管理端文件详情会按当前渠道配置动态补齐 S3Location、S3CdnFileUrl、HfFileUrl、WebDAVPublicUrl 等展示字段，配置修改后展示链接会随之刷新
+- 文件读取、删除、移动、重命名统一通过当前渠道配置解析凭据；旧版缺少 `ChannelName` 的 Telegram/TelegramNew 记录会自动匹配 `Telegram_env`
+
+Security:
+- 管理端元数据、标签、黑白名单、移动、重命名、备份恢复等写回路径会统一清理敏感字段和配置派生字段，避免旧版备份或旧记录再次写入凭据
+
+Fix Bugs:
+- 修复修改 S3 endpoint/CDN 等配置后，前端文件详情仍可能显示旧 S3Location 或旧 CDN 链接的问题
+- 修复 S3 文件移动或重命名远端操作失败时，数据库记录仍可能被移动到新路径的问题
 
 ## 2026.06.02
 

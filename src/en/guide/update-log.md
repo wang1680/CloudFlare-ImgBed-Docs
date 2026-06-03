@@ -2,22 +2,31 @@
 
 ## Recent Updates
 
-Add Features:
-- Added `/upload/huggingface/completeMultipart` to proxy HuggingFace LFS multipart completion for large direct uploads
-- HuggingFace direct upload URL generation now rewrites multipart completion URLs to an internal endpoint, enabling multipart completion in Cloudflare Workers deployments
-
 Optimization:
-- Unified WebDAV credential resolution into the shared channel credential flow, so read, delete, move, and rename operations use the same configuration source
+- Reduced persisted file metadata for S3, Telegram, Discord, HuggingFace, WebDAV, and related channels by no longer storing fields that can be read from the current channel configuration
+- Management file details now dynamically enrich S3Location, S3CdnFileUrl, HfFileUrl, WebDAVPublicUrl, and similar display fields from the current channel configuration, so displayed links refresh after config changes
+- File read, delete, move, and rename operations now resolve credentials through the current channel configuration; legacy Telegram/TelegramNew records without `ChannelName` fall back to `Telegram_env`
 
 Security:
-- Management file list, batch list, custom file list, and metadata APIs now filter sensitive S3, Telegram, Discord, HuggingFace, and WebDAV credentials from returned metadata
-- File read, delete, move, and rename operations now prefer current channel configuration for credentials, reducing the need to store or expose credentials in file metadata
-- `WebDAVBaseUrl` in metadata now strips URL userinfo to avoid leaking usernames or passwords through management API responses
+- Management metadata, tag, allow/block list, move, rename, and backup restore write paths now consistently remove sensitive and config-derived fields, preventing old backups or legacy records from writing credentials back
 
 Fix Bugs:
-- Fixed HuggingFace direct upload URL requests requiring `fileType`; files without a MIME type now fall back to `application/octet-stream`
-- Improved HuggingFace multipart completion target and parts validation so invalid requests return 400 instead of 500
-- Fixed WebDAV public URL reads changing the original 404/403 status into 500 when the WebDAV API fallback also failed
+- Fixed file details still showing stale S3Location or CDN links after changing S3 endpoint/CDN configuration
+- Fixed S3 move or rename failures potentially moving the database record even when the remote S3 operation failed
+
+## 2026.06.03
+
+Optimization:
+- Reduced persisted file metadata for S3, Telegram, Discord, HuggingFace, WebDAV, and related channels by no longer storing fields that can be read from the current channel configuration
+- Management file details now dynamically enrich S3Location, S3CdnFileUrl, HfFileUrl, WebDAVPublicUrl, and similar display fields from the current channel configuration, so displayed links refresh after config changes
+- File read, delete, move, and rename operations now resolve credentials through the current channel configuration; legacy Telegram/TelegramNew records without `ChannelName` fall back to `Telegram_env`
+
+Security:
+- Management metadata, tag, allow/block list, move, rename, and backup restore write paths now consistently remove sensitive and config-derived fields, preventing old backups or legacy records from writing credentials back
+
+Fix Bugs:
+- Fixed file details still showing stale S3Location or CDN links after changing S3 endpoint/CDN configuration
+- Fixed S3 move or rename failures potentially moving the database record even when the remote S3 operation failed
 
 ## 2026.06.02
 
