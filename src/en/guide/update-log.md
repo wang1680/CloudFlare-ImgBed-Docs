@@ -3,16 +3,22 @@
 ## Recent Updates
 
 Optimization:
-- Reduced persisted file metadata for S3, Telegram, Discord, HuggingFace, WebDAV, and related channels by no longer storing fields that can be read from the current channel configuration
-- Management file details now dynamically enrich S3Location, S3CdnFileUrl, HfFileUrl, WebDAVPublicUrl, and similar display fields from the current channel configuration, so displayed links refresh after config changes
-- File read, delete, move, and rename operations now resolve credentials through the current channel configuration; legacy Telegram/TelegramNew records without `ChannelName` fall back to `Telegram_env`
-
-Security:
-- Management metadata, tag, allow/block list, move, rename, and backup restore write paths now consistently remove sensitive and config-derived fields, preventing old backups or legacy records from writing credentials back
+- Added fallback channel matching based on unique identity fields stored in legacy metadata, allowing files to keep resolving to the current Telegram, S3/R2, Discord, HuggingFace, or WebDAV channel configuration after a channel is renamed
+- Added channel-name immutability hints in channel settings and disabled channel-name editing to prevent breaking the association between uploaded files and their channel configuration
 
 Fix Bugs:
-- Fixed file details still showing stale S3Location or CDN links after changing S3 endpoint/CDN configuration
-- Fixed S3 move or rename failures potentially moving the database record even when the remote S3 operation failed
+- Fixed large admin file lists stopping before all pages were appended even when later load-more requests succeeded
+- Changed channel deletion confirmation into a risk warning that clearly states files associated with the deleted channel may become inaccessible
+
+## 2026.06.05
+
+Optimization:
+- Added fallback channel matching based on unique identity fields stored in legacy metadata, allowing files to keep resolving to the current Telegram, S3/R2, Discord, HuggingFace, or WebDAV channel configuration after a channel is renamed
+- Added channel-name immutability hints in channel settings and disabled channel-name editing to prevent breaking the association between uploaded files and their channel configuration
+
+Fix Bugs:
+- Fixed large admin file lists stopping before all pages were appended even when later load-more requests succeeded
+- Changed channel deletion confirmation into a risk warning that clearly states files associated with the deleted channel may become inaccessible
 
 ## 2026.06.03
 
