@@ -7,8 +7,14 @@ Optimization:
 - Added channel-name immutability hints in channel settings and disabled channel-name editing to prevent breaking the association between uploaded files and their channel configuration
 
 Fix Bugs:
+- Fixed chunked uploads failing when some browsers cannot detect a file MIME type and the frontend sends an empty `originalFileType`; the upload form now falls back to `application/octet-stream`
 - Fixed large admin file lists stopping before all pages were appended even when later load-more requests succeeded
 - Changed channel deletion confirmation into a risk warning that clearly states files associated with the deleted channel may become inaccessible
+
+## 2026.06.08
+
+Fix Bugs:
+- Fixed chunked uploads failing when some browsers cannot detect a file MIME type and the frontend sends an empty `originalFileType`; the upload form now falls back to `application/octet-stream`
 
 ## 2026.06.05
 
