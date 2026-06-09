@@ -2,6 +2,28 @@
 
 ## Recent Updates
 
+Security:
+- Admin login, user login, and session checks now return 503 when security settings cannot be loaded, preventing fallback to an empty default authentication config
+- Session max-age settings are now normalized on the backend; timestamp-like or out-of-range values fall back to 14 days to avoid Cloudflare KV `expirationTtl` range errors
+
+Optimization:
+- Added frontend validation for user and admin session max age in System Settings > Security Settings, restricting values to 1-3650 days
+
+Fix Bugs:
+- Fixed admin login returning HTTP 500 when an abnormal millisecond timestamp was used as the Cloudflare KV `expirationTtl`
+
+## 2026.06.09
+
+Security:
+- Admin login, user login, and session checks now return 503 when security settings cannot be loaded, preventing fallback to an empty default authentication config
+- Session max-age settings are now normalized on the backend; timestamp-like or out-of-range values fall back to 14 days to avoid Cloudflare KV `expirationTtl` range errors
+
+Optimization:
+- Added frontend validation for user and admin session max age in System Settings > Security Settings, restricting values to 1-3650 days
+
+Fix Bugs:
+- Fixed admin login returning HTTP 500 when an abnormal millisecond timestamp was used as the Cloudflare KV `expirationTtl`
+
 Optimization:
 - Added fallback channel matching based on unique identity fields stored in legacy metadata, allowing files to keep resolving to the current Telegram, S3/R2, Discord, HuggingFace, or WebDAV channel configuration after a channel is renamed
 - Added channel-name immutability hints in channel settings and disabled channel-name editing to prevent breaking the association between uploaded files and their channel configuration
