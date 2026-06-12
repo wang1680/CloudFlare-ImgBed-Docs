@@ -404,6 +404,7 @@ Authorization: Bearer <API_TOKEN>
 {
   "success": true,
   "src": "/file/videos/1713500000000_large-video.mp4",
+  "publicUrl": "https://img.example.com/videos/1713500000000_large-video.mp4",
   "fileUrl": "https://huggingface.co/datasets/username/repo-name/resolve/main/videos/a1b2c3d4_1713500000000_large-video.mp4",
   "fullId": "videos/1713500000000_large-video.mp4"
 }
