@@ -25,7 +25,7 @@ Successful upload responses are arrays. Common fields:
 | Field | Type | Description |
 |-------|------|-------------|
 | `src` | string | File access path. By default it does not include the domain, for example `/file/abc123_image.jpg`; with `returnFormat=full`, it returns a full URL for the current site |
-| `publicUrl` | string | Optional. For successful basic uploads, Telegram large-file server-side chunking, and chunked-upload merge, returned when a default URL prefix is set under System Settings -> Web Settings -> Global Settings -> Default URL Prefix; combines that prefix with the file ID |
+| `publicUrl` | string | Optional. For successful basic uploads and chunked-upload merge, returned when a default URL prefix is set under `System Settings -> Web Settings -> Global Settings -> Default URL Prefix`; combines that prefix with the file ID |
 
 ## Basic Upload
 

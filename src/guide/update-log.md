@@ -2,15 +2,13 @@
 
 ## 最近更新
 
-Security:
-- 管理端、用户端登录和会话检查在安全配置读取失败时改为返回 503，避免异常情况下使用默认空认证配置放行
-- 会话有效期配置新增后端规范化，异常时间戳或超出范围的值会回退为 14 天，避免写入 Cloudflare KV 时触发 `expirationTtl` 越界
+Add Features:
+- 上传 API 成功响应新增 `publicUrl` 字段；设置默认 URL 前缀后，普通上传和分块合并会返回该公开访问链接
 
-Optimization:
-- 系统设置的会话安全策略中，用户端和管理端会话有效期新增 1-3650 天的前端表单校验
+## 2026.06.12
 
-Fix Bugs:
-- 修复管理员登录时异常毫秒时间戳被当作 KV `expirationTtl` 使用，导致 Cloudflare Worker 返回 500 的问题
+Add Features:
+- 上传 API 成功响应新增 `publicUrl` 字段；设置默认 URL 前缀后，普通上传和分块合并会返回该公开访问链接
 
 ## 2026.06.09
 
@@ -20,15 +18,11 @@ Security:
 
 Optimization:
 - 系统设置的会话安全策略中，用户端和管理端会话有效期新增 1-3650 天的前端表单校验
-
-Fix Bugs:
-- 修复管理员登录时异常毫秒时间戳被当作 KV `expirationTtl` 使用，导致 Cloudflare Worker 返回 500 的问题
-
-Optimization:
 - 读取旧文件 metadata 时新增基于渠道唯一标识字段的兜底匹配策略，渠道改名后仍可通过历史 metadata 中的 Telegram、S3/R2、Discord、HuggingFace、WebDAV 等标识字段匹配到当前配置
 - 渠道设置中新增渠道名称不可修改提示，编辑渠道时禁用渠道名称输入，避免已上传文件与渠道配置的关联被误改
 
 Fix Bugs:
+- 修复管理员登录时异常毫秒时间戳被当作 KV `expirationTtl` 使用，导致 Cloudflare Worker 返回 500 的问题
 - 修复分块上传部分浏览器无法识别文件 MIME Type 时，前端未传递 `originalFileType` 导致上传失败的问题；现在会默认使用 `application/octet-stream` 兜底
 - 修复管理面板大批量文件分页加载时，后续接口成功返回但前端不再追加页面，导致无法继续加载完整列表的问题
 - 删除渠道确认弹窗改为风险提醒，明确提示删除后关联该渠道的文件可能无法访问
