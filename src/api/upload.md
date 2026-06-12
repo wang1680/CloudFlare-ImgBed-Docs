@@ -25,9 +25,7 @@
 | 字段名 | 类型 | 说明 |
 |--------|------|------|
 | `src` | string | 文件访问路径。默认不包含域名，如 `/file/abc123_image.jpg`；使用 `returnFormat=full` 时返回当前站点完整链接 |
-| `publicUrl` | string | 可选。仅在系统设置中配置了 `urlPrefix` 时返回，使用该公开访问前缀拼接文件 ID，适合直接使用自定义域名或 CDN 链接 |
-
-`publicUrl` 会随普通上传、Telegram 大文件服务端分片上传和分块合并成功响应一起返回；未配置 `urlPrefix` 时不会包含该字段。
+| `publicUrl` | string | 可选。普通上传、Telegram 大文件服务端分片上传和分块合并成功时，若已在系统设置 -> 网页设置 -> 全局设置 -> 默认 URL 前缀设置了默认的 URL 前缀，则返回该前缀拼接文件 ID 的公开访问链接 |
 
 ## 普通上传
 
