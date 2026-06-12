@@ -12,10 +12,22 @@ The Upload API allows uploading files to CloudFlare ImgBed from third-party appl
 ## Response Format
 
 ```json
-[{ "src": "/file/abc123_image.jpg" }]
+[
+  {
+    "src": "/file/abc123_image.jpg",
+    "publicUrl": "https://img.example.com/abc123_image.jpg"
+  }
+]
 ```
 
-`src` does not include the domain — prepend it yourself. Use `returnFormat=full` for full URLs.
+Successful upload responses are arrays. Common fields:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `src` | string | File access path. By default it does not include the domain, for example `/file/abc123_image.jpg`; with `returnFormat=full`, it returns a full URL for the current site |
+| `publicUrl` | string | Optional. Returned only when `urlPrefix` is configured in system settings. It combines that public prefix with the file ID, useful for custom domains or CDN links |
+
+`publicUrl` is included in successful responses for basic uploads, Telegram large-file server-side chunking, and chunked-upload merge. If `urlPrefix` is not configured, this field is omitted.
 
 ## Basic Upload
 
@@ -219,7 +231,12 @@ FormData:
 **Response Example:**
 
 ```json
-[{ "src": "/file/1713500000000_video.mp4" }]
+[
+  {
+    "src": "/file/1713500000000_video.mp4",
+    "publicUrl": "https://img.example.com/1713500000000_video.mp4"
+  }
+]
 ```
 
 ::: tip Failure Retry

@@ -12,10 +12,22 @@
 ## 响应格式
 
 ```json
-[{ "src": "/file/abc123_image.jpg" }]
+[
+  {
+    "src": "/file/abc123_image.jpg",
+    "publicUrl": "https://img.example.com/abc123_image.jpg"
+  }
+]
 ```
 
-`src` 不包含域名，需自行拼接。使用 `returnFormat=full` 可返回完整链接。
+上传成功响应为数组，常见字段如下：
+
+| 字段名 | 类型 | 说明 |
+|--------|------|------|
+| `src` | string | 文件访问路径。默认不包含域名，如 `/file/abc123_image.jpg`；使用 `returnFormat=full` 时返回当前站点完整链接 |
+| `publicUrl` | string | 可选。仅在系统设置中配置了 `urlPrefix` 时返回，使用该公开访问前缀拼接文件 ID，适合直接使用自定义域名或 CDN 链接 |
+
+`publicUrl` 会随普通上传、Telegram 大文件服务端分片上传和分块合并成功响应一起返回；未配置 `urlPrefix` 时不会包含该字段。
 
 ## 普通上传
 
@@ -219,7 +231,12 @@ FormData:
 **响应示例：**
 
 ```json
-[{ "src": "/file/1713500000000_video.mp4" }]
+[
+  {
+    "src": "/file/1713500000000_video.mp4",
+    "publicUrl": "https://img.example.com/1713500000000_video.mp4"
+  }
+]
 ```
 
 ::: tip 失败重试
