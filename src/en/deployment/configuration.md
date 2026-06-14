@@ -198,10 +198,6 @@ China，Shenzhen
 
 If response fields are not configured, the API returns non-JSON content, field extraction fails, or the request fails, `UploadAddress` is saved as `未知`.
 
-#### Show Directory Suggestions
-
-When enabled, a directory tree picker button will be displayed on the upload page. Users can visually select the target folder instead of manually entering the path.
-
 ### Access Management
 
 - Domain Filtering
@@ -216,30 +212,38 @@ When enabled, a directory tree picker button will be displayed on the upload pag
 
 Frontend web-related settings are configured in "System Settings" → "Web Settings" in the admin backend
 
-| Field Name | Purpose | Type | Content Specification |
-|------------|---------|------|----------------------|
-| siteTitle | Website Title | String | Only supports `string` type, set to your custom website title |
-| siteIcon | Website Icon | String | Only supports `string` type, set to your custom website icon link |
-| ownerName | Image Hosting Name | String | Only supports `string` type, set to your custom image hosting name (default is `Sanyue`) |
-| logoUrl | Image Hosting Logo | String | Only supports `string` type, set to your custom image hosting logo link |
-| logoLink | Logo Click Link | String | Only supports `string` type, set to the link when clicking the logo, leave empty to use default GitHub link. Only applies to upload page |
-| bkInterval | Background Switch Interval | Positive Integer | Set to background image carousel time, default `3000`, unit `ms`.<br />For example, if you want to switch every 10s, set to `10000`. |
-| bkOpacity | Background Image Transparency | Float in (0,1] | Displayed background image transparency, default is `1`.<br />If you think the display effect is poor, you can customize it, like `0.8` |
-| urlPrefix | Default URL Prefix | String | Only supports `string` type, set to custom global default link prefix. This prefix overrides the original default prefix, does not override user-customized link prefixes, and is also used for the `publicUrl` link in Upload API responses |
-| announcement | Announcement | String | Only supports `string` type, can be HTML format, set to your custom announcement content (if any) |
-| defaultUploadChannel | Default Upload Channel | String | Only supports `string` type, set to your custom default upload channel, supports `telegram` (Telegram channel), `cfr2` (Cloudflare R2), `s3` (S3 channel), `discord` (Discord channel), `huggingface` (HuggingFace channel), and `webdav` (WebDAV channel) |
-| defaultChannelName | Default Channel Name | String | Only supports `string` type, specify the default channel name to use, requires selecting an upload channel first. When multiple channels are configured for the same channel type, this can specify which channel to use by default |
-| defaultUploadNameType | Default Naming Method | String | Only supports `string` type, set to your custom default upload file naming method, supports `default` (default), `index` (only prefix), `original` (only original name), and `short` (short link) |
-| loginBkImg | Login Page Background | List/String | 1. When field type is `list`, list elements are image links to be added to the carousel list (when list has only one image, it becomes a fixed background), like `["1.jpg","2.jpg"]`<br />2. When field type is `string`, currently **only supports** string value `bing`, setting this value enables bing random image carousel mode. |
-| uploadBkImg | Upload Page Background | List/String | Same as loginBkImg |
-| footerLink | Footer Portal Link | String | Only supports `string` type, set to your custom destination address (like personal blog link) |
-| disableFooter | Hide Footer | boolean | Supports `boolean` type, set to `true` to disable footer, default `false` |
-| defaultConvertToWebp | Default WebP Conversion | boolean | Supports `boolean` type, set to `true` to enable WebP conversion by default, default `false` |
-| defaultCustomerCompress | Default Compression | boolean | Supports `boolean` type, set to `true` to enable client compression by default, default `true` |
-| defaultCompressBar | Default Compression Threshold | Number | Images larger than this value will be automatically compressed, unit MB, range 1-20, default `5` |
-| defaultCompressQuality | Default Expected Size | Number | Expected image size after compression, unit MB, range 0.5-compression threshold, default `4` |
-| adminLoginBkImg | Admin Login Page Background | List/String | Same as loginBkImg |
-| adminBkImg | Admin Page Background | List/String | Same as loginBkImg |
+### Global Settings
+
+- **Site Title**: The name shown in the browser tab and page title. Example: `Sanyue ImgHub`.
+- **Site Icon**: The browser tab icon URL. Use a publicly accessible image URL.
+- **Site Name**: The image hosting name shown on frontend pages. Example: `Sanyue ImgHub`.
+- **Site Logo**: The logo image URL shown on frontend pages. A transparent PNG or WebP is recommended.
+- **Logo Link**: The URL opened when clicking the logo. Leave empty to use the default GitHub link. Example: `https://example.com`.
+- **Background Interval**: Background carousel interval in milliseconds. Default `3000`; use `10000` for 10 seconds.
+- **Background Opacity**: Background image opacity. Use a decimal between `0` and `1`. Default `1`; example `0.8`.
+- **Default URL Prefix**: Used to generate default file access links and the `publicUrl` field in successful Upload API responses. Example: `https://img.example.com/file/`; leave empty to use the current site domain.
+
+### Client Settings
+
+- **Announcement**: Announcement shown on the upload page. HTML tags are supported. Example: `<b>Maintenance</b>: scheduled at 23:00 tonight`.
+- **Directory Suggestions**: Controls whether the upload page shows the directory tree picker. When enabled, users can visually select the target folder instead of typing the path manually.
+- **Default Channel Type**: The storage channel type selected by default on the upload page. Supports Telegram, Cloudflare R2, S3, Discord, HuggingFace, and WebDAV.
+- **Default Channel Name**: When multiple channels exist under the selected channel type, specify which channel name should be used by default. Select the default channel type first.
+- **Default Upload Directory**: The default upload directory. Use a valid path starting with `/` and avoid special characters. Leave empty for the root directory. Example: `/images/wallpaper`.
+- **Default Naming**: The default file naming mode on the upload page. Options are Default, Prefix Only, Original Name, and Short Link.
+- **Default Convert to WebP**: When enabled, images are converted to WebP in the browser before upload to reduce file size.
+- **Default Compression**: When enabled, browser-side compression is used by default for image uploads.
+- **Default Compress Threshold**: Images larger than this value are compressed automatically, in MB, range `1-20`. Default `5`.
+- **Default Compress Target**: Target size after compression, in MB, range `0.5` to the compression threshold. Default `4`.
+- **Login Background**: User login page background. Enter `bing` to use Bing wallpaper rotation, or a JSON image array for custom rotation, e.g. `["https://example.com/1.jpg","https://example.com/2.jpg"]`; use one image for a fixed background, e.g. `["https://example.com/1.jpg"]`.
+- **Upload Background**: Upload page background. Uses the same format as Login Background.
+- **Footer Portal Link**: The footer portal destination, such as a personal blog, homepage, or project URL. Example: `https://blog.example.com`.
+- **Hide Footer**: When enabled, hides the frontend footer. Disabled by default.
+
+### Admin Settings
+
+- **Login Background**: Admin login page background. Uses the same format as the client Login Background.
+- **Admin Background**: Admin dashboard background. Uses the same format as the client Login Background.
 
 ## 🛠️ Other Settings
 Other setting items are configured in "System Settings" → "Other Settings" in the admin backend
