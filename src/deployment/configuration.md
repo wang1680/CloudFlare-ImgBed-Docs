@@ -221,7 +221,7 @@ city
 - **Logo 跳转链接**：点击 Logo 时跳转的链接；留空时使用默认 GitHub 链接。示例：`https://example.com`。
 - **背景切换间隔**：背景图轮播间隔，单位为毫秒。默认 `3000`，例如希望 10 秒切换一次可填写 `10000`。
 - **背景图透明度**：背景图显示透明度，填写 `0-1` 之间的小数。默认 `1`，例如 `0.8`。
-- **默认 URL 前缀**：用于生成全局默认访问链接和上传 API 成功响应中的 `publicUrl`。示例：`https://img.example.com/file/`；留空时使用当前站点域名。
+- **默认 URL 前缀**：用于生成全局默认访问链接和上传 API 成功响应中的 `publicUrl`，仅影响页面展示和接口返回的链接，不会改变文件的实际访问路径。示例：`https://img.example.com/file/`；留空时使用当前站点域名。
 
 ### 客户端设置
 
@@ -328,7 +328,6 @@ WebDAV 服务相关设置，详细介绍和使用方式请查看 [API 文档](..
 | `CF_ZONE_ID` | string | Cloudflare Zone ID | 自动清除 CDN 缓存 |
 | `CF_EMAIL` | string | Cloudflare 账户邮箱 | 自动清除 CDN 缓存 |
 | `CF_API_KEY` | string | Cloudflare Global API Key | 自动清除 CDN 缓存 |
-
 
 
 
