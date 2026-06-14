@@ -154,6 +154,50 @@ docker run -d -p 127.0.0.1:5000:5000/tcp \
 ```
 - 在管理后台 "系统设置" → "安全设置" 中填入审查服务地址，如 `https://nsfwjs.your.domain`
 
+#### IP 查询
+
+IP 查询用于在文件上传时调用第三方 IP 信息接口，并将查询结果写入文件元数据的 `UploadAddress` 字段。可在管理后台 "系统设置" → "安全设置" → "上传管理" 中配置。
+
+目前查询渠道仅支持 `自定义 API`。
+
+##### 自定义 API 配置项
+
+- **开启查询**：开启后，上传流程会按配置请求自定义 API；关闭时 `UploadAddress` 保存为 `未知`。
+- **API 路径**：自定义 API 地址，例如 `https://api.example.com/ip`。
+- **查询参数**：按列表添加请求参数名和值。参数值支持 `{ip}` 占位符，上传时会替换为实际上传 IP。
+  - 示例：参数名 `ip`，参数值 `{ip}`，最终请求为 `https://api.example.com/ip?ip=1.2.3.4`。
+- **响应字段**：按列表配置从 JSON 响应中读取的字段路径，例如 `country.name`、`city`。
+  - 最终显示内容会按照字段顺序拼接，字段之间使用 `，` 分隔。
+  - 支持点号路径和数组下标，例如 `location.country.name`、`items[0].city`。
+
+##### 响应示例
+
+假设自定义 API 返回：
+
+```json
+{
+  "country": {
+    "name": "中国"
+  },
+  "city": "深圳"
+}
+```
+
+响应字段配置为：
+
+```text
+country.name
+city
+```
+
+最终写入 `UploadAddress` 的内容为：
+
+```text
+中国，深圳
+```
+
+未配置响应字段、接口返回非 JSON、字段读取失败或请求失败时，`UploadAddress` 会保存为 `未知`。
+
 #### 目录候选项
 
 启用后，在上传页面选择目录时，会显示目录树选择器按钮，用户可以通过可视化的方式选择目标文件夹，而不需要手动输入路径。
@@ -280,7 +324,6 @@ WebDAV 服务相关设置，详细介绍和使用方式请查看 [API 文档](..
 | `CF_ZONE_ID` | string | Cloudflare Zone ID | 自动清除 CDN 缓存 |
 | `CF_EMAIL` | string | Cloudflare 账户邮箱 | 自动清除 CDN 缓存 |
 | `CF_API_KEY` | string | Cloudflare Global API Key | 自动清除 CDN 缓存 |
-
 
 
 

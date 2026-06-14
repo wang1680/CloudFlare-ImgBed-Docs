@@ -154,6 +154,50 @@ docker run -d -p 127.0.0.1:5000:5000/tcp \
 ```
 Enter the moderation service address in the management console under "System Settings" → "Security Settings", e.g., https://nsfwjs.your.domain
 
+#### IP Query
+
+IP Query calls a third-party IP information API during file upload and writes the query result to the file metadata field `UploadAddress`. Configure it in "System Settings" → "Security Settings" → "Upload Management" in the admin backend.
+
+Currently, the only supported query channel is `Custom API`.
+
+##### Custom API Configuration
+
+- **Enable Query**: When enabled, uploads request the custom API according to the configuration. When disabled, `UploadAddress` is saved as `未知`.
+- **API Path**: The custom API URL, for example `https://api.example.com/ip`.
+- **Query Parameters**: Add request parameter names and values as a list. Parameter values support the `{ip}` placeholder, which is replaced with the actual upload IP.
+  - Example: parameter name `ip`, parameter value `{ip}`; the final request becomes `https://api.example.com/ip?ip=1.2.3.4`.
+- **Response Fields**: Configure JSON response field paths as a list, for example `country.name` and `city`.
+  - The final display text is joined in field order, separated by `，`.
+  - Dot paths and array indexes are supported, for example `location.country.name` and `items[0].city`.
+
+##### Response Example
+
+Assume the custom API returns:
+
+```json
+{
+  "country": {
+    "name": "China"
+  },
+  "city": "Shenzhen"
+}
+```
+
+Configure response fields as:
+
+```text
+country.name
+city
+```
+
+The final value written to `UploadAddress` is:
+
+```text
+China，Shenzhen
+```
+
+If response fields are not configured, the API returns non-JSON content, field extraction fails, or the request fails, `UploadAddress` is saved as `未知`.
+
 #### Show Directory Suggestions
 
 When enabled, a directory tree picker button will be displayed on the upload page. Users can visually select the target folder instead of manually entering the path.
