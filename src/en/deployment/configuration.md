@@ -154,9 +154,9 @@ docker run -d -p 127.0.0.1:5000:5000/tcp \
 ```
 Enter the moderation service address in the management console under "System Settings" → "Security Settings", e.g., https://nsfwjs.your.domain
 
-#### IP Query
+#### IP Geolocation Query
 
-IP Query calls a third-party IP information API during file upload and writes the query result to the file metadata field `UploadAddress`. Configure it in "System Settings" → "Security Settings" → "Upload Management" in the admin backend.
+IP Geolocation Query calls a third-party IP information API during file upload and writes the query result to the file metadata field `UploadAddress`. Configure it in "System Settings" → "Security Settings" → "Upload Management" in the admin backend.
 
 Currently, the only supported query channel is `Custom API`.
 

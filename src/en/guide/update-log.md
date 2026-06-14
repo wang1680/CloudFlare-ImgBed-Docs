@@ -3,14 +3,14 @@
 ## Recent Updates
 
 Add Features:
-- Added IP Query settings under System Settings → Security Settings → Upload Management, supporting custom API upload-IP lookup and ordered response-field composition for the saved upload address
+- Added IP Geolocation Query settings under System Settings → Security Settings → Upload Management, supporting custom API upload-IP lookup and ordered response-field composition for the saved upload address
 - Added `publicUrl` to successful Upload API responses. When a default URL prefix is set, basic uploads and chunked-upload merge return this public access link
 
 ## 2026.06.14
 
 Add Features:
-- Added IP Query settings under System Settings → Security Settings → Upload Management, supporting enable/disable, custom API request parameters, and the `{ip}` placeholder for passing the upload IP
-- IP Query now supports JSON response field paths; the backend joins field values in order and writes the result to file metadata `UploadAddress`
+- Added IP Geolocation Query settings under System Settings → Security Settings → Upload Management, supporting enable/disable, custom API request parameters, and the `{ip}` placeholder for passing the upload IP
+- IP Geolocation Query now supports JSON response field paths; the backend joins field values in order and writes the result to file metadata `UploadAddress`
 
 ## 2026.06.12
 

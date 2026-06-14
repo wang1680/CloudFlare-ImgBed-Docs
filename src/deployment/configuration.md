@@ -154,9 +154,9 @@ docker run -d -p 127.0.0.1:5000:5000/tcp \
 ```
 - 在管理后台 "系统设置" → "安全设置" 中填入审查服务地址，如 `https://nsfwjs.your.domain`
 
-#### IP 查询
+#### IP 归属地查询
 
-IP 查询用于在文件上传时调用第三方 IP 信息接口，并将查询结果写入文件元数据的 `UploadAddress` 字段。可在管理后台 "系统设置" → "安全设置" → "上传管理" 中配置。
+IP 归属地查询用于在文件上传时调用第三方 IP 信息接口，并将查询结果写入文件元数据的 `UploadAddress` 字段。可在管理后台 "系统设置" → "安全设置" → "上传管理" 中配置。
 
 目前查询渠道仅支持 `自定义 API`。
 
@@ -328,6 +328,5 @@ WebDAV 服务相关设置，详细介绍和使用方式请查看 [API 文档](..
 | `CF_ZONE_ID` | string | Cloudflare Zone ID | 自动清除 CDN 缓存 |
 | `CF_EMAIL` | string | Cloudflare 账户邮箱 | 自动清除 CDN 缓存 |
 | `CF_API_KEY` | string | Cloudflare Global API Key | 自动清除 CDN 缓存 |
-
 
 
