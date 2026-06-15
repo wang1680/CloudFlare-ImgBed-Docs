@@ -6,6 +6,22 @@ Add Features:
 - Added IP Geolocation Query settings under System Settings → Security Settings → Upload Management, supporting custom API upload-IP lookup and ordered response-field composition for the saved upload address
 - Added `publicUrl` to successful Upload API responses. When a default URL prefix is set, basic uploads and chunked-upload merge return this public access link
 
+Optimization:
+- Added a generic Worker Cache layer to the Workers deployment adapter based on business `Cache-Control` responses. Public `GET/HEAD` responses are checked in cache first, and cache misses run the original business route before storing responses with `public, max-age/s-maxage`
+- Range requests now try to use an existing complete cached response first; cache misses pass through to the business response and do not store 206 partial responses, preventing partial content from polluting full-file cache entries
+
+Security:
+- Changed the directory tree and tag autocomplete APIs to `private` caching, preserving short browser caching while preventing authenticated APIs from entering the shared Workers cache
+
+## 2026.06.15
+
+Optimization:
+- Added a generic Worker Cache layer to the Workers deployment adapter based on business `Cache-Control` responses. Public `GET/HEAD` responses are checked in cache first, and cache misses run the original business route before storing responses with `public, max-age/s-maxage`
+- Range requests now try to use an existing complete cached response first; cache misses pass through to the business response and do not store 206 partial responses, preventing partial content from polluting full-file cache entries
+
+Security:
+- Changed the directory tree and tag autocomplete APIs to `private` caching, preserving short browser caching while preventing authenticated APIs from entering the shared Workers cache
+
 ## 2026.06.14
 
 Add Features:

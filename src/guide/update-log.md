@@ -6,6 +6,22 @@ Add Features:
 - 系统设置 → 安全设置 → 上传管理新增 IP 归属地查询配置，支持通过自定义 API 查询上传 IP，并按自定义响应字段顺序拼接保存上传地址
 - 上传 API 成功响应新增 `publicUrl` 字段；设置默认 URL 前缀后，普通上传和分块合并会返回该公开访问链接
 
+Optimization:
+- Workers 部署适配层新增基于业务响应 `Cache-Control` 的通用 Worker Cache：公开 `GET/HEAD` 响应会优先从缓存读取，未命中时执行原业务路由并按 `public, max-age/s-maxage` 写入缓存
+- Range 请求会优先尝试命中已有完整缓存，未命中时透传业务响应且不缓存 206 片段，避免部分内容污染完整文件缓存
+
+Security:
+- 目录树和标签自动补全接口的缓存头改为 `private`，保留浏览器短缓存能力，避免鉴权接口进入 Workers 共享缓存
+
+## 2026.06.15
+
+Optimization:
+- Workers 部署适配层新增基于业务响应 `Cache-Control` 的通用 Worker Cache：公开 `GET/HEAD` 响应会优先从缓存读取，未命中时执行原业务路由并按 `public, max-age/s-maxage` 写入缓存
+- Range 请求会优先尝试命中已有完整缓存，未命中时透传业务响应且不缓存 206 片段，避免部分内容污染完整文件缓存
+
+Security:
+- 目录树和标签自动补全接口的缓存头改为 `private`，保留浏览器短缓存能力，避免鉴权接口进入 Workers 共享缓存
+
 ## 2026.06.14
 
 Add Features:
