@@ -3,15 +3,30 @@
 ## Recent Updates
 
 Add Features:
-- Added IP Geolocation Query settings under System Settings → Security Settings → Upload Management, supporting custom API upload-IP lookup and ordered response-field composition for the saved upload address
-- Added `publicUrl` to successful Upload API responses. When a default URL prefix is set, basic uploads and chunked-upload merge return this public access link
+- Added a floating batch action bar for dashboard multi-select, showing the selected count and quick actions for copy, download, move, tag management, blacklist, whitelist, delete, and clearing selection
+- Redesigned the upload page quick toolbar as an expandable capsule, with upload settings available directly and secondary actions expanding upward
 
 Optimization:
-- Added a generic Worker Cache layer to the Workers deployment adapter based on business `Cache-Control` responses. Public `GET/HEAD` responses are checked in cache first, and cache misses run the original business route before storing responses with `public, max-age/s-maxage`
-- Range requests now try to use an existing complete cached response first; cache misses pass through to the business response and do not store 206 partial responses, preventing partial content from polluting full-file cache entries
+- Switched the upload and login title font to Pacifico, and refined title colors, hover underline, and crayon-style hover writing effects for light and dark modes
+- Refined the upload list toolbar, quick toolbar spacing, animations, and mobile placement for a lighter interaction
+- Moved the dashboard select-current-page control to the breadcrumb row, added breadcrumb spacing, and softened card preview hover scaling
+- Added async image decoding and deferred off-screen rendering for dashboard previews to reduce jank when many high-resolution images are shown
+- Suppressed card and list hover effects while drag-selecting dashboard items to reduce visual noise
+- Extracted the dashboard batch action bar into a standalone component for easier maintenance
 
-Security:
-- Changed the directory tree and tag autocomplete APIs to `private` caching, preserving short browser caching while preventing authenticated APIs from entering the shared Workers cache
+## 2026.06.29
+
+Add Features:
+- Added a floating batch action bar for dashboard multi-select, showing the selected count and quick actions for copy, download, move, tag management, blacklist, whitelist, delete, and clearing selection
+- Redesigned the upload page quick toolbar as an expandable capsule, with upload settings available directly and secondary actions expanding upward
+
+Optimization:
+- Switched the upload and login title font to Pacifico, and refined title colors, hover underline, and crayon-style hover writing effects for light and dark modes
+- Refined the upload list toolbar, quick toolbar spacing, animations, and mobile placement for a lighter interaction
+- Moved the dashboard select-current-page control to the breadcrumb row, added breadcrumb spacing, and softened card preview hover scaling
+- Added async image decoding and deferred off-screen rendering for dashboard previews to reduce jank when many high-resolution images are shown
+- Suppressed card and list hover effects while drag-selecting dashboard items to reduce visual noise
+- Extracted the dashboard batch action bar into a standalone component for easier maintenance
 
 ## 2026.06.15
 
