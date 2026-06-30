@@ -2,17 +2,19 @@
 
 ## Recent Updates
 
-Add Features:
-- Added a floating batch action bar for dashboard multi-select, showing the selected count and quick actions for copy, download, move, tag management, blacklist, whitelist, delete, and clearing selection
-- Redesigned the upload page quick toolbar as an expandable capsule, with upload settings available directly and secondary actions expanding upward
+Optimization:
+- Integrated the dashboard top page switcher into the current option, allowing users to hover or click to switch between file management, user management, system settings, and upload page
+- Refined the dashboard page switcher hover stability, dark menu background, current option surface, and mobile spacing for a more consistent interface
+- Added dedicated theme variables for the page switcher, with a lighter candy color and soft pink-blue gradient treatment for the current option, including improved dark-mode color quality
+- Added a subtle zoom-in effect to multi-image background carousels for smoother background transitions
+
+## 2026.06.30
 
 Optimization:
-- Switched the upload and login title font to Pacifico, and refined title colors, hover underline, and crayon-style hover writing effects for light and dark modes
-- Refined the upload list toolbar, quick toolbar spacing, animations, and mobile placement for a lighter interaction
-- Moved the dashboard select-current-page control to the breadcrumb row, added breadcrumb spacing, and softened card preview hover scaling
-- Added async image decoding and deferred off-screen rendering for dashboard previews to reduce jank when many high-resolution images are shown
-- Suppressed card and list hover effects while drag-selecting dashboard items to reduce visual noise
-- Extracted the dashboard batch action bar into a standalone component for easier maintenance
+- Integrated the dashboard top page switcher into the current option, allowing users to hover or click to switch between file management, user management, system settings, and upload page
+- Refined the dashboard page switcher hover stability, dark menu background, current option surface, and mobile spacing for a more consistent interface
+- Added dedicated theme variables for the page switcher, with a lighter candy color and soft pink-blue gradient treatment for the current option, including improved dark-mode color quality
+- Added a subtle zoom-in effect to multi-image background carousels for smoother background transitions
 
 ## 2026.06.29
 
