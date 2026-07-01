@@ -3,10 +3,18 @@
 ## Recent Updates
 
 Optimization:
-- Integrated the dashboard top page switcher into the current option, allowing users to hover or click to switch between file management, user management, system settings, and upload page
-- Refined the dashboard page switcher hover stability, dark menu background, current option surface, and mobile spacing for a more consistent interface
-- Added dedicated theme variables for the page switcher, with a lighter candy color and soft pink-blue gradient treatment for the current option, including improved dark-mode color quality
-- Added a subtle zoom-in effect to multi-image background carousels for smoother background transitions
+- Refined upload page title, toolbars, and quick action capsule details with consistent light/dark hover states, borders, shadows, and mobile edge alignment
+- Unified dashboard breadcrumb controls, checkboxes, view toggle, and breadcrumb interactions with a lighter glass-style treatment, and extracted a reusable dashboard checkbox component
+- Made dashboard mobile card view use a two-column layout, with more compact list view, pagination, loading skeletons, and action buttons
+- Added swipe-based page navigation on dashboard mobile content areas and hid the pagination prev/next buttons to reduce small-screen obstruction
+
+## 2026.07.01
+
+Optimization:
+- Refined upload page title, toolbars, and quick action capsule details with consistent light/dark hover states, borders, shadows, and mobile edge alignment
+- Unified dashboard breadcrumb controls, checkboxes, view toggle, and breadcrumb interactions with a lighter glass-style treatment, and extracted a reusable dashboard checkbox component
+- Made dashboard mobile card view use a two-column layout, with more compact list view, pagination, loading skeletons, and action buttons
+- Added swipe-based page navigation on dashboard mobile content areas and hid the pagination prev/next buttons to reduce small-screen obstruction
 
 ## 2026.06.30
 
