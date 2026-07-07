@@ -34,12 +34,13 @@ CloudFlare ImgBed is an open-source file hosting solution based on Cloudflare, p
 
 ## Demo Screenshots
 ![Poster](/images/guide/poster.png)
-![Login Interface](/images/guide/login.png)
 ![Upload Interface](/images/guide/upload.png)
 
 <details>
     <summary>More Interface Screenshots</summary>
 
+![Login Interface](/images/guide/login.png)
+![Uploading Interface](/images/guide/uploading.png)
 ![Dashboard Interface](/images/guide/dashboard.png)
 ![User Management](/images/guide/cusmanager.png)
 ![System Settings](/images/guide/sysconfig.png)
