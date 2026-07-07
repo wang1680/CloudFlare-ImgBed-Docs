@@ -9,6 +9,7 @@
 - **Obsidian插件**：[项目链接](https://github.com/fantasy-ke/obsidian-cf-imgbed/tree/1.0.2) （_作者：[fantasy-ke](https://github.com/fantasy-ke)_）
 - **Wordpress插件**：[项目链接](https://github.com/imysen/wp-sanyueqicfimg) （_作者：[邹云森森](https://github.com/imysen)_）
 - **浏览器上传扩展（油猴脚本）**：[项目链接](https://greasyfork.org/en/scripts/552877-image-video-uploader-helper-intelligent-naming-version) （_作者：[yunskyline](https://github.com/yunskyline)_）
+- **OpenList驱动**：[项目链接](https://github.com/OpenListTeam/openlist) （_作者：[ZZ0YY](https://github.com/ZZ0YY)_）
 
 ## 应用
 

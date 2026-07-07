@@ -7,8 +7,10 @@ Everyone is welcome to contribute to the ecosystem of this project! Below are so
 - **Auto-upload in editor (Tampermonkey script)**: [Project Link](https://greasyfork.org/en/scripts/529816-image-uploader-to-markdown-to-cloudflare-imgbed) (_Author: Linux.do: [calg_c](https://linux.do/u/calg_c/summary)_)
 - **Typecho Plugin**: [Project Link](https://github.com/Lord2333/CF-ImgBed-Uploader_for_Typecho) (_Author: [Lord2333](https://github.com/Lord2333)_)
 - **Obsidian Plugin**: [Project Link](https://github.com/fantasy-ke/obsidian-cf-imgbed/tree/1.0.2) (_Author: [fantasy-ke](https://github.com/fantasy-ke)_)
-- **WordPress Plugin**: [Project Link](https://github.com/imysen/wp-sanyueqicfimg) (_Author: [yunsen]]((https://github.com/imysen)_）
+- **WordPress Plugin**: [Project Link](https://github.com/imysen/wp-sanyueqicfimg) (_Author: [yunsen](https://github.com/imysen)_)
 - **Browser Upload Extension (Tampermonkey script)**: [Project Link](https://greasyfork.org/en/scripts/552877-image-video-uploader-helper-intelligent-naming-version) (_Author: [yunskyline](https://github.com/yunskyline)_)
+- **OpenList Driver**: [Project Link](https://github.com/OpenListTeam/openlist) (_Author: [ZZ0YY](https://github.com/ZZ0YY)_)
+  
 
 ## Applications
 
