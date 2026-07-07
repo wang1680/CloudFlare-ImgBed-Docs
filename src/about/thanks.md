@@ -12,7 +12,11 @@
 
 项目维护不易，喜欢本项目的话，可以作者一点鼓励哦，您的每一份支持都是我前进的动力\~
 
-<a href="https://afdian.com/a/marseventh"><img src="https://img.shields.io/badge/AFDIAN-946CE6?style=for-the-badge&logo=afdian&logoColor=white" height="36" alt="Afdian"></a>&nbsp;&nbsp;<a href="images/about/weixin-reward.png" target="_blank"><img src="https://img.shields.io/badge/WeChat_Pay-07c160?style=for-the-badge&logo=wechat&logoColor=white" height="36" alt="WeChat Pay"></a>&nbsp;&nbsp;<a href="images/about/alipay-reward.png" target="_blank"><img src="https://img.shields.io/badge/Alipay-1677FF?style=for-the-badge&logo=alipay&logoColor=white" height="36" alt="Alipay"></a>
+<div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+  <a href="https://afdian.com/a/marseventh" target="_blank"><img src="https://img.shields.io/badge/AFDIAN-946CE6?style=for-the-badge&logo=afdian&logoColor=white" height="36" alt="Afdian"></a>
+  <a href="/images/about/weixin-reward.png" target="_blank"><img src="https://img.shields.io/badge/WeChat_Pay-07c160?style=for-the-badge&logo=wechat&logoColor=white" height="36" alt="WeChat Pay"></a>
+  <a href="/images/about/alipay-reward.png" target="_blank"><img src="https://img.shields.io/badge/Alipay-1677FF?style=for-the-badge&logo=alipay&logoColor=white" height="36" alt="Alipay"></a>
+</div>
 
 ### 赞助者
 
