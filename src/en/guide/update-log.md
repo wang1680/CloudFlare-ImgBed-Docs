@@ -2,11 +2,21 @@
 
 ## Recent Updates
 
+Fix Bugs:
+- Fixed intermittent hover flicker and hit-target jitter in the admin top page switcher while images, tables, or charts are loading. Menu visibility is now managed explicitly, with a grouped option animation and a shared hover highlight
+
 Optimization:
-- Refined upload page title, toolbars, and quick action capsule details with consistent light/dark hover states, borders, shadows, and mobile edge alignment
-- Unified dashboard breadcrumb controls, checkboxes, view toggle, and breadcrumb interactions with a lighter glass-style treatment, and extracted a reusable dashboard checkbox component
-- Made dashboard mobile card view use a two-column layout, with more compact list view, pagination, loading skeletons, and action buttons
-- Added swipe-based page navigation on dashboard mobile content areas and hid the pagination prev/next buttons to reduce small-screen obstruction
+- Synchronized the page switcher panel, option group, arrow, and hover slider at roughly 300ms, preserving the glass-style expansion while making the animation more cohesive
+- Centered the current-directory-empty state in the dashboard content area and aligned user management table spacing from the top header on desktop and mobile
+
+## 2026.07.11
+
+Fix Bugs:
+- Fixed intermittent hover flicker and hit-target jitter in the admin top page switcher while images, tables, or charts are loading. Menu visibility is now managed explicitly, with a grouped option animation and a shared hover highlight
+
+Optimization:
+- Synchronized the page switcher panel, option group, arrow, and hover slider at roughly 300ms, preserving the glass-style expansion while making the animation more cohesive
+- Centered the current-directory-empty state in the dashboard content area and aligned user management table spacing from the top header on desktop and mobile
 
 ## 2026.07.01
 
