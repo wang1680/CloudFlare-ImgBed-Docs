@@ -1,6 +1,18 @@
 # 快速开始
 
-本指南将帮助您在 15 分钟内快速部署并使用 CloudFlare ImgBed。
+本指南将帮助您在 15 分钟内快速部署并使用 CloudFlare ImgBed。如果您更喜欢视频教程，也可以参考如下视频教程搭建，但是不能保证视频教程始终是最新的，遇到问题还请以本文档为准。
+
+<div style="position: relative; padding: 30% 45%;">
+    <iframe 
+        src="//player.bilibili.com/player.html?bvid=BV1EeNu6zEAe&page=1" 
+        scrolling="no" 
+        border="0" 
+        frameborder="no" 
+        framespacing="0" 
+        allowfullscreen="true" 
+        style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"
+    ></iframe>
+</div>
 
 ## 📱 快速体验
 
