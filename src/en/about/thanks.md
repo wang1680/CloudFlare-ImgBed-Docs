@@ -15,7 +15,6 @@ Maintaining this project is not easy. If you like it, please consider giving a s
 <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
   <a href="https://afdian.com/a/marseventh" target="_blank"><img src="https://img.shields.io/badge/AFDIAN-946CE6?style=for-the-badge&logo=afdian&logoColor=white" height="36" alt="Afdian"></a>
   <a href="/images/about/weixin-reward.png" target="_blank"><img src="https://img.shields.io/badge/WeChat_Pay-07c160?style=for-the-badge&logo=wechat&logoColor=white" height="36" alt="WeChat Pay"></a>
-  <a href="/images/about/alipay-reward.png" target="_blank"><img src="https://img.shields.io/badge/Alipay-1677FF?style=for-the-badge&logo=alipay&logoColor=white" height="36" alt="Alipay"></a>
 </div>
 
 ### Sponsors
