@@ -29,7 +29,7 @@ Welcome to contribute to the ecosystem of this project! Below is a curated list 
 - **Description:** An exclusive plugin for Obsidian, allowing you to seamlessly connect to the cloud image bed while writing notes locally.
 
 #### wp-sanyueqicfimg
-- **Author:** [邹云森森](https://github.com/imysen)
+- **Author:** [imysen](https://github.com/imysen)
 - **Link:** [Click here](https://github.com/imysen/wp-sanyueqicfimg)
 - **Description:** A WordPress extension that easily replaces the local media library, drastically saving server storage space.
 
