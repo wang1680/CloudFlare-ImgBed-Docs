@@ -65,7 +65,7 @@ Welcome to contribute to the ecosystem of this project! Below is a curated list 
 
 #### ImgBed
 - **Author:** [axibayuit-a11y](https://github.com/axibayuit-a11y)
-- **Link:** https://md.ccwu.cc/
+- **Link:** [Click here](https://md.ccwu.cc/)
 - **Description:** A closed-source project refactored and integrated based on this repository. It supports 28 UI languages, 13 mainstream upload channels, backups, automatic tagging, access mode selection, user rate limiting, personal blogs, and magnet link uploads. The built-in toolkit features image editing, while file management and public image beds support switching between thumbnail and original image loading modes. With automated deployment, beginners can spin up their own site in just three minutes.
 
 ## AI Agents
