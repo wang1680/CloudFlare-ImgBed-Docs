@@ -1,37 +1,109 @@
 # 生态建设
 
-欢迎大家为本项目的生态建设贡献力量！以下是一些已经存在的插件和仓库，供大家参考和使用。如果你有好的插件或应用，也欢迎提交 PR 或 Issue 进行分享。
+欢迎大家为本项目的生态建设贡献力量！以下是一些经过筛选的优质内容，供大家参考和使用。如果您有好的项目相关优质内容，也欢迎提交 Discussion 进行分享。详情请参见[生态征集令](https://github.com/MarSeventh/CloudFlare-ImgBed/discussions/606)。
 
-## 插件
+## 插件扩展
 
-- **编辑器内自动上传（油猴脚本）**：[项目链接](https://greasyfork.org/zh-CN/scripts/529816-image-uploader-to-markdown-to-cloudflare-imgbed) （_作者：Linux.do: [calg_c](https://linux.do/u/calg_c/summary)_）
-- **Typecho插件**：[项目链接](https://github.com/Lord2333/CF-ImgBed-Uploader_for_Typecho) （_作者：[Lord2333](https://github.com/Lord2333)_）
-- **Obsidian插件**：[项目链接](https://github.com/fantasy-ke/obsidian-cf-imgbed/tree/1.0.2) （_作者：[fantasy-ke](https://github.com/fantasy-ke)_）
-- **Wordpress插件**：[项目链接](https://github.com/imysen/wp-sanyueqicfimg) （_作者：[邹云森森](https://github.com/imysen)_）
-- **浏览器上传扩展（油猴脚本）**：[项目链接](https://greasyfork.org/en/scripts/552877-image-video-uploader-helper-intelligent-naming-version) （_作者：[yunskyline](https://github.com/yunskyline)_）
-- **OpenList驱动**：[项目链接](https://github.com/OpenListTeam/openlist) （_作者：[ZZ0YY](https://github.com/ZZ0YY)_）
+### 浏览器插件
 
-## 应用
+#### Image Uploader to Markdown to CloudFlare-ImgBed
+- 作者：[calg_c](https://linux.do/u/calg_c/summary)
+- 公开地址：[点击跳转](https://greasyfork.org/zh-CN/scripts/529816-image-uploader-to-markdown-to-cloudflare-imgbed)
+- 介绍：这是一个用于从编辑器内自动上传到图床的浏览器扩展，使用油猴脚本实现。
 
-- **桌面客户端**：[项目链接](https://github.com/MarSeventh/satellite) （**官方开发**）
-- **向TG BOT发送文件上传图床**：[项目链接](https://github.com/uki0xc/img-up-bot?tab=readme-ov-file) （_作者：[uki0xc](https://github.com/uki0xc)_）
-- **自动备份元数据**：[项目链接](https://github.com/imysen/cloudflare-imgbed-auto-backup) （_作者：[邹云森森](https://github.com/imysen)_）
+#### Image/Video Uploader Helper
+- 作者：[yunskyline](https://github.com/yunskyline)
+- 公开地址：[点击跳转](https://greasyfork.org/en/scripts/552877-image-video-uploader-helper-intelligent-naming-version)
+- 介绍：功能强大的浏览器上传辅助扩展，支持图片与视频的智能命名及一键无缝上传。
 
-## Agent
-- **OpenClaw文件中转**：[项目链接](https://github.com/MarSeventh/cfbed-upload-skill)
+### 博客与笔记插件
 
-## 优质内容推荐
+#### CF-ImgBed-Uploader for Typecho
+- 作者：[Lord2333](https://github.com/Lord2333)
+- 公开地址：[点击跳转](https://github.com/Lord2333/CF-ImgBed-Uploader_for_Typecho)
+- 介绍：专为 Typecho 博客系统量身定制的图床上传插件，让你在写博文时享受丝滑体验。
 
-### 相关视频教程
+#### obsidian-cf-imgbed
+- 作者：[fantasy-ke](https://github.com/fantasy-ke)
+- 公开地址：[点击跳转](https://github.com/fantasy-ke/obsidian-cf-imgbed/tree/1.0.2)
+- 介绍：为 Obsidian 知识管理软件打造的专属插件，支持在本地记笔记时快捷接入云端图床。
 
-- [利用Cloudflare R2 +Pages搭建在线图床系统，不限空间，不被墙，超级简单，完全免费 (youtube.com)](https://www.youtube.com/watch?v=T8VayuUMOzM)
+#### wp-sanyueqicfimg
+- 作者：[邹云森森](https://github.com/imysen)
+- 公开地址：[点击跳转](https://github.com/imysen/wp-sanyueqicfimg)
+- 介绍：适用于 WordPress 的图床扩展，轻松替换本地媒体库，极大节省服务器存储空间。
 
-### 相关优质博文（感谢每一位鼎力支持的热心大佬）
+### 系统驱动
 
-- [CloudFlare-ImgBed项目 – Yunsen的小窝](https://blog.imysen.com/category/cloudflare-imgbed/)
-  - [完全免费，图文教程手把手教你使用cloudflare搭建一个无限空间的私人图床 支持身份认证与成人元素鉴定！ - Yunsen的小窝](https://blog.imysen.com/cfpages-syq-imgbed/)
-  - [为CloudFlare-ImgBed图床配置国内CDN并分线路解析，以最低成本享受极致速度！ – Yunsen的小窝](https://blog.imysen.com/015-cloudflare-imgbed-fen-xian-pei-zhi-guo-nei-cdn/)
-  - [【开源】cloudflare-imgbed项目使用Github Actions自动备份元数据](https://blog.imysen.com/024-cloudflare-imgbed-auto-backup/)
-- [利用cloudflare pages搭建telegram频道图床 (lepidus.me)](https://blogstr.lepidus.me/post/1725801323700/)
-- [搭建基于CloudFlare和Telegram的免费图床教程 - 刘学馆 | Blog (sexy0769.com)](https://blog.sexy0769.com/skill/735.html)
-- [CloudFlare+Github，打造属于自己的免费图床 - 大头钉的小小blog (luckyting.top)](https://luckyting.top/index.php/archives/20/)
+#### OpenList Driver
+- 作者：[ZZ0YY](https://github.com/ZZ0YY)
+- 公开地址：[点击跳转](https://github.com/OpenListTeam/openlist)
+- 介绍：为 OpenList 目录列表程序提供的底层驱动支持，进一步拓展存储边界。
+
+## 周边应用
+
+### 客户端与机器人
+
+#### Satellite 桌面客户端
+- 作者：**官方开发**
+- 公开地址：[点击跳转](https://github.com/MarSeventh/satellite)
+- 介绍：官方亲自操刀的桌面端应用，提供更直观、更现代化的跨平台图床管理交互。
+
+#### img-up-bot
+- 作者：[uki0xc](https://github.com/uki0xc)
+- 公开地址：[点击跳转](https://github.com/uki0xc/img-up-bot?tab=readme-ov-file)
+- 介绍：基于 Telegram 的图床交互机器人，在聊天框里发图即可自动完成上传并返回链接。
+
+### 辅助工具
+
+#### cloudflare-imgbed-auto-backup
+- 作者：[邹云森森](https://github.com/imysen)
+- 公开地址：[点击跳转](https://github.com/imysen/cloudflare-imgbed-auto-backup)
+- 介绍：一套实用的元数据自动化备份脚本，给你的图床数据加上一道硬核“安全险”。
+
+### 衍生项目
+
+### ImgBed
+- 作者：[林酱](https://github.com/axibayuit-a11y)
+- 公开地址：https://md.ccwu.cc/
+- 项目介绍：基于本项目二次开发重构整合的闭源项目，支持28种界面语言翻译，内置13种主流上传渠道，支持备份、自动标签、访问模式选择、用户频控、个人博客、磁力链接上传，图片工具箱内置图片编辑工具，文件管理和公开图床支持缩略图原图加载模式选择。自动化部署项目，小白三分钟就能部署属于自己的站点。
+
+## AI 智能体
+
+### Agent 技能
+
+#### cfbed-upload-skill
+- 作者：**官方开发**
+- 公开地址：[点击跳转](https://github.com/MarSeventh/cfbed-upload-skill)
+- 介绍：官方提供的 AI 智能体技能插件，赋予大语言模型自动向图床传输和处理图片的“超能力”。
+
+## 优质教程
+
+### 视频教程
+
+#### 官方部署教程
+- 作者：**官方开发**
+- 公开地址：[点击跳转](https://www.bilibili.com/video/BV1EeNu6zEAe/)
+- 介绍：官方权威出品的保姆级视频教学，非常适合纯小白入门。
+
+### 文字教程
+
+#### CloudFlare-ImgBed 项目系列进阶教程
+- 作者：Yunsen 的小窝
+- 公开地址：[点击跳转](https://blog.imysen.com/category/cloudflare-imgbed/)
+- 介绍：一套从基础到进阶的硬核完整指南。内容涵盖了私人图床搭建、成人元素鉴定配置、国内 CDN 分线路解析提速，以及利用 Github Actions 实现自动化数据备份。
+
+#### 利用 Cloudflare Pages 搭建 Telegram 频道图床
+- 作者：lepidus.me
+- 公开地址：[点击跳转](https://blogstr.lepidus.me/post/1725801323700/)
+- 介绍：图文并茂的折腾记录，教你巧妙结合 Pages 和 TG 频道打通免费图床链路。
+
+#### 搭建基于 CloudFlare 和 Telegram 的免费图床教程
+- 作者：刘学馆 | Blog
+- 公开地址：[点击跳转](https://blog.sexy0769.com/skill/735.html)
+- 介绍：另辟蹊径的实战派教程，详细解析了从 0 到 1 的参数配置与部署流程。
+
+#### CloudFlare+Telegram，打造属于自己的免费图床
+- 作者：大头钉的小小 blog
+- 公开地址：[点击跳转](https://luckyting.top/index.php/archives/20/)
+- 介绍：详细介绍了如何利用 CloudFlare 和 Telegram 搭建属于自己的免费图床。
