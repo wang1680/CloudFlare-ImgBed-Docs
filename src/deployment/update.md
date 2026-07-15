@@ -1,17 +1,16 @@
 # 版本更新
 
-根据不同的部署方式，使用不同的更新方式。
+根据不同的部署方式，使用不同的更新方式。请注意更新之前请先检查[公告](https://github.com/MarSeventh/CloudFlare-ImgBed/discussions/categories/announcements)和[兼容性更新日志](https://github.com/MarSeventh/CloudFlare-ImgBed/blob/main/.github/breaking-updates.json)，**处理完所有兼容性问题**后再进行更新。
 
 ## Cloudflare Pages 部署
 
 ### 自动更新
 
-启用 **Upstream Sync** Action 后，上游仓库有更新时会自动同步并触发部署，无需手动操作。
+仓库内置了 `Upstream Sync` Action（每日自动同步上游更新），启用 **Upstream Sync** Action 和仓库的 **issues** 功能后，上游仓库有更新时会自动同步并触发部署。如果遇到需要您手动处理的情况时，会创建新的 issue 来进行说明。
 
-::: tip 启用 Upstream Sync
-仓库内置了 `Upstream Sync` Action（每日自动同步上游更新）。启用后，上游有新版本时会自动同步到你的 `main` 分支，随后自动触发 Worker 部署，实现全自动更新。
-
-启用方式：进入 Fork 仓库的 **Actions** 页面，找到 **Upstream Sync**，点击 **Enable workflow**。
+::: tip 启用 Upstream Sync 和 issues
+Action 启用方式：进入 Fork 仓库的 **Actions** 页面，找到 **Upstream Sync**，点击 **Enable workflow**。
+issues 功能启用方式：进入 Fork 仓库的 **Settings** 页面，点击 **General**，在 **Features** 中勾选 **Issues**。
 :::
 
 ### 手动更新
@@ -27,12 +26,11 @@
 
 ### 自动更新
 
-启用 **Upstream Sync** Action 后，上游仓库有更新时会自动同步到 `main` 分支并触发部署，无需手动操作。
+仓库内置了 `Upstream Sync` Action（每日自动同步上游更新），启用 **Upstream Sync** Action 和仓库的 **issues** 功能后，上游仓库有更新时会自动同步并触发部署。如果遇到需要您手动处理的情况时，会创建新的 issue 来进行说明。
 
-::: tip 启用 Upstream Sync
-仓库内置了 `Upstream Sync` Action（每日自动同步上游更新）。启用后，上游有新版本时会自动同步到你的 `main` 分支，随后自动触发 Worker 部署，实现全自动更新。
-
-启用方式：进入 Fork 仓库的 **Actions** 页面，找到 **Upstream Sync**，点击 **Enable workflow**。
+::: tip 启用 Upstream Sync 和 issues
+Action 启用方式：进入 Fork 仓库的 **Actions** 页面，找到 **Upstream Sync**，点击 **Enable workflow**。
+issues 功能启用方式：进入 Fork 仓库的 **Settings** 页面，点击 **General**，在 **Features** 中勾选 **Issues**。
 :::
 
 ### 手动更新

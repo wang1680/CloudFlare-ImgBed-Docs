@@ -1,17 +1,16 @@
 # Version Updates
 
-Use different update methods depending on your deployment method.
+Use the corresponding update method based on your deployment type. Please note: Before updating, make sure to check the [Announcements](https://github.com/MarSeventh/CloudFlare-ImgBed/discussions/categories/announcements) and the [Breaking Updates Log](https://github.com/MarSeventh/CloudFlare-ImgBed/blob/main/.github/breaking-updates.json). Ensure you have **resolved all compatibility issues** before proceeding.
 
 ## Cloudflare Pages Deployment
 
 ### Automatic Updates
 
-After enabling the **Upstream Sync** Action, updates from the upstream repository will be automatically synced and trigger deployment without manual intervention.
+The repository includes a built-in `Upstream Sync` Action (which automatically syncs upstream updates daily). Once you enable both the **Upstream Sync** Action and the repository's **issues** feature, updates from the upstream repository will be automatically synchronized and trigger a new deployment. If manual intervention is required, a new issue will be created to provide instructions.
 
-::: tip Enable Upstream Sync
-The repository includes an `Upstream Sync` Action (automatically syncs upstream updates daily). Once enabled, new upstream versions will be synced to your `main` branch and automatically trigger Worker deployment, achieving fully automatic updates.
-
-To enable: Go to the **Actions** page of your forked repository, find **Upstream Sync**, and click **Enable workflow**.
+::: tip Enabling Upstream Sync and Issues
+To enable the Action: Navigate to the **Actions** page of your forked repository, locate **Upstream Sync**, and click **Enable workflow**.
+To enable the issues feature: Navigate to the **Settings** page of your forked repository, click **General**, and check **Issues** under the **Features** section.
 :::
 
 ### Manual Updates
@@ -27,12 +26,11 @@ To enable: Go to the **Actions** page of your forked repository, find **Upstream
 
 ### Automatic Updates
 
-After configuring Secrets and enabling the **Upstream Sync** Action, updates from the upstream repository will be automatically synced and trigger deployment without manual intervention.
+The repository includes a built-in `Upstream Sync` Action (which automatically syncs upstream updates daily). Once you enable both the **Upstream Sync** Action and the repository's **issues** feature, updates from the upstream repository will be automatically synchronized and trigger a new deployment. If manual intervention is required, a new issue will be created to provide instructions.
 
-::: tip Enable Upstream Sync
-The repository includes an `Upstream Sync` Action (automatically syncs upstream updates daily). Once enabled, new upstream versions will be synced to your `main` branch and automatically trigger Worker deployment, achieving fully automatic updates.
-
-To enable: Go to the **Actions** page of your forked repository, find **Upstream Sync**, and click **Enable workflow**.
+::: tip Enabling Upstream Sync and Issues
+To enable the Action: Navigate to the **Actions** page of your forked repository, locate **Upstream Sync**, and click **Enable workflow**.
+To enable the issues feature: Navigate to the **Settings** page of your forked repository, click **General**, and check **Issues** under the **Features** section.
 :::
 
 ### Manual Updates
