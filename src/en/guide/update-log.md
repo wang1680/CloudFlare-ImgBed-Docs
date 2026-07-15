@@ -2,6 +2,10 @@
 
 ## Recent Updates
 
+Add Features:
+- Added a “Reset announcement read status” option to announcement settings. Users who already acknowledged an announcement will see it again on their next visit after its content changes or an administrator manually refreshes it
+- Announcements are now marked as acknowledged only after the user clicks “Got it”, recording the acknowledgement time and announcement version while remaining compatible with the legacy first-visit marker
+
 Fix Bugs:
 - Fixed intermittent hover flicker and hit-target jitter in the admin top page switcher while images, tables, or charts are loading. Menu visibility is now managed explicitly, with a grouped option animation and a shared hover highlight
 
@@ -14,6 +18,10 @@ Security:
 - Upgrade dependencies to improve security
 
 ## 2026.07.15
+
+Add Features:
+- Added a “Reset announcement read status” option to announcement settings. Users who already acknowledged an announcement will see it again on their next visit after its content changes or an administrator manually refreshes it
+- Announcements are now marked as acknowledged only after the user clicks “Got it”, recording the acknowledgement time and announcement version while remaining compatible with the legacy first-visit marker
 
 Security:
 - Enhance target URL validation for the fetchRes interface
