@@ -9,6 +9,16 @@ Optimization:
 - Synchronized the page switcher panel, option group, arrow, and hover slider at roughly 300ms, preserving the glass-style expansion while making the animation more cohesive
 - Centered the current-directory-empty state in the dashboard content area and aligned user management table spacing from the top header on desktop and mobile
 
+Security:
+- Enhance target URL validation for the fetchRes interface
+- Upgrade dependencies to improve security
+
+## 2026.07.15
+
+Security:
+- Enhance target URL validation for the fetchRes interface
+- Upgrade dependencies to improve security
+
 ## 2026.07.11
 
 Fix Bugs:
