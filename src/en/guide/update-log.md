@@ -3,19 +3,38 @@
 ## Recent Updates
 
 Add Features:
-- Added a “Reset announcement read status” option to announcement settings. Users who already acknowledged an announcement will see it again on their next visit after its content changes or an administrator manually refreshes it
-- Announcements are now marked as acknowledged only after the user clicks “Got it”, recording the acknowledgement time and announcement version while remaining compatible with the legacy first-visit marker
+- Added an “Enable Wallpaper” switch to Web Settings. It is enabled by default; after disabling and saving it, pages use a solid-color background on the next reload
 
 Fix Bugs:
-- Fixed intermittent hover flicker and hit-target jitter in the admin top page switcher while images, tables, or charts are loading. Menu visibility is now managed explicitly, with a grouped option animation and a shared hover highlight
+- Fixed insufficient text/background contrast in dark mode for dialog options, System Settings tabs, dropdowns, IP geolocation parameter buttons, Token permissions, and related controls
+- Fixed selected dates appearing oval in the upload trend calendar, oversized folder title overlays in the dashboard, and upload channel card hover glows collapsing into circles
 
 Optimization:
-- Synchronized the page switcher panel, option group, arrow, and hover slider at roughly 300ms, preserving the glass-style expansion while making the animation more cohesive
-- Centered the current-directory-empty state in the dashboard content area and aligned user management table spacing from the top header on desktop and mobile
+- Refined the frontend with a flatter, lighter glass-style design and unified cards, toolbars, dialogs, and interaction states across the upload page, dashboard, and System Settings
+- Adjusted the upload page directory-tree button size and hover scale for a more balanced proportion with adjacent toolbar buttons
+- Simplified frontend state management by removing the unused `credentials` compatibility mapping
+- Reduced Docker runtime image contents to lower the final image size
 
-Security:
-- Enhance target URL validation for the fetchRes interface
-- Upgrade dependencies to improve security
+Documentation:
+- Updated the Chinese and English READMEs and storage backend guides with compatible storage services and channel configuration details
+
+## 2026.07.21
+
+Add Features:
+- Added an “Enable Wallpaper” switch to Web Settings. It is enabled by default; after disabling and saving it, pages use a solid-color background on the next reload
+
+Fix Bugs:
+- Fixed insufficient text/background contrast in dark mode for dialog options, System Settings tabs, dropdowns, IP geolocation parameter buttons, Token permissions, and related controls
+- Fixed selected dates appearing oval in the upload trend calendar, oversized folder title overlays in the dashboard, and upload channel card hover glows collapsing into circles
+
+Optimization:
+- Refined the frontend with a flatter, lighter glass-style design and unified cards, toolbars, dialogs, and interaction states across the upload page, dashboard, and System Settings
+- Adjusted the upload page directory-tree button size and hover scale for a more balanced proportion with adjacent toolbar buttons
+- Simplified frontend state management by removing the unused `credentials` compatibility mapping
+- Reduced Docker runtime image contents to lower the final image size
+
+Documentation:
+- Updated the Chinese and English READMEs and storage backend guides with compatible storage services and channel configuration details
 
 ## 2026.07.15
 
