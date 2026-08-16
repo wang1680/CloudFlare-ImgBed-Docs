@@ -11,8 +11,14 @@ Fix Bugs:
 - Fixed `500` responses when Docker/Node deployments served Telegram or Telegraph files through Cloudflare/Nginx and forwarded incoming proxy headers to the upstream; upstream requests now retain only Range and conditional cache headers
 
 Optimization:
+- Added the same background blur used by cards to the admin top bar through a shared global glass-blur variable, and consolidated top-bar, pagination, and loading-action styles into one common stylesheet for consistent visuals and maintenance
 - Split common, Docker, and Worker production dependencies into deployment-specific profiles so each environment installs only the packages it needs, reducing unrelated dependencies and deployment size
 - Changed Star History bootstrap data to weekly aggregation, matching the automated update cadence and reducing daily noise in reconstructed charts
+
+## 2026.08.16
+
+Optimization:
+- Added the same background blur used by cards to the admin top bar through a shared global glass-blur variable, and consolidated top-bar, pagination, and loading-action styles into one common stylesheet for consistent visuals and maintenance
 
 ## 2026.07.29
 
