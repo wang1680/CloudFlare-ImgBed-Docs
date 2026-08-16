@@ -3,6 +3,7 @@
 ## Recent Updates
 
 Add Features:
+- Added an “All Channels / Configured Only” filter to channel types in Upload Settings, showing configured and currently available channels by default; when the current selection is unavailable and another channel is available, it automatically switches to the first configured channel
 - Added image resizing to Cloudflare Pages through custom-domain `/cdn-cgi/image/` URL transformations, using a client redirect to avoid 404 responses from same-domain internal requests in Pages Functions
 - Added original-file fallback via `fallback=original` to the Read API and format validation by MIME type or file extension before selecting a processing path; AVIF is available only on Worker and Docker, GIF resizing only on Docker, and SVG and other unsupported formats return `415` by default
 
@@ -16,6 +17,9 @@ Optimization:
 - Changed Star History bootstrap data to weekly aggregation, matching the automated update cadence and reducing daily noise in reconstructed charts
 
 ## 2026.08.16
+
+Add Features:
+- Added an “All Channels / Configured Only” filter to channel types in Upload Settings, showing configured and currently available channels by default; when the current selection is unavailable and another channel is available, it automatically switches to the first configured channel
 
 Optimization:
 - Added the same background blur used by cards to the admin top bar through a shared global glass-blur variable, and consolidated top-bar, pagination, and loading-action styles into one common stylesheet for consistent visuals and maintenance
