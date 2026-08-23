@@ -66,6 +66,11 @@ Welcome to contribute to the ecosystem of this project! Below is a curated list 
 - **Link:** [Click here](https://github.com/imysen/cloudflare-imgbed-auto-backup)
 - **Description:** A practical set of automated metadata backup scripts, adding a hardcore "safety net" to your data.
 
+#### ImgBed Daily Report
+- **Author:** [hfdz1119](https://github.com/hfdz1119)
+- **Link:** [Click here](https://github.com/hfdz1119/imgbed-daily-report)
+- **Description:** A standalone Telegram daily report extension for CloudFlare-ImgBed, built with Cloudflare Workers and D1. It collects read-only statistics on the day's uploaded file count, upload volume, storage channel distribution, and current total library size, then sends scheduled reports through a Telegram Bot.
+
 ### Derivative Projects
 
 #### ImgBed

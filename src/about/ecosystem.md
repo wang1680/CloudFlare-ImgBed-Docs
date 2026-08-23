@@ -66,6 +66,11 @@
 - 公开地址：[点击跳转](https://github.com/imysen/cloudflare-imgbed-auto-backup)
 - 介绍：一套实用的元数据自动化备份脚本，给你的图床数据加上一道硬核“安全险”。
 
+#### ImgBed Daily Report
+- 作者：[hfdz1119](https://github.com/hfdz1119)
+- 公开地址：[点击跳转](https://github.com/hfdz1119/imgbed-daily-report)
+- 介绍：为 CloudFlare-ImgBed 开发的独立 Telegram 日报扩展，基于 Cloudflare Workers + D1，以只读方式统计当日上传文件数、上传容量、存储渠道分布及当前图库总量，并通过 Telegram Bot 定时推送。
+
 ### 衍生项目
 
 ### ImgBed
