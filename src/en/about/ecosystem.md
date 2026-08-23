@@ -2,9 +2,9 @@
 
 Welcome to contribute to the ecosystem of this project! Below is a curated list of high-quality content for your reference and use. If you have excellent project-related tools or tutorials, feel free to share them by submitting a Discussion. For more details, please check out the [Ecosystem Call for Contributions](https://github.com/MarSeventh/CloudFlare-ImgBed/discussions/606).
 
-## Plugins & Extensions
+## 🧩 Plugins & Extensions
 
-### Browser Extensions
+### 🌐 Browser Extensions
 
 #### Image Uploader to Markdown to CloudFlare-ImgBed
 - **Author:** [calg_c](https://linux.do/u/calg_c/summary)
@@ -16,7 +16,7 @@ Welcome to contribute to the ecosystem of this project! Below is a curated list 
 - **Link:** [Click here](https://greasyfork.org/en/scripts/552877-image-video-uploader-helper-intelligent-naming-version)
 - **Description:** A powerful browser upload helper supporting smart naming and seamless one-click uploading for both images and videos.
 
-### Blog & Note Plugins
+### ✍️ Blog & Note Plugins
 
 #### CF-ImgBed-Uploader for Typecho
 - **Author:** [Lord2333](https://github.com/Lord2333)
@@ -38,16 +38,16 @@ Welcome to contribute to the ecosystem of this project! Below is a curated list 
 - **Link:** [Click here](https://github.com/imysen/wp-sanyueqicfimg)
 - **Description:** A WordPress extension that easily replaces the local media library, drastically saving server storage space.
 
-### System Drivers
+### ⚙️ System Drivers
 
 #### OpenList Driver
 - **Author:** [ZZ0YY](https://github.com/ZZ0YY)
 - **Link:** [Click here](https://github.com/OpenListTeam/openlist)
 - **Description:** Underlying driver support for the OpenList directory listing program, further expanding your storage boundaries.
 
-## Peripheral Applications
+## 🛠️ Peripheral Applications
 
-### Clients & Bots
+### 💬 Clients & Bots
 
 #### Satellite Desktop Client
 - **Author:** **Official Development**
@@ -59,7 +59,7 @@ Welcome to contribute to the ecosystem of this project! Below is a curated list 
 - **Link:** [Click here](https://github.com/uki0xc/img-up-bot?tab=readme-ov-file)
 - **Description:** A Telegram-based interactive bot. Just send an image in the chat to automatically upload it and receive the link.
 
-### Auxiliary Tools
+### 🧰 Auxiliary Tools
 
 #### cloudflare-imgbed-auto-backup
 - **Author:** [imysen](https://github.com/imysen)
@@ -71,32 +71,32 @@ Welcome to contribute to the ecosystem of this project! Below is a curated list 
 - **Link:** [Click here](https://github.com/hfdz1119/imgbed-daily-report)
 - **Description:** A standalone Telegram daily report extension for CloudFlare-ImgBed, built with Cloudflare Workers and D1. It collects read-only statistics on the day's uploaded file count, upload volume, storage channel distribution, and current total library size, then sends scheduled reports through a Telegram Bot.
 
-### Derivative Projects
+### 🌱 Derivative Projects
 
 #### ImgBed
 - **Author:** [axibayuit-a11y](https://github.com/axibayuit-a11y)
 - **Link:** [Click here](https://md.ccwu.cc/)
 - **Description:** A closed-source project refactored and integrated based on this repository. It supports 28 UI languages, 13 mainstream upload channels, backups, automatic tagging, access mode selection, user rate limiting, personal blogs, and magnet link uploads. The built-in toolkit features image editing, while file management and public image beds support switching between thumbnail and original image loading modes. With automated deployment, beginners can spin up their own site in just three minutes.
 
-## AI Agents
+## 🤖 AI Agents
 
-### Agent Skills
+### 🧠 Agent Skills
 
 #### cfbed-upload-skill
 - **Author:** **Official Development**
 - **Link:** [Click here](https://github.com/MarSeventh/cfbed-upload-skill)
 - **Description:** The official AI agent skill plugin, empowering Large Language Models (LLMs) with the "superpower" to automatically transfer and process images.
 
-## High-Quality Tutorials
+## 📚 High-Quality Tutorials
 
-### Video Tutorials
+### 🎬 Video Tutorials
 
 #### Official Deployment Tutorial
 - **Author:** **Official Development**
 - **Link:** [Click here](https://www.bilibili.com/video/BV1EeNu6zEAe/)
 - **Description:** The authoritative, step-by-step official video guide, perfectly suited for absolute beginners.
 
-### Text Tutorials
+### 📝 Text Tutorials
 
 #### CloudFlare-ImgBed Advanced Tutorial Series
 - **Author:** Yunsen's Cabin (Yunsen 的小窝)

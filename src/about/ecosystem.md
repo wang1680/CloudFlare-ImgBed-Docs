@@ -2,9 +2,9 @@
 
 欢迎大家为本项目的生态建设贡献力量！以下是一些经过筛选的优质内容，供大家参考和使用。如果您有好的项目相关优质内容，也欢迎提交 Discussion 进行分享。详情请参见[生态征集令](https://github.com/MarSeventh/CloudFlare-ImgBed/discussions/606)。
 
-## 插件扩展
+## 🧩 插件扩展
 
-### 浏览器插件
+### 🌐 浏览器插件
 
 #### Image Uploader to Markdown to CloudFlare-ImgBed
 - 作者：[calg_c](https://linux.do/u/calg_c/summary)
@@ -16,7 +16,7 @@
 - 公开地址：[点击跳转](https://greasyfork.org/en/scripts/552877-image-video-uploader-helper-intelligent-naming-version)
 - 介绍：功能强大的浏览器上传辅助扩展，支持图片与视频的智能命名及一键无缝上传。
 
-### 博客与笔记插件
+### ✍️ 博客与笔记插件
 
 #### CF-ImgBed-Uploader for Typecho
 - 作者：[Lord2333](https://github.com/Lord2333)
@@ -38,16 +38,16 @@
 - 公开地址：[点击跳转](https://github.com/imysen/wp-sanyueqicfimg)
 - 介绍：适用于 WordPress 的图床扩展，轻松替换本地媒体库，极大节省服务器存储空间。
 
-### 系统驱动
+### ⚙️ 系统驱动
 
 #### OpenList Driver
 - 作者：[ZZ0YY](https://github.com/ZZ0YY)
 - 公开地址：[点击跳转](https://github.com/OpenListTeam/openlist)
 - 介绍：为 OpenList 目录列表程序提供的底层驱动支持，进一步拓展存储边界。
 
-## 周边应用
+## 🛠️ 周边应用
 
-### 客户端与机器人
+### 💬 客户端与机器人
 
 #### Satellite 桌面客户端
 - 作者：**官方开发**
@@ -59,7 +59,7 @@
 - 公开地址：[点击跳转](https://github.com/uki0xc/img-up-bot?tab=readme-ov-file)
 - 介绍：基于 Telegram 的图床交互机器人，在聊天框里发图即可自动完成上传并返回链接。
 
-### 辅助工具
+### 🧰 辅助工具
 
 #### cloudflare-imgbed-auto-backup
 - 作者：[邹云森森](https://github.com/imysen)
@@ -71,32 +71,32 @@
 - 公开地址：[点击跳转](https://github.com/hfdz1119/imgbed-daily-report)
 - 介绍：为 CloudFlare-ImgBed 开发的独立 Telegram 日报扩展，基于 Cloudflare Workers + D1，以只读方式统计当日上传文件数、上传容量、存储渠道分布及当前图库总量，并通过 Telegram Bot 定时推送。
 
-### 衍生项目
+### 🌱 衍生项目
 
-### ImgBed
+#### ImgBed
 - 作者：[林酱](https://github.com/axibayuit-a11y)
 - 公开地址：[点击跳转](https://md.ccwu.cc/)
 - 项目介绍：基于本项目二次开发重构整合的闭源项目，支持28种界面语言翻译，内置13种主流上传渠道，支持备份、自动标签、访问模式选择、用户频控、个人博客、磁力链接上传，图片工具箱内置图片编辑工具，文件管理和公开图床支持缩略图原图加载模式选择。自动化部署项目，小白三分钟就能部署属于自己的站点。
 
-## AI 智能体
+## 🤖 AI 智能体
 
-### Agent 技能
+### 🧠 Agent 技能
 
 #### cfbed-upload-skill
 - 作者：**官方开发**
 - 公开地址：[点击跳转](https://github.com/MarSeventh/cfbed-upload-skill)
 - 介绍：官方提供的 AI 智能体技能插件，赋予大语言模型自动向图床传输和处理图片的“超能力”。
 
-## 优质教程
+## 📚 优质教程
 
-### 视频教程
+### 🎬 视频教程
 
 #### 官方部署教程
 - 作者：**官方开发**
 - 公开地址：[点击跳转](https://www.bilibili.com/video/BV1EeNu6zEAe/)
 - 介绍：官方权威出品的保姆级视频教学，非常适合纯小白入门。
 
-### 文字教程
+### 📝 文字教程
 
 #### CloudFlare-ImgBed 项目系列进阶教程
 - 作者：Yunsen 的小窝
