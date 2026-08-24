@@ -8,6 +8,8 @@ Add Features:
 - Added original-file fallback via `fallback=original` to the Read API and format validation by MIME type or file extension before selecting a processing path; AVIF is available only on Worker and Docker, GIF resizing only on Docker, and SVG and other unsupported formats return `415` by default
 
 Fix Bugs:
+- Fixed the public gallery list cache incorrectly using `expirationTtl`, which prevented the 24-hour lifetime from taking effect; the cache TTL is now set correctly through `Cache-Control`
+- Fixed inconsistent search and theme button sizes on the public gallery page and made the entire search button clickable instead of only the magnifying-glass icon
 - Fixed abnormal `fetchRes` content in Docker/Node when an upstream compressed body had already been decoded but retained its original encoding and length headers, and corrected the base URL used for chained relative redirects
 - Fixed `500` responses when Docker/Node deployments served Telegram or Telegraph files through Cloudflare/Nginx and forwarded incoming proxy headers to the upstream; upstream requests now retain only Range and conditional cache headers
 
@@ -15,6 +17,12 @@ Optimization:
 - Added the same background blur used by cards to the admin top bar through a shared global glass-blur variable, and consolidated top-bar, pagination, and loading-action styles into one common stylesheet for consistent visuals and maintenance
 - Split common, Docker, and Worker production dependencies into deployment-specific profiles so each environment installs only the packages it needs, reducing unrelated dependencies and deployment size
 - Changed Star History bootstrap data to weekly aggregation, matching the automated update cadence and reducing daily noise in reconstructed charts
+
+## 2026.08.24
+
+Fix Bugs:
+- Fixed the public gallery list cache incorrectly using `expirationTtl`, which prevented the 24-hour lifetime from taking effect; the cache TTL is now set correctly through `Cache-Control`
+- Fixed inconsistent search and theme button sizes on the public gallery page and made the entire search button clickable instead of only the magnifying-glass icon
 
 ## 2026.08.16
 
