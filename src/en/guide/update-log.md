@@ -3,6 +3,7 @@
 ## Recent Updates
 
 Add Features:
+- Added a “Default Language” dropdown to Web Settings with “简体中文” and English options, defaulting to Simplified Chinese; on initial page load, the locale is resolved in order from the persisted user preference, the website default, and then Simplified Chinese
 - Added an “All Channels / Configured Only” filter to channel types in Upload Settings, showing configured and currently available channels by default; when the current selection is unavailable and another channel is available, it automatically switches to the first configured channel
 - Added image resizing to Cloudflare Pages through custom-domain `/cdn-cgi/image/` URL transformations, using a client redirect to avoid 404 responses from same-domain internal requests in Pages Functions
 - Added original-file fallback via `fallback=original` to the Read API and format validation by MIME type or file extension before selecting a processing path; AVIF is available only on Worker and Docker, GIF resizing only on Docker, and SVG and other unsupported formats return `415` by default
@@ -14,9 +15,20 @@ Fix Bugs:
 - Fixed `500` responses when Docker/Node deployments served Telegram or Telegraph files through Cloudflare/Nginx and forwarded incoming proxy headers to the upstream; upstream requests now retain only Range and conditional cache headers
 
 Optimization:
+- Reordered Web Settings by placing “Default Language” after “Site Icon”, renaming “Enable Wallpaper” to “Enable Background Image”, and moving it before “Background Interval”
+- Expanded the “Default URL Prefix” tooltip to explain its use in scenarios such as CDN acceleration and remind administrators to ensure the custom prefix is accessible
 - Added the same background blur used by cards to the admin top bar through a shared global glass-blur variable, and consolidated top-bar, pagination, and loading-action styles into one common stylesheet for consistent visuals and maintenance
 - Split common, Docker, and Worker production dependencies into deployment-specific profiles so each environment installs only the packages it needs, reducing unrelated dependencies and deployment size
 - Changed Star History bootstrap data to weekly aggregation, matching the automated update cadence and reducing daily noise in reconstructed charts
+
+## 2026.08.25
+
+Add Features:
+- Added a “Default Language” dropdown to Web Settings with “简体中文” and English options, defaulting to Simplified Chinese; on initial page load, the locale is resolved in order from the persisted user preference, the website default, and then Simplified Chinese
+
+Optimization:
+- Reordered Web Settings by placing “Default Language” after “Site Icon”, renaming “Enable Wallpaper” to “Enable Background Image”, and moving it before “Background Interval”
+- Expanded the “Default URL Prefix” tooltip to explain its use in scenarios such as CDN acceleration and remind administrators to ensure the custom prefix is accessible
 
 ## 2026.08.24
 
