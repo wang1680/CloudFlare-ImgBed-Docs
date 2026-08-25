@@ -224,13 +224,14 @@ Frontend web-related settings are configured in "System Settings" → "Web Setti
 
 - **Site Title**: The name shown in the browser tab and page title. Example: `Sanyue ImgHub`.
 - **Site Icon**: The browser tab icon URL. Use a publicly accessible image URL.
+- **Default Language**: The website default used when the user has no persisted language preference. Options are “简体中文” and English, with Simplified Chinese as the default. On page entry, the locale is initialized in this order: persisted user preference → website default → Simplified Chinese.
 - **Site Name**: The image hosting name shown on frontend pages. Example: `Sanyue ImgHub`.
 - **Site Logo**: The logo image URL shown on frontend pages. A transparent PNG or WebP is recommended.
 - **Logo Link**: The URL opened when clicking the logo. Leave empty to use the default GitHub link. Example: `https://example.com`.
+- **Enable Background Image**: Controls whether background images are loaded across all pages. Enabled by default. After disabling and saving, pages use a solid-color background on the next reload; background sources are still configured by the background options under Client Settings and Admin Settings.
 - **Background Interval**: Background carousel interval in milliseconds. Default `3000`; use `10000` for 10 seconds.
 - **Background Opacity**: Background image opacity. Use a decimal between `0` and `1`. Default `1`; example `0.8`.
-- **Enable Wallpaper**: Controls whether background wallpapers are loaded across all pages. Enabled by default. After disabling and saving, pages use a solid-color background on the next reload; wallpaper sources are still configured by the background options under Client Settings and Admin Settings.
-- **Default URL Prefix**: Used to generate default file access links and the `publicUrl` field in successful Upload API responses. It only affects displayed links and returned API links, and does not change the actual file access path. Example: `https://img.example.com/file/`; leave empty to use the current site domain.
+- **Default URL Prefix**: Used to generate default file access links and the `publicUrl` field in successful Upload API responses. It only affects displayed links and returned API links, and does not change the actual file access path. This is useful for scenarios such as CDN acceleration; make sure the custom prefix is accessible. Example: `https://img.example.com/file/`; leave empty to use the current site domain.
 
 ### Client Settings
 
