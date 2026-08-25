@@ -9,6 +9,7 @@ Add Features:
 - 读取 API 新增 `fallback=original` 原图回退，并在进入具体处理渠道前按 MIME 类型或文件扩展名校验格式；AVIF 仅 Worker 和 Docker 支持，GIF 仅 Docker 支持，SVG 及其他不支持格式默认返回 `415`
 
 Fix Bugs:
+- 修复 macOS Safari 无法使用 `Cmd + V` 粘贴上传的问题，并根据当前平台显示对应的粘贴快捷键
 - 修复公开图库列表缓存错误使用 `expirationTtl` 导致 24 小时有效期不生效的问题，现通过 `Cache-Control` 正确设置缓存 TTL
 - 修复公开图库页搜索按钮与主题按钮尺寸不一致，以及搜索按钮仅放大镜图标区域可点击的问题
 - 修复 `fetchRes` 在 Docker/Node 环境代理压缩响应时，正文已解码但仍保留原编码和长度响应头导致内容异常的问题，并修正多级相对重定向的基准 URL
@@ -25,6 +26,9 @@ Optimization:
 
 Add Features:
 - 网页设置新增“默认语言”下拉选项，支持“简体中文”和 English，默认为简体中文；首次进入页面时按“用户持久化语言 → 网页默认语言 → 简体中文”的优先级初始化语言
+
+Fix Bugs:
+- 修复 macOS Safari 无法使用 `Cmd + V` 粘贴上传的问题，并根据当前平台显示对应的粘贴快捷键
 
 Optimization:
 - 调整网页设置项目顺序，将“默认语言”置于“网站图标”后，并将“启用壁纸”更名为“启用背景图”并移至“背景切换间隔”前

@@ -9,6 +9,7 @@ Add Features:
 - Added original-file fallback via `fallback=original` to the Read API and format validation by MIME type or file extension before selecting a processing path; AVIF is available only on Worker and Docker, GIF resizing only on Docker, and SVG and other unsupported formats return `415` by default
 
 Fix Bugs:
+- Fixed paste uploads not working with `Cmd + V` in Safari on macOS and added platform-specific paste shortcut labels
 - Fixed the public gallery list cache incorrectly using `expirationTtl`, which prevented the 24-hour lifetime from taking effect; the cache TTL is now set correctly through `Cache-Control`
 - Fixed inconsistent search and theme button sizes on the public gallery page and made the entire search button clickable instead of only the magnifying-glass icon
 - Fixed abnormal `fetchRes` content in Docker/Node when an upstream compressed body had already been decoded but retained its original encoding and length headers, and corrected the base URL used for chained relative redirects
@@ -25,6 +26,9 @@ Optimization:
 
 Add Features:
 - Added a “Default Language” dropdown to Web Settings with “简体中文” and English options, defaulting to Simplified Chinese; on initial page load, the locale is resolved in order from the persisted user preference, the website default, and then Simplified Chinese
+
+Fix Bugs:
+- Fixed paste uploads not working with `Cmd + V` in Safari on macOS and added platform-specific paste shortcut labels
 
 Optimization:
 - Reordered Web Settings by placing “Default Language” after “Site Icon”, renaming “Enable Wallpaper” to “Enable Background Image”, and moving it before “Background Interval”
