@@ -3,6 +3,7 @@
 ## Recent Updates
 
 Add Features:
+- Added a dynamic greeting and runtime overview to System Settings → System Status, showing a time-aware greeting, local clock, and timezone while generating bilingual status summaries from the index API response, file count, and upload channel count
 - Added a “Default Language” dropdown to Web Settings with “简体中文” and English options, defaulting to Simplified Chinese; on initial page load, the locale is resolved in order from the persisted user preference, the website default, and then Simplified Chinese
 - Added an “All Channels / Configured Only” filter to channel types in Upload Settings, showing configured and currently available channels by default; when the current selection is unavailable and another channel is available, it automatically switches to the first configured channel
 - Added image resizing to Cloudflare Pages through custom-domain `/cdn-cgi/image/` URL transformations, using a client redirect to avoid 404 responses from same-domain internal requests in Pages Functions
@@ -25,6 +26,9 @@ Optimization:
 - Changed Star History bootstrap data to weekly aggregation, matching the automated update cadence and reducing daily noise in reconstructed charts
 
 ## 2026.08.31
+
+Add Features:
+- Added a dynamic greeting and runtime overview to System Settings → System Status, showing a time-aware greeting, local clock, and timezone while generating bilingual status summaries from the index API response, file count, and upload channel count
 
 Optimization:
 - Added a hover lift effect to the three overview cards at the top of System Settings → System Status, using subtle upward movement, shadow and border transitions for clearer interaction feedback while respecting the system's reduced-motion preference
