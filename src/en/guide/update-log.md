@@ -17,6 +17,7 @@ Fix Bugs:
 
 Optimization:
 - Added a hover lift effect to the three overview cards at the top of System Settings → System Status, using subtle upward movement, shadow and border transitions for clearer interaction feedback while respecting the system's reduced-motion preference
+- Added hover feedback to the bar-style labels in Upload Channel Distribution and File Status Distribution, using subtle lift plus background, border, and shadow changes for clearer interaction states across light and dark themes while respecting reduced-motion preferences
 - Reordered Web Settings by placing “Default Language” after “Site Icon”, renaming “Enable Wallpaper” to “Enable Background Image”, and moving it before “Background Interval”
 - Expanded the “Default URL Prefix” tooltip to explain its use in scenarios such as CDN acceleration and remind administrators to ensure the custom prefix is accessible
 - Added the same background blur used by cards to the admin top bar through a shared global glass-blur variable, and consolidated top-bar, pagination, and loading-action styles into one common stylesheet for consistent visuals and maintenance
@@ -27,6 +28,7 @@ Optimization:
 
 Optimization:
 - Added a hover lift effect to the three overview cards at the top of System Settings → System Status, using subtle upward movement, shadow and border transitions for clearer interaction feedback while respecting the system's reduced-motion preference
+- Added hover feedback to the bar-style labels in Upload Channel Distribution and File Status Distribution, using subtle lift plus background, border, and shadow changes for clearer interaction states across light and dark themes while respecting reduced-motion preferences
 
 ## 2026.08.25
 
