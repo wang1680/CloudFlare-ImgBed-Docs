@@ -16,11 +16,17 @@ Fix Bugs:
 - Fixed `500` responses when Docker/Node deployments served Telegram or Telegraph files through Cloudflare/Nginx and forwarded incoming proxy headers to the upstream; upstream requests now retain only Range and conditional cache headers
 
 Optimization:
+- Added a hover lift effect to the three overview cards at the top of System Settings → System Status, using subtle upward movement, shadow and border transitions for clearer interaction feedback while respecting the system's reduced-motion preference
 - Reordered Web Settings by placing “Default Language” after “Site Icon”, renaming “Enable Wallpaper” to “Enable Background Image”, and moving it before “Background Interval”
 - Expanded the “Default URL Prefix” tooltip to explain its use in scenarios such as CDN acceleration and remind administrators to ensure the custom prefix is accessible
 - Added the same background blur used by cards to the admin top bar through a shared global glass-blur variable, and consolidated top-bar, pagination, and loading-action styles into one common stylesheet for consistent visuals and maintenance
 - Split common, Docker, and Worker production dependencies into deployment-specific profiles so each environment installs only the packages it needs, reducing unrelated dependencies and deployment size
 - Changed Star History bootstrap data to weekly aggregation, matching the automated update cadence and reducing daily noise in reconstructed charts
+
+## 2026.08.31
+
+Optimization:
+- Added a hover lift effect to the three overview cards at the top of System Settings → System Status, using subtle upward movement, shadow and border transitions for clearer interaction feedback while respecting the system's reduced-motion preference
 
 ## 2026.08.25
 
