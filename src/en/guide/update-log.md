@@ -3,6 +3,7 @@
 ## Recent Updates
 
 Add Features:
+- Enhanced dashboard file sorting with ascending and descending order by time, size, file ID, or file name, browser-persisted sorting preferences, and a combined icon that clearly indicates the active field and direction
 - Added a dynamic greeting and runtime overview to System Settings → System Status, showing a time-aware greeting, local clock, and timezone while generating bilingual status summaries from the index API response, file count, and upload channel count
 - Added a “Default Language” dropdown to Web Settings with “简体中文” and English options, defaulting to Simplified Chinese; on initial page load, the locale is resolved in order from the persisted user preference, the website default, and then Simplified Chinese
 - Added an “All Channels / Configured Only” filter to channel types in Upload Settings, showing configured and currently available channels by default; when the current selection is unavailable and another channel is available, it automatically switches to the first configured channel
@@ -17,6 +18,7 @@ Fix Bugs:
 - Fixed `500` responses when Docker/Node deployments served Telegram or Telegraph files through Cloudflare/Nginx and forwarded incoming proxy headers to the upstream; upstream requests now retain only Range and conditional cache headers
 
 Optimization:
+- Unified popup spacing, corner radii, selected states, and light/dark hover feedback across the dashboard sorting menu, System Settings selects, and the Upload Settings channel filter so option backgrounds no longer touch the popup edges
 - Added a hover lift effect to the three overview cards at the top of System Settings → System Status, using subtle upward movement, shadow and border transitions for clearer interaction feedback while respecting the system's reduced-motion preference
 - Added hover feedback to the bar-style labels in Upload Channel Distribution and File Status Distribution, using subtle lift plus background, border, and shadow changes for clearer interaction states across light and dark themes while respecting reduced-motion preferences
 - Reordered Web Settings by placing “Default Language” after “Site Icon”, renaming “Enable Wallpaper” to “Enable Background Image”, and moving it before “Background Interval”
@@ -24,6 +26,14 @@ Optimization:
 - Added the same background blur used by cards to the admin top bar through a shared global glass-blur variable, and consolidated top-bar, pagination, and loading-action styles into one common stylesheet for consistent visuals and maintenance
 - Split common, Docker, and Worker production dependencies into deployment-specific profiles so each environment installs only the packages it needs, reducing unrelated dependencies and deployment size
 - Changed Star History bootstrap data to weekly aggregation, matching the automated update cadence and reducing daily noise in reconstructed charts
+
+## 2026.09.08
+
+Add Features:
+- Enhanced dashboard file sorting with ascending and descending order by time, size, file ID, or file name, browser-persisted sorting preferences, and a combined icon that clearly indicates the active field and direction
+
+Optimization:
+- Unified popup spacing, corner radii, selected states, and light/dark hover feedback across the dashboard sorting menu, System Settings selects, and the Upload Settings channel filter so option backgrounds no longer touch the popup edges
 
 ## 2026.08.31
 
