@@ -16,6 +16,8 @@ Fix Bugs:
 - Fixed inconsistent search and theme button sizes on the public gallery page and made the entire search button clickable instead of only the magnifying-glass icon
 - Fixed abnormal `fetchRes` content in Docker/Node when an upstream compressed body had already been decoded but retained its original encoding and length headers, and corrected the base URL used for chained relative redirects
 - Fixed `500` responses when Docker/Node deployments served Telegram or Telegraph files through Cloudflare/Nginx and forwarded incoming proxy headers to the upstream; upstream requests now retain only Range and conditional cache headers
+- Fixed dark-mode logo hover effects not following the active page theme and multiple global messages overlapping because of a fixed top position
+- Fixed the upload page title's crayon-writing animation being clipped at the bottom, and adjusted title layering and responsive spacing so the hover transition remains fully visible
 
 Optimization:
 - Increased hover-background contrast in light mode for dropdown menus, selects, the upload channel filter, and the System Settings tab toggle, while restoring hover feedback for the selected item when a select opens for clearer and more consistent interaction states
@@ -30,14 +32,20 @@ Optimization:
 - Added the same background blur used by cards to the admin top bar through a shared global glass-blur variable, and consolidated top-bar, pagination, and loading-action styles into one common stylesheet for consistent visuals and maintenance
 - Split common, Docker, and Worker production dependencies into deployment-specific profiles so each environment installs only the packages it needs, reducing unrelated dependencies and deployment size
 - Changed Star History bootstrap data to weekly aggregation, matching the automated update cadence and reducing daily noise in reconstructed charts
+- Refined layouts for desktop viewports with limited available height by reducing spacing above the upload page title and upload area, tightening upload-list toolbar sizing, and preloading the title font for a smoother initial render
 
 ## 2026.09.09
+
+Fix Bugs:
+- Fixed dark-mode logo hover effects not following the active page theme and multiple global messages overlapping because of a fixed top position
+- Fixed the upload page title's crayon-writing animation being clipped at the bottom, and adjusted title layering and responsive spacing so the hover transition remains fully visible
 
 Optimization:
 - Increased hover-background contrast in light mode for dropdown menus, selects, the upload channel filter, and the System Settings tab toggle, while restoring hover feedback for the selected item when a select opens for clearer and more consistent interaction states
 - Refined the admin top page switcher with stronger dark-mode hover contrast, spacing between the current and remaining options, and a corrected highlight exit animation that no longer slides back to the first option
 - Unified dashed borders across the default-upload and paste-link cards, with clearer neutral hover borders, opacity changes, and soft shadows in light and dark themes
 - Increased light-mode border contrast for shared glass cards, dialogs, and dropdowns while preserving a clearer visual distinction between default and hover borders
+- Refined layouts for desktop viewports with limited available height by reducing spacing above the upload page title and upload area, tightening upload-list toolbar sizing, and preloading the title font for a smoother initial render
 
 ## 2026.09.08
 
