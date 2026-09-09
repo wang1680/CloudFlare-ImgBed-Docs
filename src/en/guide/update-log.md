@@ -18,6 +18,7 @@ Fix Bugs:
 - Fixed `500` responses when Docker/Node deployments served Telegram or Telegraph files through Cloudflare/Nginx and forwarded incoming proxy headers to the upstream; upstream requests now retain only Range and conditional cache headers
 
 Optimization:
+- Increased hover-background contrast in light mode for dropdown menus, selects, the upload channel filter, and the System Settings tab toggle, while restoring hover feedback for the selected item when a select opens for clearer and more consistent interaction states
 - Unified popup spacing, corner radii, selected states, and light/dark hover feedback across the dashboard sorting menu, System Settings selects, and the Upload Settings channel filter so option backgrounds no longer touch the popup edges
 - Added a hover lift effect to the three overview cards at the top of System Settings → System Status, using subtle upward movement, shadow and border transitions for clearer interaction feedback while respecting the system's reduced-motion preference
 - Added hover feedback to the bar-style labels in Upload Channel Distribution and File Status Distribution, using subtle lift plus background, border, and shadow changes for clearer interaction states across light and dark themes while respecting reduced-motion preferences
@@ -26,6 +27,11 @@ Optimization:
 - Added the same background blur used by cards to the admin top bar through a shared global glass-blur variable, and consolidated top-bar, pagination, and loading-action styles into one common stylesheet for consistent visuals and maintenance
 - Split common, Docker, and Worker production dependencies into deployment-specific profiles so each environment installs only the packages it needs, reducing unrelated dependencies and deployment size
 - Changed Star History bootstrap data to weekly aggregation, matching the automated update cadence and reducing daily noise in reconstructed charts
+
+## 2026.09.09
+
+Optimization:
+- Increased hover-background contrast in light mode for dropdown menus, selects, the upload channel filter, and the System Settings tab toggle, while restoring hover feedback for the selected item when a select opens for clearer and more consistent interaction states
 
 ## 2026.09.08
 
