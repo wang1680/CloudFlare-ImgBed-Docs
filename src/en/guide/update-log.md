@@ -19,6 +19,9 @@ Fix Bugs:
 
 Optimization:
 - Increased hover-background contrast in light mode for dropdown menus, selects, the upload channel filter, and the System Settings tab toggle, while restoring hover feedback for the selected item when a select opens for clearer and more consistent interaction states
+- Refined the admin top page switcher with stronger dark-mode hover contrast, spacing between the current and remaining options, and a corrected highlight exit animation that no longer slides back to the first option
+- Unified dashed borders across the default-upload and paste-link cards, with clearer neutral hover borders, opacity changes, and soft shadows in light and dark themes
+- Increased light-mode border contrast for shared glass cards, dialogs, and dropdowns while preserving a clearer visual distinction between default and hover borders
 - Unified popup spacing, corner radii, selected states, and light/dark hover feedback across the dashboard sorting menu, System Settings selects, and the Upload Settings channel filter so option backgrounds no longer touch the popup edges
 - Added a hover lift effect to the three overview cards at the top of System Settings → System Status, using subtle upward movement, shadow and border transitions for clearer interaction feedback while respecting the system's reduced-motion preference
 - Added hover feedback to the bar-style labels in Upload Channel Distribution and File Status Distribution, using subtle lift plus background, border, and shadow changes for clearer interaction states across light and dark themes while respecting reduced-motion preferences
@@ -32,6 +35,9 @@ Optimization:
 
 Optimization:
 - Increased hover-background contrast in light mode for dropdown menus, selects, the upload channel filter, and the System Settings tab toggle, while restoring hover feedback for the selected item when a select opens for clearer and more consistent interaction states
+- Refined the admin top page switcher with stronger dark-mode hover contrast, spacing between the current and remaining options, and a corrected highlight exit animation that no longer slides back to the first option
+- Unified dashed borders across the default-upload and paste-link cards, with clearer neutral hover borders, opacity changes, and soft shadows in light and dark themes
+- Increased light-mode border contrast for shared glass cards, dialogs, and dropdowns while preserving a clearer visual distinction between default and hover borders
 
 ## 2026.09.08
 
