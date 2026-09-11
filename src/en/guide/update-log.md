@@ -11,6 +11,7 @@ Add Features:
 - Added original-file fallback via `fallback=original` to the Read API and format validation by MIME type or file extension before selecting a processing path; AVIF is available only on Worker and Docker, GIF resizing only on Docker, and SVG and other unsupported formats return `415` by default
 
 Fix Bugs:
+- Fixed upload items continuing to show an uploading animation after a confirmed failure, when automatic retries were disabled, or after the maximum automatic retry count was reached; failed items now show a static error state and remain available for manual retry, which resets their progress and automatic retry count before uploading again
 - Fixed paste uploads not working with `Cmd + V` in Safari on macOS and added platform-specific paste shortcut labels
 - Fixed the public gallery list cache incorrectly using `expirationTtl`, which prevented the 24-hour lifetime from taking effect; the cache TTL is now set correctly through `Cache-Control`
 - Fixed inconsistent search and theme button sizes on the public gallery page and made the entire search button clickable instead of only the magnifying-glass icon
@@ -33,6 +34,11 @@ Optimization:
 - Split common, Docker, and Worker production dependencies into deployment-specific profiles so each environment installs only the packages it needs, reducing unrelated dependencies and deployment size
 - Changed Star History bootstrap data to weekly aggregation, matching the automated update cadence and reducing daily noise in reconstructed charts
 - Refined layouts for desktop viewports with limited available height by reducing spacing above the upload page title and upload area, tightening upload-list toolbar sizing, and preloading the title font for a smoother initial render
+
+## 2026.09.11
+
+Fix Bugs:
+- Fixed upload items continuing to show an uploading animation after a confirmed failure, when automatic retries were disabled, or after the maximum automatic retry count was reached; failed items now show a static error state and remain available for manual retry, which resets their progress and automatic retry count before uploading again
 
 ## 2026.09.09
 
