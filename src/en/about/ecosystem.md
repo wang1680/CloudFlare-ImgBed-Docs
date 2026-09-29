@@ -25,7 +25,7 @@ Welcome to contribute to the ecosystem of this project! Below is a curated list 
 
 #### obsidian-cf-imgbed
 - **Author:** [fantasy-ke](https://github.com/fantasy-ke)
-- **Link:** [Click here](https://github.com/fantasy-ke/obsidian-cf-imgbed/tree/1.0.2)
+- **Link:** [Click here](https://github.com/fantasy-ke/obsidian-cf-imgbed)
 - **Description:** An exclusive plugin for Obsidian, allowing you to seamlessly connect to the cloud image bed while writing notes locally.
 
 #### siyuan-cf-imgbed

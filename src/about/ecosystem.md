@@ -25,7 +25,7 @@
 
 #### obsidian-cf-imgbed
 - 作者：[fantasy-ke](https://github.com/fantasy-ke)
-- 公开地址：[点击跳转](https://github.com/fantasy-ke/obsidian-cf-imgbed/tree/1.0.2)
+- 公开地址：[点击跳转](https://github.com/fantasy-ke/obsidian-cf-imgbed)
 - 介绍：为 Obsidian 知识管理软件打造的专属插件，支持在本地记笔记时快捷接入云端图床。
 
 #### siyuan-cf-imgbed
